@@ -99,13 +99,13 @@
 		{\textquoteright}		% closing inner mark
 	\setquotestyle {czech}
 
-	\RequirePackage [backend=biber, citestyle=iso-numeric, babel=other,%
+	\RequirePackage [backend=biber, citestyle=iso-numeric, autolang=other,%
 					sorting=nyt, urldate=iso8601]{ biblatex }
 
 	\renewcommand*{\acronymname}{Seznam použitých zkratek}
 \else
 	\setdefaultlanguage [variant=british] {english}
-	\RequirePackage [backend=biber, citestyle=iso-numeric, babel=other,%
+	\RequirePackage [backend=biber, citestyle=iso-numeric, autolang=other,%
 					sorting=nyt, urldate=iso8601]{ biblatex }
 \fi
 
