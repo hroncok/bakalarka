@@ -1,0 +1,3 @@
+[submodule "biblatex-iso690"]
+	path = biblatex-iso690
+	url = git@github.com:michal-h21/biblatex-iso690.git
