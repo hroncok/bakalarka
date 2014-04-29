@@ -1,0 +1,67 @@
+% options:
+% thesis=B bachelor's thesis
+% thesis=M master's thesis
+% czech thesis in Czech language
+% english thesis in English language
+% hidelinks remove colour boxes around hyperlinks
+
+% arara: xelatex: { shell: yes }
+% arara: makeglossaries
+% arara: biber
+% arara: xelatex: { shell: yes }
+\documentclass[thesis=B,czech]{template/FITthesisXE}[2014/04/29]
+
+\usepackage{ graphicx }		% graphics files inclusion
+\usepackage{ dirtree } 		% directory tree visualisation
+\usepackage{ longtable } 	% tables which Pandoc use
+
+\addbibresource{library.bib}
+
+% make list of acronyms
+\makeglossaries
+\input{acronyms.tex}
+\glsaddall	% add even unused acronyms
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+\acknowledgements{\input{podekovani.tex}}
+\abstractCS{\input{abstrakt_cs.tex}}
+\abstractEN{\input{abstrakt_en.tex}}
+\input{meta.tex}
+
+\begin{document}
+
+\begin{introduction}
+\input{Uvod.tex}
+\end{introduction}
+
+\input{Doporuceni-pro-REST.tex}
+\input{Pozadavky.tex}
+\input{Navrh-API.tex}
+\input{Realizace.tex}
+
+\begin{conclusion}
+\input{Zaver.tex}
+\end{conclusion}
+
+\printbibliography
+
+\appendix
+
+\chapter{Seznam použitých zkratek}
+\printglossary[type=\acronymtype,style=acronyms]
+
+\chapter{Obsah přiloženého média}
+
+\begin{figure}%
+	\dirtree{%
+		.1 doc\DTcomment{přiložené dokumenty}.
+		.1 readme.md\DTcomment{stručný popis obsahu média}.
+		.1 src.\DTcomment{~}.
+		.2 impl\DTcomment{zdrojové kódy implementace}.
+		.2 thesis\DTcomment{zdrojová forma práce ve formátu Markdown a \LaTeX{}}.
+		.1 thesis.pdf\DTcomment{text práce ve formátu PDF}.
+	}
+\end{figure}
+
+\end{document}

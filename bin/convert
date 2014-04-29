@@ -1,0 +1,148 @@
+#!/bin/bash
+#
+# Script for converting Markdown files to LaTeX
+#
+
+PANDOC_OPTS="-f markdown -t latex --no-wrap --listings --no-tex-ligatures --biblatex --bibliography=library.bib"
+FILTERS_PRE=( 'title' 'header_label' )
+FILTERS_POST=( 'listings' 'hyperrefs' 'itemizes' 'hotfix_1' )
+FILES="${@:-*.md *.yml}"
+SKIP_FILES="README.md"
+
+
+##########  F u n c t i o n s  ##########
+
+# Replace Pandoc title block with \chapter{}
+filter_title() {
+	$SED -Ei \
+		-e '1 { s/^% (.*)$/\\chapter{\1}/ }' \
+		"$1" || echo "title filter failed" >&2
+}
+
+# Pandoc's extension 'header_attributes' for identifying headers to use them in
+# links (references) doesn't work when the link isn't in the same document. 
+# This is small hack that just replaces '{#anything}' on headers with 
+# \label{anything}, i.e. the same replacement which is Pandoc normally doing.
+filter_header_label() {
+	$SED -Ei \
+		-e '/^#+/ s/\{#([^}]+)\}/\\label{\1}/g' \
+		-e ':a;N; /\n[=-]+\s*$/ s/\{#([^}]+)\}/\\label{\1}/; ba' \
+		"$1" || echo "header_label filter failed" >&2
+}
+
+# Replace lstlistings blocks with minted for syntax highlighting, wrap it into
+# floated listing, optionally add caption and replace inline listings with \verb
+#
+# Examples:
+# ```{caption="This is caption!" .Ruby}
+#   put "Code block with caption"
+# ```
+# ```ruby
+#   put "Code block without caption"
+# ```
+# ```
+#   Plaintext code block, i.e. language 'text'.
+# ```
+#
+# Note: Yeah, these regexps are crazy, but no time to write it better...
+filter_listings() {
+	local opts="bgcolor=codebg"
+	$SED -Ei \
+		-e "/^\\\begin\{lstlisting\}/ {\
+			s/\}(\[(caption=.*)\])?$/}[language=text,\2]/; \
+			s/caption=([^]]+).*$/\n\\\caption{\1}/; \
+			s/label=([^], ]+)(.*)$/\2\n\\\label{\1}/; \
+			s/language=([^], ]+)(.*)$/\2\n\\\begin{minted}[$opts]{\L\1}/; \
+			s/^[^\n]*/\\\begin{listing}/; }" \
+		-e 's/\\end\{lstlisting\}/\\end{minted}\n\\end{listing}/' \
+		-e 's/\\lstinline!([^!]*)!/\\verb!\1!/g' \
+		-e 's/\\lstinline"([^"]*)"/\\verb"\1"/g' \
+		"$1" || echo "listings filter failed" >&2
+}
+
+# Add reference number to the reference text
+# e.g. \hyperref[foo]{see} -> \hyperref[foo]{see \ref*{foo}}
+filter_hyperrefs() {
+	$SED -Ei \
+		-e 's/\\hyperref\[([^] ]+)\]\{([^}]+)\}/\\hyperref[\1]{\2~\\ref*{\1}}/g' \
+		"$1" || echo "hyperrefs filter failed" >&2
+}
+
+# Pandoc places '\itemsep1pt\parskip0pt\parsep0pt' at the start of each itemize
+# environment; replace it with preffered \tightlist (memoir package).
+filter_itemizes() {
+	$SED -Ei \
+		-e "/^\\\begin\{itemize\}/,/^\\\end\{itemize\}/ {\
+			s/\\\itemsep1pt.*/\\\tightlist/; }" \
+		"$1" || echo "itemizes filter failed" >&2
+}
+
+# Ugly hotfix for table in chapter Realizace
+filter_hotfix_1() {
+	if [[ "$1" = Realizace* ]]; then
+		$SED -Ei \
+			-e "/^\\\begin\{longtable\}/,/\\\label\{tab:operatory\}/ {\
+				s/^(\\\begin\{longtable\}.*$)/\1\n\\\pagebreak/; }" \
+			"$1" || echo "filter hotfix_realizace failed" >&2
+	fi
+}
+
+# Convert meta.yml to LaTeX
+convert_meta() {
+	$SED -E 's/^(\w+):\s+(.*)$/\\\1{\2}/' \
+		"$1" || echo "meta conversion failed" >&2
+}
+
+# Convert acronyms.yml to LaTeX (glossary)
+convert_acronyms() {
+	$SED -E 's/^(\w+):\s+(.*)$/\\newacronym{\1}{\1}{\2}/' \
+		"$1" || echo "acronyms conversion failed" >&2
+}
+
+
+##########  M a i n  ##########
+
+# Use GNU sed on OS X (install via Homebrew)
+if [[ "$(uname)" == 'Darwin' ]]; then
+	SED="gsed"
+else
+	SED="sed"
+fi
+
+mkdir .backup 2>/dev/null
+
+for file in $FILES; do
+	[[ "$SKIP_FILES" = *$file* ]] && continue
+
+	suffix="${file##*.}"
+	tmpfile="${file}.tmp"
+	texfile="${file%.*}.tex"
+
+	# backup TeX file!
+	[[ -f "$texfile" ]] && mv "$texfile" ".backup/$texfile"
+	cp "$file" "$tmpfile"
+
+	# apply pre-convert filters
+	for name in ${FILTERS_PRE[*]}; do
+		eval "filter_$name $tmpfile $suffix"
+	done
+
+	# convert
+	case "$file" in
+		*.md)
+			pandoc $PANDOC_OPTS "$tmpfile" > "$texfile";;
+		meta.yml)
+			convert_meta "$tmpfile" > "$texfile";;
+		acronyms.yml)
+			convert_acronyms "$tmpfile" > "$texfile";;
+		*)
+			echo "Unsupported file: $file";;
+	esac
+
+	# apply post-convert filters
+	for name in ${FILTERS_POST[*]}; do
+		eval "filter_$name $texfile"
+	done
+
+	rm "$tmpfile" 2>/dev/null
+done

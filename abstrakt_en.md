@@ -1,0 +1,1 @@
+This diploma thesis aims to summarize basic and generally accepted conventions for designing a RESTful APIs. They are then used for designing a new API of the KOSapi middleware which is, inter alia, extended by new data domains. A significant part of this work is design and implementation of language and tool for parametric querying over RESTful resources which was named RSQL.
