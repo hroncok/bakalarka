@@ -345,7 +345,7 @@
 	\ifx2#1 \DeclareRobustCommand{\thedeclarationofauthenticity}{\@declarationOptionSelectedtrue\if@langczech{%
 		Prohlašuji, že jsem předloženou práci vypracoval samostatně a že jsem uvedl veškeré použité informační zdroje v~souladu s~Metodickým pokynem o~etické přípravě vysokoškolských závěrečných prací.
 
-		Beru na vědomí, že se na moji práci vztahují práva a povinnosti vyplývající ze zákona č.~121/2000~Sb., autorského zákona, ve znění pozdějších předpisů. V~souladu s~ust. §~46 odst.~6 tohoto zákona tímto uděluji nevýhradní oprávnění (licenci) k~užití této mojí práce, a to včetně všech počítačových programů, jež jsou její součástí či přílohou a veškeré jejich dokumentace (dále souhrnně jen \uv{Dílo}), a to všem osobám, které si přejí Dílo užít. Tyto osoby jsou oprávněny Dílo užít jakýmkoli způsobem, který nesnižuje hodnotu Díla, avšak pouze k~nevýdělečným účelům. Toto oprávnění je časově, teritoriálně i množstevně neomezené.
+		Beru na vědomí, že se na moji práci vztahují práva a povinnosti vyplývající ze zákona č.~121/2000~Sb., autorského zákona, ve znění pozdějších předpisů. V~souladu s~ust. §~46 odst.~6 tohoto zákona tímto uděluji nevýhradní oprávnění (licenci) k~užití této mojí práce, a to včetně všech počítačových programů, jež jsou její součástí či přílohou a veškeré jejich dokumentace (dále souhrnně jen „Dílo“), a to všem osobám, které si přejí Dílo užít. Tyto osoby jsou oprávněny Dílo užít jakýmkoli způsobem, který nesnižuje hodnotu Díla, avšak pouze k~nevýdělečným účelům. Toto oprávnění je časově, teritoriálně i množstevně neomezené.
 		}\else{%
 		I hereby declare that the presented thesis is my own work and that I have cited all sources of information in accordance with the Guideline for adhering to ethical principles when elaborating an academic final thesis.
 		
@@ -365,8 +365,7 @@
 	\ifx4#1 \DeclareRobustCommand{\thedeclarationofauthenticity}{\if@langczech{%
 		Prohlašuji, že jsem předloženou práci vypracoval samostatně a že jsem uvedl veškeré použité informační zdroje v~souladu s~Metodickým pokynem o~etické přípravě vysokoškolských závěrečných prací.
 
-		Beru na vědomí, že se na moji práci vztahují práva a povinnosti vyplývající ze zákona č.~121/2000~Sb., autorského zákona, ve znění pozdějších předpisů. V~souladu s~ust. §~46 odst.~6 tohoto zákona tímto uděluji nevýhradní oprávnění (licenci) k~užití této mojí práce, a to včetně všech počítačových programů, jež jsou její součástí či přílohou a veškeré jejich dokumentace (dále souhrnně jen \uv{Dílo}), a to všem osobám, které si přejí Dílo užít. Tyto osoby jsou oprávněny Dílo užít jakýmkoli způsobem, který nesnižuje hodnotu Díla a za jakýmkoli účelem (včetně užití k~výdělečným účelům). Toto oprávnění je časově, teritoriálně i~množstevně neomezené. Každá osoba, která využije výše 
-uvedenou licenci, se však zavazuje udělit ke každému dílu, které vznikne (byť jen zčásti) na základě Díla, úpravou Díla, spojením Díla s~jiným dílem, zařazením Díla do díla souborného či zpracováním Díla (včetně překladu), licenci alespoň ve výše uvedeném rozsahu a zároveň zpřístupnit zdrojový kód takového díla alespoň srovnatelným způsobem a ve srovnatelném rozsahu, jako je zpřístupněn zdrojový kód Díla.
+		Beru na vědomí, že se na moji práci vztahují práva a povinnosti vyplývající ze zákona č.~121/2000~Sb., autorského zákona, ve znění pozdějších předpisů. V~souladu s~ust. §~46 odst.~6 tohoto zákona tímto uděluji nevýhradní oprávnění (licenci) k~užití této mojí práce, a to včetně všech počítačových programů, jež jsou její součástí či přílohou a veškeré jejich dokumentace (dále souhrnně jen „Dílo“), a to všem osobám, které si přejí Dílo užít. Tyto osoby jsou oprávněny Dílo užít jakýmkoli způsobem, který nesnižuje hodnotu Díla a za jakýmkoli účelem (včetně užití k~výdělečným účelům). Toto oprávnění je časově, teritoriálně i~množstevně neomezené. Každá osoba, která využije výše uvedenou licenci, se však zavazuje udělit ke každému dílu, které vznikne (byť jen zčásti) na základě Díla, úpravou Díla, spojením Díla s~jiným dílem, zařazením Díla do díla souborného či zpracováním Díla (včetně překladu), licenci alespoň ve výše uvedeném rozsahu a zároveň zpřístupnit zdrojový kód takového díla alespoň srovnatelným způsobem a ve srovnatelném rozsahu, jako je zpřístupněn zdrojový kód Díla.
 		}\else{%
 		I hereby declare that the presented thesis is my own work and that I have cited all sources of information in accordance with the Guideline for adhering to ethical principles when elaborating an academic final thesis.
 		
@@ -377,7 +376,7 @@ of works or by adapting the Work (including translation), and at the same time m
 	\ifx5#1 \DeclareRobustCommand{\thedeclarationofauthenticity}{\if@langczech{%
 		Prohlašuji, že jsem předloženou práci vypracoval samostatně a že jsem uvedl veškeré použité informační zdroje v~souladu s~Metodickým pokynem o~etické přípravě vysokoškolských závěrečných prací.
 
-		Beru na vědomí, že se na moji práci vztahují práva a povinnosti vyplývající ze zákona č.~121/2000~Sb., autorského zákona, ve znění pozdějších předpisů. V~souladu s~ust. §~46 odst.~6 tohoto zákona tímto uděluji nevýhradní oprávnění (licenci) k~užití této mojí práce, a to včetně všech počítačových programů, jež jsou její součástí či přílohou a veškeré jejich dokumentace (dále souhrnně jen \uv{Dílo}), a to všem osobám, které si přejí Dílo užít. Tyto osoby jsou oprávněny Dílo užít jakýmkoli způsobem, který nesnižuje hodnotu Díla a za jakýmkoli účelem (včetně užití k~výdělečným účelům). Toto oprávnění je časově, teritoriálně i množstevně neomezené.
+		Beru na vědomí, že se na moji práci vztahují práva a povinnosti vyplývající ze zákona č.~121/2000~Sb., autorského zákona, ve znění pozdějších předpisů. V~souladu s~ust. §~46 odst.~6 tohoto zákona tímto uděluji nevýhradní oprávnění (licenci) k~užití této mojí práce, a to včetně všech počítačových programů, jež jsou její součástí či přílohou a veškeré jejich dokumentace (dále souhrnně jen „Dílo“), a to všem osobám, které si přejí Dílo užít. Tyto osoby jsou oprávněny Dílo užít jakýmkoli způsobem, který nesnižuje hodnotu Díla a za jakýmkoli účelem (včetně užití k~výdělečným účelům). Toto oprávnění je časově, teritoriálně i množstevně neomezené.
 		}\else{
 		I hereby declare that the presented thesis is my own work and that I have cited all sources of information in accordance with the Guideline for adhering to ethical principles when elaborating an academic final thesis.
 		
@@ -487,7 +486,7 @@ of works or by adapting the Work (including translation), and at the same time m
 	\if@declarationOptionSelected
 		\if@langczech\chapterstyletitle{Prohlášení}\else\chapterstyletitle{Declaration}\fi\thedeclarationofauthenticity{}
 		
-		\vspace{2cm}
+		\vspace{1cm}
 
 		\noindent
 			\if@cityfordeclarationdefined
