@@ -13,6 +13,7 @@ acronyms.tex: acronyms.yml bin/convert
 
 %.tex: %.md bin/convert
 	./bin/convert "$<"
+	vlna "$@" 2>/dev/null
 
 images/%.pdf: images/%.png bin/png2scaledpdf
 	./bin/png2scaledpdf "$<"
