@@ -421,7 +421,7 @@ of works or by adapting the Work (including translation), and at the same time m
 					\else
 						\ClassError{FITthesis}{Department unspecified}{Specify the department using the \department command.}
 					\fi
-				} & \hfill\includegraphics[width=.16\textwidth]{images/cvut-logo-bw}
+				} & \hfill\includegraphics[width=.16\textwidth]{pdfs/cvut-logo-bw}
 			\end{tabular*}
 		\end{center}
 		

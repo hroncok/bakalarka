@@ -1,0 +1,16 @@
+#!/bin/bash -e
+width=`convert "$1" -print "%w\n" /dev/null`
+height=`convert "$1" -print "%h\n" /dev/null`
+convert "$1" "${1%png}pdf"
+wscale=`echo 370 $width  | awk '{printf "%f", $1 / $2}'`
+hscale=`echo 500 $height | awk '{printf "%f", $1 / $2}'`
+if [[ $wscale < $hscale ]]; then
+  scale=$wscale
+else
+  scale=$hscale
+fi
+
+if [[ $scale < 1 ]]; then
+  cpdf -scale-page "$scale $scale" "${1%png}pdf" -o "${1%png}scaled.pdf" 2>/dev/null
+  mv -f "${1%png}scaled.pdf" "${1%png}pdf"
+fi
