@@ -1,7 +1,0 @@
-#!/bin/bash
-
-if [[ ! -f acronyms.tex ]]; then
-    `dirname "$0"`/convert
-fi
-
-arara -v BP_Hroncok_Miroslav_2014
