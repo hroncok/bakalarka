@@ -583,8 +583,8 @@ of works or by adapting the Work (including translation), and at the same time m
 	\cleardoublepage
 	\listoftablescond
 
-	%\cleardoublepage
-	%\listoffigurescond
+	\cleardoublepage
+	\listoffigurescond
 
 	\pagestyle{ruled}
 % 	\if@langczech\mainmatter*\else\mainmatter\fi %hlavni text prace
