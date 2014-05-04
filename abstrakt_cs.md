@@ -1,1 +1,1 @@
-Tato diplomová práce si klade za cíl shrnout obecně uznávané konvence a standardy pro návrh RESTful API. Následně je aplikuje při návrhu nového rozhraní middleware systému KOSapi, který mj. rozšiřuje o nové domény dat. Významnou částí práce je návrh a implementace jazyka i nástroje pro podporu parametrického vyhledávání nad RESTovými zdroji nazvaném RSQL.
+Tady bude český abstrakt.
