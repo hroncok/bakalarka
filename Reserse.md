@@ -9,7 +9,7 @@ TODO něco o tom, proč použít normální tar.gz
 Repozitář
 =========
 
-S ohledem na výše uvedené požadavky se pokusím představit služby a aplikace, které by teoreticky mohly být využity na sdílení dapů.
+S ohledem na požadavky uvedené [v části](#par:pozadavky-repozitar) se pokusím představit služby a aplikace, které by teoreticky mohly být využity na sdílení dapů.
 
 
 GitHub
