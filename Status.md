@@ -1,4 +1,4 @@
-% Teoretická část (TODO název)
+% Status quo a požadavky
 
 V této kapitole osvětlím problematiku své bakalářské práce s důrazem na důvody vedoucí k její potřebě.
 
@@ -21,7 +21,37 @@ DevAssistant umožňuje spouštění takzvaných asistentů, které lze zařadit
  * *připravovací asistenty* pomáhají uživateli zapojit se do nějakého projektu,
  * *úkolové asistenty* pomáhají uživateli s věcmi, které se netýkají konkrétního projektu [@Kabrda2013a].
 
-Jednotlivé asistenty jsou představovány YAML soubory, které definují jak metadata, tak kód, který asistent spouští. Asistenty jsou hierarchicky řazeny do jednotlivých kategorií popsaných výše [@Kabrda2013]. Zatímco existuje základní sada asistentů, která je v některých případech distribuována společně s aplikací [@Kabrda2014], existuje také možnost vytvářet a používat své vlastní asistenty [@Kabrda2013].
+Jednotlivé asistenty jsou představovány YAML soubory (jako [v ukázce](#par:assistant-example)), které definují jak metadata, tak kód, který asistent spouští. Asistenty jsou hierarchicky řazeny do jednotlivých kategorií popsaných výše [@Kabrda2013]. Zatímco existuje základní sada asistentů, která je v některých případech distribuována společně s aplikací [@Kabrda2014], existuje také možnost vytvářet a používat své vlastní asistenty [@Kabrda2013].
+
+```{caption="Ukázka vlastního asistentu z dokumentace \autocite{Kabrda2013} {#par:assistant-example}" .yaml}
+fullname: Argh Script Template
+description: Create a template of simple script that uses argh library
+project_type: [python]
+
+dependencies:
+- rpm: [python-argh]
+
+files:
+  arghs: &arghs
+    source: arghscript.py
+
+args:
+  name:
+    use: common_args
+
+run:
+- log_i: Hello, I'm Argh assistant...
+- if $(test -e "$name"):
+  - log_e: '"$name" already exists, cannot proceed.'
+- cl: mkdir -p "$name"
+- $proj_name~: $(basename "$name")
+- cl: cp *arghs ${name}/${proj_name}.py
+- cl: chmod +x *arghs ${name}/${proj_name}.py
+- dda_c: "$name"
+- cl: cd "$name"
+- use: git_init_add_commit.run
+- log_i: Project "$proj_name" has been created in "$name".
+````
 
 Příkladem vlastního asistentu může být například vytvářecí asistent, který studentům prvního ročníku Fakulty informačních technologií ČVUT v Praze pomůže s vytvořením úloh z předmětu *Programování a algoritmizace 1*. Takový asistent by zajistil, že studenti mají k dispozici potřebné programy (kompilátor apod.), a pomohl jim zkompilovat úlohy pomocí programu make [@FreeSoftwareFoundation2013]. Přestože by tento asistent byl jistě přínosný pro zmíněné studenty, pro další uživatele by nedávalo smysl, aby takový asistent byl distribuovaný společně s aplikací DevAssistant.
 
@@ -73,27 +103,3 @@ Repozitář
 [^kontrola]: Například jedná-li se skutečně o dap splňující specifikaci.
 [^klasifikace]: Například pomocí tagů.
 [^api]: V rámci této práce je implementováno pouze API toto umožňující.
-
-Rešerše
-=======
-
-S ohledem na výše uvedené požadavky se pokusím představit služby a aplikace, které by teoreticky mohly být využity na sdílení dapů.
-
-
-GitHub
-------
-
-GitHub [@GiHubInc.2014] ([na obrázku](#par:github)) je poměrně známá a oblíbená služba určená k hostování zdrojových kódů aplikací pomocí verzovacího systému git [@Chacon2009]. Ačkoli jsou jednotlivé asistenty v dapu vlastně zdrojovým kódem a verzování tohoto kódu na GitHubu je pochopitelně možné, nesplňuje GitHub požadavky týkající se formátu dapu -- je sice možné nahrát k repozitáři archivy, není ale možné zajistit jejich kontrolu na správnost.
-
-![Screenshot ze služby GitHub {#par:github}](images/github)
-
-Z uživatelského hlediska pak není příliš přívětivé rozlišení co na GitHubu je dap a co ne - procházení jednotlivých projektů na GitHubu z aplikace DevAssistant a vyhledávání dapů je tak nemožné, nebo by bylo příliš komplikované. Obsah by také nebyl pod kontrolou vývojářů DevAssistantu a případné odstranění škodlivých dapů by vyžadovalo vyjednávání s provozovateli GitHubu.
-
-**Závěr:** Využití GitHubu nebo jakékoli podobné služby je tedy pro účely repozitáře dapů nevhodné.
-
-PyPI
-----
-
-RubyGems.org
-------------
-

@@ -13,7 +13,7 @@ acronyms.tex: acronyms.yml bin/convert
 
 %.tex: %.md bin/convert
 	./bin/convert "$<"
-	vlna "$@" 2>/dev/null
+	vlna "$@" 2>/dev/null || :
 
 %.cbx: biblatex-iso690/%.cbx biblatex-iso690/README
 	ln -s "$<" .
