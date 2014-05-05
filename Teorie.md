@@ -51,7 +51,7 @@ Repozitář
      * nahrání nového dapu,
      * nahrání nových verzí dapu,
      * kontrola správnosti[^1],
-     * klasifikace dap[^2],
+     * klasifikace dapu[^2],
      * přizvání dalších uživatelů ke správě dapu,
      * mazání jednotlivých verzí dapu nebo dapu jako celku.
  * Pro uživatele, který chce dap získat:
