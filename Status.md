@@ -55,20 +55,35 @@ run:
 
 Příkladem vlastního asistentu může být například vytvářecí asistent, který studentům prvního ročníku Fakulty informačních technologií ČVUT v Praze pomůže s vytvořením úloh z předmětu *Programování a algoritmizace 1*. Takový asistent by zajistil, že studenti mají k dispozici potřebné programy (kompilátor apod.), a pomohl jim zkompilovat úlohy pomocí programu make [@FreeSoftwareFoundation2013]. Přestože by tento asistent byl jistě přínosný pro zmíněné studenty, pro další uživatele by nedávalo smysl, aby takový asistent byl distribuovaný společně s aplikací DevAssistant.
 
-Požadavky
+Požadavky {#par:pozadavky}
 =========
 
 Přestože je technicky možné distribuovat uživatelům asistent ve formě archivu, který je potřeba extrahovat na určité místo, jedná se o poměrně nepraktické řešení. Proto vyvstává potřeba vytvořit jednotný formát distribuovatelných asistentů a místo, kde takové asistenty sdílet [@Kabrda2013b].
 
-Balík (dap)
+Balík (dap) {#par:pozadavky-balik}
 -----------
 
 *Balík* je jedna distribuovatelná jednotka obsahující několik asistentů. Pro naše potřeby musí splňovat následující požadavky:
 
  * dodržení daného formátu a formy,
  * obsažení distribuovaných asistentů a dalších souborů k nim náležícím,
- * obsažení metadat (název balíku, autor, licence apod.),
+ * obsažení metadat,
  * možnost verzování.
+
+V balíku by měly být nutně uložena tato metadata:
+
+ * název balíku,
+ * krátké slovní shrnutí obsahu,
+ * verze,
+ * licence,
+ * autor nebo autoři.
+
+A volitelně pak také:
+
+ * domovská webová stránka,
+ * místo, kam hlásit chyby,
+ * delší text popisující obsah balíku a práci s asistenty v něm obsaženými.
+ 
 
 Konkrétní implementace takového balíku je nastíněna v e-mailu, který tento formát navrhuje [@Kabrda2013b], a podrobně popsána v kapitole (TODO). Pro potřeby rozlišení balíku pro DevAssistant od jiných balíků (např. RPM) je tento balík pojmenován *DevAssistant Package*, zkráceně dap[^dap].
 

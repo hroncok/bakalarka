@@ -1,5 +1,7 @@
 % Rešerše
 
+V této kapitole nastíním možná řešení požadavků vyjmenovaných [v části](#par:pozadavky).
+
 Balík (dap)
 ===========
 
