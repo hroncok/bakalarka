@@ -28,7 +28,7 @@ Příkladem vlastního asistentu může být například vytvářecí asistent, 
 Požadavky
 =========
 
-Přestože je technicky možné distribuovat uživatelům asistent ve formě souborů, které je potřeba rozbalit na určité místo, jedná se o poměrně nepraktické řešení. Proto vyvstává potřeba vytvořit jednotný formát distribuovatelných asistentů a místo, kde takové asistenty sdílet [@Kabrda2013b].
+Přestože je technicky možné distribuovat uživatelům asistent ve formě archivu, který je potřeba extrahovat na určité místo, jedná se o poměrně nepraktické řešení. Proto vyvstává potřeba vytvořit jednotný formát distribuovatelných asistentů a místo, kde takové asistenty sdílet [@Kabrda2013b].
 
 Balík (dap)
 -----------
@@ -40,7 +40,7 @@ Balík (dap)
  * obsažení metadat (název balíku, autor, licence apod.),
  * možnost verzování.
 
-Konkrétní implementace takového balíku je nastíněna v e-mailu, který tento formát navrhuje [@Kabrda2013b], a podrobně popsána v kapitole (TODO). Pro potřeby rozlišení balíku pro DevAssistant od jiných balíků (např. RPM) je tento balík pojmenován *DevAssistant Package*, zkráceně dap.
+Konkrétní implementace takového balíku je nastíněna v e-mailu, který tento formát navrhuje [@Kabrda2013b], a podrobně popsána v kapitole (TODO). Pro potřeby rozlišení balíku pro DevAssistant od jiných balíků (např. RPM) je tento balík pojmenován *DevAssistant Package*, zkráceně dap[^dap].
 
 Repozitář
 ---------
@@ -50,8 +50,8 @@ Repozitář
  * Pro uživatele, který sdílí dap:
      * nahrání nového dapu,
      * nahrání nových verzí dapu,
-     * kontrola správnosti[^1],
-     * klasifikace dapu[^2],
+     * kontrola správnosti[^kontrola],
+     * klasifikace dapu[^klasifikace],
      * přizvání dalších uživatelů ke správě dapu,
      * mazání jednotlivých verzí dapu nebo dapu jako celku.
  * Pro uživatele, který chce dap získat:
@@ -59,7 +59,7 @@ Repozitář
      * stažení dapů,
      * hodnocení dapů,
      * hlášení školdivých dapů,
-     * možnost prohledávání repozitáře a stahování dapů přímo z aplikace DevAssistant[^3].
+     * možnost prohledávání repozitáře a stahování dapů přímo z aplikace DevAssistant[^api].
  * Pro správce repozitáře:
      * mazání jednotlivých verzí dapu nebo dapu jako celku,
      * úprava nebo mazání uživatelských účtů a profilů,
@@ -69,9 +69,10 @@ Repozitář
      * úprava uživatelského a profilu,
      * opuštění aplikace (smazání profilu a vytvořeného obsahu).
 
-[^1]: Například jedná-li se skutečně o dap splňující specifikaci.
-[^2]: Například pomocí tagů.
-[^3]: V rámci této práce je implementováno pouze API toto umožňující.
+[^dap]: Pro účely zjednodušení textu jsem se rozhodl toto slovo skloňovat podle vzoru *hrad*.
+[^kontrola]: Například jedná-li se skutečně o dap splňující specifikaci.
+[^klasifikace]: Například pomocí tagů.
+[^api]: V rámci této práce je implementováno pouze API toto umožňující.
 
 Rešerše
 =======
