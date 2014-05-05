@@ -5,7 +5,7 @@
 
 PANDOC_OPTS="-f markdown -t latex --no-wrap --listings --no-tex-ligatures --biblatex --bibliography=library.bib"
 FILTERS_PRE=( 'title' 'header_label' )
-FILTERS_POST=( 'listings' 'hyperrefs' 'itemizes' 'hotfix_1' )
+FILTERS_POST=( 'listings' 'hyperrefs' 'itemizes' 'hotfix_1' 'dash' )
 FILES="${@:-*.md *.yml}"
 SKIP_FILES="README.md"
 
@@ -85,6 +85,12 @@ filter_hotfix_1() {
 				s/^(\\\begin\{longtable\}.*$)/\1\n\\\pagebreak/; }" \
 			"$1" || echo "filter hotfix_realizace failed" >&2
 	fi
+}
+
+# Remove weird dash defunctor
+filter_dash() {
+	$SED -Ei -e "s/ -\{\}- / -- /g" \
+		"$1" || echo "dash replacing failed" >&2
 }
 
 # Convert meta.yml to LaTeX
