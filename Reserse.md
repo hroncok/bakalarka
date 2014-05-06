@@ -82,7 +82,7 @@ RubyGems.org nesplňuje některé požadavky definované [v části](#par:pozada
 
 Využití RubyGems.org by vyžadovalo nemalou modifikaci jeho zdrojového kódu. To přináší řadu nevýhod, především nutnost prozkoumat cizí zdrojový kód a porozumět mu a následná nutnost synchronizování vlastních změn s aktuální verzí RubyGems.org.
 
-**Závěr:** Využití RubyGems.org je tedy pro účely repozitáře dapů možné, ale nepříliš optimální, dokonce méně optimální, než PyPI.
+**Závěr:** Využití RubyGems.org je tedy pro účely repozitáře dapů možné, ale nepříliš optimální, dokonce méně optimální než PyPI.
 
 Vlastní řešení
 --------------
