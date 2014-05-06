@@ -5,8 +5,33 @@ V této kapitole nastíním možná řešení požadavků vyjmenovaných [v čá
 Balík (dap)
 ===========
 
-TODO něco o tom, proč použít normální tar.gz
+S ohledem na požadavky uvedené [v části](#par:pozadavky-balik) se pokusím představit možnosti, které vyvstávají při volbě vhodného formátu pro dap.
+Vzhledem k tomu, že dap obsahuje řadu souborů v adresářové struktuře a metadata, nabízející se dvě možnosti:
 
+ * vlastní binární formát vyvinutý pouze pro potřeby dapu,
+ * využití existujícího formátu pro archivaci souborů a přidání metadat
+     * ve formě souboru v daném archivu,
+     * nebo ve formě pozměněné hlavičky tohoto archivu.
+
+Vlastní binární formát
+----------------------
+
+Vlastní binární formát by dával smysl ve dvou případech:
+
+Pokud by bylo žádoucí formát uzavřít a neprozradit nikomu, jak funguje -- tato situace ale nenastává, jelikož vývoj aplikace DevAssistant a celý ekosystém kolem ní probíhá zcela otevřeně.
+
+Dalším důvodem je možnost navrhnout formát tak, aby byl optimalizovaný právě pro asistenty. Vzhledem k tomu, že asistenty sestávají převážně s textových souborů[^textove] a celková velikost jednoho dapu se v extrahované formě pohybuje řádově v desítkách kilobajtů, postrádá taková optimalizace smysl.
+
+Implementace ryze vlastního formátu by pak přinášela mnoho problémů, například zvýšení rizika chyby či nutnost udržovat zpětnou kompatibilitu. Především by se jednalo o další kus kódu, který je potřeba napsat a udržovat -- vzhledem k nulovým výhodám by se tedy jednalo o zbytečně složité řešení.
+
+**Závěr:** Implementace ryze vlastního formátu je tedy pro účely dapu nevhodná.
+
+[^textove]: YAML definice asistentů a různé šablony zdrojových kódů
+
+Existující formát pro archivaci souborů
+---------------------------------------
+
+TODO
 
 Repozitář
 =========

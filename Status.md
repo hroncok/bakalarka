@@ -67,6 +67,7 @@ Balík (dap) {#par:pozadavky-balik}
 
  * dodržení daného formátu a formy,
  * obsažení distribuovaných asistentů a dalších souborů k nim náležícím,
+     * společně s adresářovou strukturou
  * obsažení metadat,
  * možnost verzování.
 
