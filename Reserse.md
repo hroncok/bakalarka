@@ -42,7 +42,7 @@ S ohledem na požadavky uvedené [v části](#par:pozadavky-repozitar) se pokus�
 GitHub
 ------
 
-GitHub [@GiHubInc.2014] ([na obrázku](#par:github)) je poměrně známá a oblíbená služba určená k hostování zdrojových kódů aplikací pomocí verzovacího systému git [@Chacon2009]. Ačkoli jsou jednotlivé asistenty v dapu vlastně zdrojovým kódem a verzování tohoto kódu na GitHubu je pochopitelně možné, nesplňuje GitHub požadavky týkající se formátu dapu -- je sice možné nahrát k repozitáři archivy, není ale možné zajistit jejich kontrolu na správnost.
+GitHub [@GiHub2014] ([na obrázku](#par:github)) je poměrně známá a oblíbená služba určená k hostování zdrojových kódů aplikací pomocí verzovacího systému git [@Chacon2009]. Ačkoli jsou jednotlivé asistenty v dapu vlastně zdrojovým kódem a verzování tohoto kódu na GitHubu je pochopitelně možné, nesplňuje GitHub požadavky týkající se formátu dapu -- je sice možné nahrát k repozitáři archivy, není ale možné zajistit jejich kontrolu na správnost.
 
 ![Screenshot ze služby GitHub {#par:github}](images/github)
 
