@@ -37,7 +37,7 @@ Zbývající možností je využití nějakého existujícího formátu určené
 
 Použitý archiv musí kromě souborů nést i metadata. Pro účely nezvyšování komplexnosti je vhodnější přidat do archivu soubor tyto metadata obsahující, než modifikovat hlavičku souboru -- dap tak bude možné rozbalit obvyklým způsobem jako obyčejný *tar.gz* archiv bez ztráty těchto informací. Vzhledem k použití formátu YAML pro asistenty[^format-asistentu] je pak žádoucí použít stejný formát.
 
-**Závěr:** Pro účely dapu bude použit archiv *tar.gz* obsahující YAML soubor s metadaty.
+**Závěr:** Pro účely dapu bude použit archiv *tar.gz* obsahující YAML soubor s metadaty. Konkrétní implementace takového balíku je nastíněna v e-mailu, který tento formát navrhuje [@Kabrda2013b], a podrobně popsána v kapitole (TODO).
 
 [^format-asistentu]: Jak je popsáno [v kapitole](#par:asistenty).
 
@@ -60,6 +60,16 @@ Z uživatelského hlediska pak není příliš přívětivé rozlišení co na G
 
 PyPI
 ----
+
+PyPI [@PythonSoftwareFoundation2014] ([na obrázku](#par:pypi)) je repozitář modulů do programovacího jazyka Python. Zdrojový kód aplikace [@PythonSoftwareFoundation2014a] je dostupný pod permisivní licencí BSD a je tedy teoreticky možné PyPI upravit a použít jako repozitář dapů.
+
+![Screenshot z hlavní instance PyPI {#par:pypi}](images/pypi)
+
+Přesto PyPI nesplňuje některé požadavky definované [v části](#par:pozadavky-repozitar). V první řadě je navržen na sdílení modulů do Pythonu a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. PyPI nepodporuje uživatelské hodnocení. Klasifikace je možná pouze pomocí kategorií definovaných přímo v nahrávaném balíku, je možné použít pouze předem dané kategorie [@PythonSoftwareFoundation2014b].
+
+Využití PyPI by vyžadovalo nemalou modifikaci jeho zdrojového kódu. To přináší řadu nevýhod, především nutnost prozkoumat cizí zdrojový kód a porozumět mu a následná nutnost synchronizování vlastních změn s aktuální verzí PyPI.
+
+**Závěr:** Využití PyPI je tedy pro účely repozitáře dapů možné, ale nepříliš optimální.
 
 RubyGems.org
 ------------
