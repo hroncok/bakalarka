@@ -11,7 +11,7 @@ DevAssistant je aplikací, která programátorům pomáhá vytvářet nové výv
 
 Jedná se o svobodný software, je vydaný pod licencí GNU GPL verze 2 nebo vyšší [@RedHat2013].
 
-Asistenty
+Asistenty  {#par:asistenty}
 ---------
 
 DevAssistant je vlastně nástroj umožňující spouštění takzvaných asistentů, které lze zařadit do čtyř kategorií:
