@@ -21,11 +21,15 @@ DevAssistant je vlastně nástroj umožňující spouštění takzvaných asiste
  * *připravovací asistenty* pomáhají uživateli zapojit se do nějakého projektu,
  * *úkolové asistenty* pomáhají uživateli s věcmi, které se netýkají konkrétního projektu [@Kabrda2013a].
 
-Jednotlivé asistenty jsou napsány ve speciálním DSL, které je založené na jazyce YAML.
+Jednotlivé asistenty jsou napsány ve speciálním DSL [@Kabrda2013c], který je založen na jazyce YAML.
 
-> DSL (doménově specifický jazyk) je programovací jazyk, který je prostřednictvím vhodné abstrakce a výrazového slovníku zaměřen na omezenou, konkrétní problémovou doménu [@PrispevateleWikipedie2014].
+> DSL (doménově specifický jazyk) je programovací jazyk, který je prostřednictvím vhodné abstrakce a výrazového slovníku zaměřen na omezenou, konkrétní problémovou doménu. [@PrispevateleWikipedie2014]
 
-YAML soubory (jako [v ukázce](#par:assistant-example)) definují jak metadata, tak kód, který asistent spouští. Asistenty jsou hierarchicky řazeny do jednotlivých kategorií popsaných výše [@Kabrda2013]. Zatímco existuje základní sada asistentů, která je v některých případech distribuována společně s aplikací [@Kabrda2014], existuje také možnost vytvářet a používat své vlastní asistenty [@Kabrda2013].
+> YAML je formát pro serializaci strukturovaných dat. Výhodou tohoto formátu je, že je čitelný nejen strojem, ale i člověkem. [@PrispevateleWikipedie2014a]
+
+YAML soubory definují jak metadata, tak kód, který asistent spouští. Kromě nich můžou k asistentu patřit ještě další soubory (šablony zdrojových kódů apod.) a ikona (zobrazená například v grafickém rozhraní [na obrázku](#par:da-gui)).
+
+[V ukázce](#par:assistant-example) můžete vidět příklad jednoduchého vytvářecího asistentu.
 
 ```{caption="Ukázka vlastního asistentu z dokumentace \autocite{Kabrda2013} {#par:assistant-example}" .yaml}
 fullname: Argh Script Template
@@ -56,6 +60,10 @@ run:
 - use: git_init_add_commit.run
 - log_i: Project "$proj_name" has been created in "$name".
 ````
+
+Asistenty jsou hierarchicky řazeny do jednotlivých kategorií popsaných výše [@Kabrda2013] a uloženy na speciální místo na disku. Zatímco existuje základní sada asistentů, která je v některých případech distribuována společně s aplikací [@Kabrda2014], existuje také možnost vytvářet a používat své vlastní asistenty [@Kabrda2013].
+
+Distribuování asistentů společně s aplikací však přináší řadu potíží - například nutnost kompatibility se všemi platformami, na kterých aplikace běží, či snaha vyhovět požadavkům všech uživatelů (jejichž představy se pochopitelně různí).
 
 Příkladem vlastního asistentu může být například vytvářecí asistent, který studentům prvního ročníku Fakulty informačních technologií ČVUT v Praze pomůže s vytvořením úloh z předmětu *Programování a algoritmizace 1*. Takový asistent by zajistil, že studenti mají k dispozici potřebné programy (kompilátor apod.), a pomohl jim zkompilovat úlohy pomocí programu make [@FreeSoftwareFoundation2013]. Přestože by tento asistent byl jistě přínosný pro zmíněné studenty, pro další uživatele by nedávalo smysl, aby takový asistent byl distribuovaný společně s aplikací DevAssistant.
 
