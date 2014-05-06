@@ -65,7 +65,7 @@ PyPI [@PythonSoftwareFoundation2014] ([na obrázku](#par:pypi)) je repozitář m
 
 ![Screenshot z hlavní instance PyPI {#par:pypi}](images/pypi)
 
-Přesto PyPI nesplňuje některé požadavky definované [v části](#par:pozadavky-repozitar). V první řadě je navržen na sdílení modulů do Pythonu a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. PyPI nepodporuje uživatelské hodnocení. Klasifikace je možná pouze pomocí kategorií definovaných přímo v nahrávaném balíku, je možné použít pouze předem dané kategorie [@PythonSoftwareFoundation2014b].
+PyPI nesplňuje některé požadavky definované [v části](#par:pozadavky-repozitar). V první řadě je navržen na sdílení modulů do Pythonu a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. PyPI nepodporuje uživatelské hodnocení. Klasifikace je možná pouze pomocí kategorií definovaných přímo v nahrávaném balíku, je možné použít pouze předem dané kategorie [@PythonSoftwareFoundation2014b].
 
 Využití PyPI by vyžadovalo nemalou modifikaci jeho zdrojového kódu. To přináší řadu nevýhod, především nutnost prozkoumat cizí zdrojový kód a porozumět mu a následná nutnost synchronizování vlastních změn s aktuální verzí PyPI.
 
@@ -78,7 +78,11 @@ RubyGems.org [@Quaranto2014] ([na obrázku](#par:rubygems)) je repozitář gemů
 
 ![Screenshot z RubyGems.org {#par:rubygems}](images/rubygems)
 
-TODO
+RubyGems.org nesplňuje některé požadavky definované [v části](#par:pozadavky-repozitar). V první řadě je navržen na sdílení modulů do Ruby a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. RubyGems.org nepodporuje uživatelské hodnocení ani klasifikaci.
+
+Využití RubyGems.org by vyžadovalo nemalou modifikaci jeho zdrojového kódu. To přináší řadu nevýhod, především nutnost prozkoumat cizí zdrojový kód a porozumět mu a následná nutnost synchronizování vlastních změn s aktuální verzí RubyGems.org.
+
+**Závěr:** Využití RubyGems.org je tedy pro účely repozitáře dapů možné, ale nepříliš optimální, dokonce méně optimální, než PyPI.
 
 Vlastní řešení
 --------------
