@@ -23,11 +23,11 @@ DevAssistant je vlastně nástroj umožňující spouštění takzvaných asiste
 
 Jednotlivé asistenty jsou napsány ve speciálním DSL [@Kabrda2013c], který je založen na jazyce YAML.
 
-> DSL (doménově specifický jazyk) je programovací jazyk, který je prostřednictvím vhodné abstrakce a výrazového slovníku zaměřen na omezenou, konkrétní problémovou doménu. [@PrispevateleWikipedie2014]
+> DSL (*Domain-specific language*) je programovací jazyk, který je prostřednictvím vhodné abstrakce a výrazového slovníku zaměřen na omezenou, konkrétní problémovou doménu. [@PrispevateleWikipedie2014]
 
 > YAML je formát pro serializaci strukturovaných dat. Výhodou tohoto formátu je, že je dobře čitelný nejen strojem, ale i člověkem. [@PrispevateleWikipedie2014a]
 
-YAML soubory definují jak metadata, tak kód, který asistent spouští. Kromě nich můžou k asistentu patřit ještě další soubory (šablony zdrojových kódů apod.) a ikona (zobrazená například v grafickém rozhraní [na obrázku](#par:da-gui)).
+YAML soubory asistentu definují jak metadata (název asistentu, krátký popis, závislosti), tak samotný kód, který je vykonán aplikací (spuštění příkazů na příkazoví řádce). Ke každému asistentu mohou patřit ikony pro zobrazení v grafickém rozhraní (jako  [na obrázku](#par:da-gui)) a další soubory, které může asistent použít při vlastním spuštění.
 
 [V ukázce](#par:assistant-example) můžete vidět příklad jednoduchého vytvářecího asistentu.
 
@@ -61,16 +61,20 @@ run:
 - log_i: Project "$proj_name" has been created in "$name".
 ````
 
-Asistenty jsou hierarchicky řazeny do jednotlivých kategorií popsaných výše [@Kabrda2013] a uloženy na speciální místo na disku. Zatímco existuje základní sada asistentů, která je v některých případech distribuována společně s aplikací [@Kabrda2014], existuje také možnost vytvářet a používat své vlastní asistenty [@Kabrda2013].
+DevAssistant může načítat asistenty z vice různých adresářů. Každý z těchto adresářů má pevně definovanou strukturu [@Kabrda2013], která mimo jiné určuje, do které z výše uvedených kategorií asistent patří. Navíc je v této struktuře přesně definované místo pro ikony a případně další soubory asistentů.
 
-Distribuování asistentů společně s aplikací však přináší řadu potíží - například nutnost kompatibility se všemi platformami, na kterých aplikace běží, či snaha vyhovět požadavkům všech uživatelů (jejichž představy se pochopitelně různí).
+Zatímco existuje základní sada asistentů, která je v některých případech distribuována společně s aplikací [@Kabrda2014], existuje také možnost vytvářet a používat své vlastní asistenty [@Kabrda2013]. Distribuování základní sady asistentů společně s aplikací však přináší řadu potíží - například nutnost kompatibility se všemi platformami, na kterých aplikace běží, či snaha vyhovět požadavkům všech uživatelů (jejichž představy se pochopitelně různí).
 
-Příkladem vlastního asistentu může být například vytvářecí asistent, který studentům prvního ročníku Fakulty informačních technologií ČVUT v Praze pomůže s vytvořením úloh z předmětu *Programování a algoritmizace 1*. Takový asistent by zajistil, že studenti mají k dispozici potřebné programy (kompilátor apod.), a pomohl jim zkompilovat úlohy pomocí programu make [@FreeSoftwareFoundation2013]. Přestože by tento asistent byl jistě přínosný pro zmíněné studenty, pro další uživatele by nedávalo smysl, aby takový asistent byl distribuovaný společně s aplikací DevAssistant.
+Jako příklad vlastního asistentu si můžeme představit vytvářecí asistent, který studentům prvního ročníku Fakulty informačních technologií ČVUT v Praze pomůže s vytvořením úloh z předmětu *Programování a algoritmizace 1*. Takový asistent by zajistil, že studenti mají k dispozici potřebné programy (kompilátor apod.), a pomohl jim zkompilovat úlohy pomocí programu make [@FreeSoftwareFoundation2013]. Přestože by tento asistent byl jistě přínosný pro zmíněné studenty, pro další uživatele by nedávalo smysl, aby takový asistent byl distribuovaný společně s aplikací DevAssistant.
+
+Přestože je technicky možné distribuovat uživatelům asistent ve formě archivu, který je potřeba extrahovat na určité místo, jedná se o poměrně nepraktické řešení. Uživatelé mohou například archiv omylem rozbalit na špatné místo. Odstranění takové asistentu je problematické -- je potřeba dohledat, které soubory jsou v archivu a ze složky s asistenty je odstranit. Jednotlivé archivy spolu mohou navzájem kolidovat.
+
+Proto vyvstává potřeba vytvořit jednotný formát distribuovatelných asistentů a místo, kde takové asistenty sdílet [@Kabrda2013b].
 
 Požadavky {#par:pozadavky}
 =========
 
-Přestože je technicky možné distribuovat uživatelům asistent ve formě archivu, který je potřeba extrahovat na určité místo, jedná se o poměrně nepraktické řešení. Proto vyvstává potřeba vytvořit jednotný formát distribuovatelných asistentů a místo, kde takové asistenty sdílet [@Kabrda2013b].
+V této části popíšu požadavky na řešení problému popsaného na konci předchozí části.
 
 Balík (dap) {#par:pozadavky-balik}
 -----------
