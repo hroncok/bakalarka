@@ -25,7 +25,7 @@ Jednotlivé asistenty jsou napsány ve speciálním DSL [@Kabrda2013c], který j
 
 > DSL (doménově specifický jazyk) je programovací jazyk, který je prostřednictvím vhodné abstrakce a výrazového slovníku zaměřen na omezenou, konkrétní problémovou doménu. [@PrispevateleWikipedie2014]
 
-> YAML je formát pro serializaci strukturovaných dat. Výhodou tohoto formátu je, že je čitelný nejen strojem, ale i člověkem. [@PrispevateleWikipedie2014a]
+> YAML je formát pro serializaci strukturovaných dat. Výhodou tohoto formátu je, že je dobře čitelný nejen strojem, ale i člověkem. [@PrispevateleWikipedie2014a]
 
 YAML soubory definují jak metadata, tak kód, který asistent spouští. Kromě nich můžou k asistentu patřit ještě další soubory (šablony zdrojových kódů apod.) a ikona (zobrazená například v grafickém rozhraní [na obrázku](#par:da-gui)).
 
