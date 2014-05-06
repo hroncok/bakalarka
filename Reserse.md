@@ -87,4 +87,11 @@ Využití RubyGems.org by vyžadovalo nemalou modifikaci jeho zdrojového kódu.
 Vlastní řešení
 --------------
 
-TODO
+Z předchozích příkladů přímo vyplývá, že nejlepším řešením je řešení vlastní. To poskytuje tyto výhody:
+
+ * plná kontrola nad obsahem (oproti službám třetích stran)
+ * plná kontrola nad funkcionalitou
+ * plná kontrola nad architekturou aplikace
+ * plná kontrola nad použitými technologiemi
+
+**Závěr:** Pro účely repozitáře dapů je nejlepší implementovat vlastní řešení.
