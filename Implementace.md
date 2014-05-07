@@ -153,7 +153,7 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#par:pozada
 
 **bugreports**
 
-> Místo, kam reportovat chyby, nepovinný údaj. Buďto validní URL podle stejných podmínek jako v případě *homepage*, nebo e-mailová adresa.
+> Místo, kam reportovat chyby, nepovinný údaj. Buďto validní URL podle stejných podmínek jako v případě *homepage*, nebo e-mailová adresa. Zavináč v adrese lze nahradit sekvencí `_at_`.
 > 
 > Příklady validních záznamů pro položku *bugreports*:
 > 
