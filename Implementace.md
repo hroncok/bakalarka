@@ -99,7 +99,7 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#par:pozada
 >  * fit-cvut
 >  * 666
 >  * pivo
->  * bar_6
+>  * blok_6
 
 [^ascii]: Tedy písmena anglické abecedy.
 
