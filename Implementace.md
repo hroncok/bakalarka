@@ -119,7 +119,7 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#par:pozada
 
 **license**
 
-> Licence obsahu dapu. Používají se specifikátory licencí z RPM balíčků distribuce Fedora [@Callaway2014a][@Callaway2014b]. Je možné použít pouze ve Fedoře povolené licence [@Callaway2014a][@Callaway2014b], které zaručují svobodné šíření obsahu. Tagy lze kombinovat pomocí slov `and` a `or` -- k tomuto účelu je možné použít i závorky a vyhodnocení probíhá podobně jako v jiných logických výrazech. Slovo `and` se používá v případě, že část obsahu je šířena pod jednou a část pod druhou licencí, slovo `or` se používá pokud je možné licenci si vybrat [@Callaway2013].
+> Licence obsahu dapu, povinný údaj. Používají se specifikátory licencí z RPM balíčků distribuce Fedora [@Callaway2014a][@Callaway2014b]. Je možné použít pouze ve Fedoře povolené licence [@Callaway2014a][@Callaway2014b], které zaručují svobodné šíření obsahu. Tagy lze kombinovat pomocí slov `and` a `or` -- k tomuto účelu je možné použít i závorky a vyhodnocení probíhá podobně jako v jiných logických výrazech. Slovo `and` se používá v případě, že část obsahu je šířena pod jednou a část pod druhou licencí, slovo `or` se používá pokud je možné licenci si vybrat [@Callaway2013].
 > 
 > V případě zvýšené poptávky po možnosti uvedení nesvobodné licence [@Callaway2014], je možné později povolit v metadatech i tuto variantu. Pro účely repozitáře dapů ale bude nadále možné nahrávat jen svobodný obsah.
 > 
@@ -132,7 +132,7 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#par:pozada
 
 **authors**
 
-> Seznam autorů obsahu dapu. U každého autora je nejprve uvedeno celé jméno a poté volitelně e-mailová adresa v lomených závorkách, podobně jako při e-mailové komunikaci. Zavináč v adrese lze nahradit sekvencí `_at_`.
+> Seznam autorů obsahu dapu, povinný údaj. U každého autora je nejprve uvedeno celé jméno a poté volitelně e-mailová adresa v lomených závorkách, podobně jako při e-mailové komunikaci. Zavináč v adrese lze nahradit sekvencí `_at_`.
 > 
 > Příklady validních autorů:
 > 
@@ -140,3 +140,23 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#par:pozada
 >  * Miroslav Hrončok \<miroslav.hroncok_at_fit.cvut.cz\>
 >  * Miroslav Hrončok
 >  * Никола I Петровић-Његош
+
+**homepage**
+
+> Webová stránka dapu, nepovinný údaj. Zadána ve formě platného URL. Je možné použít adresy využívající protokoly HTTP, HTTPS a FTP. Není možné použít adresy s IP adresou místo jména domény. Jako webová stránka dapu může sloužit například odkaz na repozitář s kódem.
+> 
+> Příklady validních URL webových stránek:
+> 
+>  * https://github.com/hroncok/dap-travis
+>  * http://users.fit.cvut.cz/~hroncmir/dap-travis
+>  * ftp://users.fit.cvut.cz/hroncmir/dap-travis
+
+**bugreports**
+
+> Místo, kam reportovat chyby, nepovinný údaj. Buďto validní URL podle stejných podmínek jako v případě *homepage*, nebo e-mailová adresa.
+> 
+> Příklady validních záznamů pro položku *bugreports*:
+> 
+>  * https://github.com/hroncok/dap-travis/issues
+>  * miroslav.hroncok@fit.cvut.cz
+>  * devassistant@lists.fedoraproject.org
