@@ -6,7 +6,7 @@ Balík (dap)  {#par:reserse-balik}
 ===========
 
 S ohledem na požadavky uvedené [v části](#par:pozadavky-balik) se pokusím představit možnosti, které vyvstávají při volbě vhodného formátu pro dap.
-Vzhledem k tomu, že dap obsahuje řadu souborů v adresářové struktuře a metadata, nabízející se dvě možnosti:
+Vzhledem k tomu, že dap obsahuje řadu souborů v adresářové struktuře a metadata, nabízejí se dvě možnosti:
 
  * vlastní binární formát vyvinutý pouze pro potřeby dapu,
  * využití existujícího formátu pro archivaci souborů a přidání metadat
@@ -18,7 +18,7 @@ Vlastní binární formát
 
 Vlastní binární formát by dával smysl ve dvou případech:
 
-Pokud by bylo žádoucí formát uzavřít a neprozradit nikomu, jak funguje -- tato situace ale nenastává, jelikož vývoj aplikace DevAssistant a celý ekosystém kolem ní probíhá zcela otevřeně.
+Pokud by bylo žádoucí formát uzavřít a neprozradit nikomu, jak funguje -- tato situace ale nenastává, jelikož vývoj aplikace DevAssistant a celý ekosystém kolem ní má být zcela otevřený.
 
 Dalším důvodem je možnost navrhnout formát tak, aby byl optimalizovaný právě pro asistenty. Vzhledem k tomu, že asistenty sestávají převážně s textových souborů[^textove] a celková velikost jednoho dapu se v extrahované formě pohybuje řádově v desítkách kilobajtů, postrádá taková optimalizace smysl.
 
@@ -31,7 +31,7 @@ Implementace ryze vlastního formátu by pak přinášela mnoho problémů, nap�
 Existující formát pro archivaci souborů
 ---------------------------------------
 
-Zbývající možností je využití nějakého existujícího formátu určeného pro archivaci souborů. Takových formátů je mnoho a je třeba zvolit takový formát, který bude možné použít na všech platformách, podporovaných aplikací. Po konzultaci s vedoucím práce jsme zvolili formát *tar.gz* [@FreeSoftwareFoundation2013a][@FreeSoftwareFoundation2010], který je velmi rozšířený a otevřený.
+Zbývající možností je využití nějakého existujícího formátu určeného pro archivaci souborů. Takových formátů je mnoho a je třeba zvolit takový formát, který bude možné použít na všech platformách podporovaných aplikací. Po konzultaci s vedoucím práce jsme zvolili formát *tar.gz* [@FreeSoftwareFoundation2013a][@FreeSoftwareFoundation2010], který je velmi rozšířený a otevřený.
 
 ### Metadata {#par:reserse-metadata}
 
