@@ -19,7 +19,7 @@ Nahrazení typické přípony je provedeno proto, aby byl dap uživateli jasně 
 Dap má uvnitř archivu striktně danou adresářovou strukturu, která odpovídá adresářové struktuře, kterou očekává DevAssistant, doplněnou o další soubory a adresáře potřebné pouze pro dap:
 
 \dirtree{%
-	.1 <název>-<verze>/\DTcomment{kořenový adresář}.
+	.1 <název>-<verze>/\DTcomment{hlavní adresář}.
 		.2 assistants/\DTcomment{adresář s asistenty}.
 			.3 crt|mod|prep|task/\DTcomment{adresáře s asistenty daného typu}.
 			.3 <název>.yaml\DTcomment{asistent první úrovně}.
@@ -50,7 +50,7 @@ Asistenty a snipety mají hierarchickou strukturu. Platí, že asistent nejvyš�
 
 Ikony (`icons`) a soubory (`files`) náleží jednotlivým asistentům a je tedy nutné je patřičně zařadit. Například asistentu `crt/python/flask.yaml` náleží ikona `crt/python/flask.svg` či `crt/python/flask.png` ze složky `icons` a žádná jiná.
 
-Adresáře, které nejsou využité (jsou prázdné) by dap neměl obsahovat. Veškerý obsah kořenového adresáře, kromě souboru `meta.yaml` je volitelný. Teoreticky tak může existovat dap obsahující pouze metadata, prakticky však takový dap nedává příliš smysl. Jakýkoliv obsah mimo tuto danou strukturu je nepřípustný.
+Adresáře, které nejsou využité (jsou prázdné) by dap neměl obsahovat. Veškerý obsah hlavního adresáře, kromě souboru `meta.yaml` je volitelný. Teoreticky tak může existovat dap obsahující pouze metadata, prakticky však takový dap nedává příliš smysl. Jakýkoliv obsah mimo tuto danou strukturu je nepřípustný.
 
 Adresář `doc` byl přidán pro účely dapu, aby bylo možné společně s asistenty distribuovat i dokumentaci. Například povinně uváděný text licence, za jejíchž podmínek je obsah dapu distribuován.
 
