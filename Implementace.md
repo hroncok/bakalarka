@@ -86,33 +86,33 @@ Adresářová struktura reálného dapu [@Kabrda2014] může vypadat například
 
 Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#par:pozadavky-balik). Z důvodů popsaných [v části](#par:reserse-metadata) se jedná o YAML soubor. Soubor obsahuje tyto direktivy:
 
-`package_name`
+**package_name**
 
-Název dapu, povinný údaj. Smí obsahovat malá písmena obsažená v tabulce ASCII[^ascii], číslice a znaky podtržítko (`_`) a spojovník (`-`), avšak první a poslední znak smí být pouze písmeno nebo číslice.
-
-Délka názvu není nijak omezena, přesto není praktické vybírat extrémně dlouhé názvy, například kvůli možným omezením souborového systému, ale také kvůli uživatelské (ne)přívětivosti.
-
-Příklady validních názvů:
-
- * python
- * foo
- * fit-cvut
- * 666
- * pivo
- * bar_6
-
-`version`
-
-Verze dapu, povinný údaj. Verze musí obsahovat alespoň jedno nezáporné číslo a může obsahovat neomezeně dalších nezáporných čísel oddělených tečkou. Číslice se uvádí bez nadbytečných úvodních nul. Za číselnou verzí může být bez oddělení uveden text `dev`, `a`, nebo `b` značící v uvedeném pořadí blíže nespecifikovanou vývojovou verzi, alfa verzi a betaverzi.
-
-Příklady verzí seřazené od nejstarší po nejnovější:
-
- * 0.99
- * 1
- * 1.0.5
- * 1.1dev
- * 1.1a
- * 1.1b
- * 1.1
+> Název dapu, povinný údaj. Smí obsahovat malá písmena obsažená v tabulce ASCII[^ascii], číslice a znaky podtržítko (`_`) a spojovník (`-`), avšak první a poslední znak smí být pouze písmeno nebo číslice.
+> 
+> Délka názvu není nijak omezena, přesto není praktické vybírat extrémně dlouhé názvy, například kvůli možným omezením souborového systému, ale také kvůli uživatelské (ne)přívětivosti.
+> 
+> Příklady validních názvů:
+> 
+>  * python
+>  * foo
+>  * fit-cvut
+>  * 666
+>  * pivo
+>  * bar_6
 
 [^ascii]: Tedy písmena anglické abecedy.
+
+**version**
+
+> Verze dapu, povinný údaj. Verze musí obsahovat alespoň jedno nezáporné číslo a může obsahovat neomezeně dalších nezáporných čísel oddělených tečkou. Číslice se uvádí bez nadbytečných úvodních nul. Za číselnou verzí může být bez oddělení uveden text `dev`, `a`, nebo `b` značící v uvedeném pořadí blíže nespecifikovanou vývojovou verzi, alfa verzi a betaverzi.
+> 
+> Příklady verzí seřazené od nejstarší po nejnovější:
+> 
+>  * 0.99
+>  * 1
+>  * 1.0.5
+>  * 1.1dev
+>  * 1.1a
+>  * 1.1b
+>  * 1.1
