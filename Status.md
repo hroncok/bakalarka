@@ -59,7 +59,7 @@ run:
 - cl: cd "$name"
 - use: git_init_add_commit.run
 - log_i: Project "$proj_name" has been created in "$name".
-````
+```
 
 DevAssistant může načítat asistenty z vice různých adresářů. Každý z těchto adresářů má pevně definovanou strukturu [@da-tutorial], která mimo jiné určuje, do které z výše uvedených kategorií asistent patří. Navíc je v této struktuře přesně definované místo pro ikony a případně další soubory asistentů.
 
