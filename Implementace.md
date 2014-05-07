@@ -129,3 +129,14 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#par:pozada
 >  * GPL+ or Artistic
 >  * GPLv2+
 >  * LGPLv2+ and LGPLv2 and LGPLv3+ and (GPLv3 or LGPLv2) and (GPLv3+ or LGPLv2) and (CC-BY-SA or LGPLv2+) and (CC-BY-SA or LGPLv2) and CC-BY and BSD and MIT and Public Domain
+
+**authors**
+
+> Seznam autorů obsahu dapu. U každého autora je nejprve uvedeno celé jméno a poté volitelně e-mailová adresa v lomených závorkách, podobně jako při e-mailové komunikaci. Zavináč v adrese lze nahradit sekvencí `_at_`.
+> 
+> Příklady validních autorů:
+> 
+>  * Miroslav Hrončok \<miroslav.hroncok@fit.cvut.cz\>
+>  * Miroslav Hrončok \<miroslav.hroncok_at_fit.cvut.cz\>
+>  * Miroslav Hrončok
+>  * Никола I Петровић-Његош
