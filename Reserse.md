@@ -2,7 +2,7 @@
 
 V této kapitole nastíním možná řešení požadavků vyjmenovaných [v části](#par:pozadavky).
 
-Balík (dap)
+Balík (dap)  {#par:reserse-balik}
 ===========
 
 S ohledem na požadavky uvedené [v části](#par:pozadavky-balik) se pokusím představit možnosti, které vyvstávají při volbě vhodného formátu pro dap.

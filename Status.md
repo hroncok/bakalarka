@@ -27,7 +27,7 @@ Jednotlivé asistenty jsou napsány ve speciálním DSL [@Kabrda2013c], který j
 
 > YAML je formát pro serializaci strukturovaných dat. Výhodou tohoto formátu je, že je dobře čitelný nejen strojem, ale i člověkem. [@PrispevateleWikipedie2014a]
 
-YAML soubory asistentu definují jak metadata (název asistentu, krátký popis, závislosti), tak samotný kód, který je vykonán aplikací (spuštění příkazů na příkazové řádce). Ke každému asistentu mohou patřit ikony pro zobrazení v grafickém rozhraní (jako  [na obrázku](#par:da-gui)) a další soubory, které může asistent použít při vlastním spuštění.
+YAML soubory asistentu definují jak metadata (název asistentu, krátký popis, závislosti), tak samotný kód, který je vykonán aplikací (spuštění příkazů na příkazové řádce). Ke každému asistentu mohou patřit ikony pro zobrazení v grafickém rozhraní (jako  [na obrázku](#par:da-gui)) a další soubory, které může asistent použít při vlastním spuštění. Speciálními soubory jsou pak tzv. snipety, které umožňují sdílení kódu mezi jednotlivými asistenty -- jedná se, stejně jako v případě asistentů, o soubory ve formátu YAML.
 
 [V ukázce](#par:assistant-example) můžete vidět příklad jednoduchého vytvářecího asistentu.
 
