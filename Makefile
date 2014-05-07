@@ -22,7 +22,7 @@ images/%.pdf: images/%.png bin/png2scaledpdf
 	./bin/png2scaledpdf "$<"
 
 library_.bib: library.bib
-	sed 's|\\_|_|g' library.bib > library_.bib
+	sed 's|\\_|_|g;s|\\#|#|g' library.bib > library_.bib
 
 biblatex-iso690/README:
 	git submodule init

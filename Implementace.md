@@ -116,3 +116,16 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#par:pozada
 >  * 1.1a
 >  * 1.1b
 >  * 1.1
+
+**license**
+
+> Licence obsahu dapu. Používají se specifikátory licencí z RPM balíčků distribuce Fedora [@Callaway2014a][@Callaway2014b]. Je možné použít pouze ve Fedoře povolené licence [@Callaway2014a][@Callaway2014b], které zaručují svobodné šíření obsahu. Tagy lze kombinovat pomocí slov `and` a `or` -- k tomuto účelu je možné použít i závorky a vyhodnocení probíhá podobně jako v jiných logických výrazech. Slovo `and` se používá v případě, že část obsahu je šířena pod jednou a část pod druhou licencí, slovo `or` se používá pokud je možné licenci si vybrat [@Callaway2013].
+> 
+> V případě zvýšené poptávky po možnosti uvedení nesvobodné licence [@Callaway2014], je možné později povolit v metadatech i tuto variantu. Pro účely repozitáře dapů ale bude nadále možné nahrávat jen svobodný obsah.
+> 
+> Příklady validních specifikátorů licence:
+> 
+>  * AGPLv3
+>  * GPL+ or Artistic
+>  * GPLv2+
+>  * LGPLv2+ and LGPLv2 and LGPLv3+ and (GPLv3 or LGPLv2) and (GPLv3+ or LGPLv2) and (CC-BY-SA or LGPLv2+) and (CC-BY-SA or LGPLv2) and CC-BY and BSD and MIT and Public Domain
