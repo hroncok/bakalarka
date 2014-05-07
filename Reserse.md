@@ -33,7 +33,7 @@ Existující formát pro archivaci souborů
 
 Zbývající možností je využití nějakého existujícího formátu určeného pro archivaci souborů. Takových formátů je mnoho a je třeba zvolit takový formát, který bude možné použít na všech platformách, podporovaných aplikací. Po konzultaci s vedoucím práce jsme zvolili formát *tar.gz* [@FreeSoftwareFoundation2013a][@FreeSoftwareFoundation2010], který je velmi rozšířený a otevřený.
 
-### Metadata
+### Metadata {#par:reserse-metadata}
 
 Použitý archiv musí kromě souborů nést i metadata. Pro účely nezvyšování komplexnosti je vhodnější přidat do archivu soubor tyto metadata obsahující, než modifikovat hlavičku souboru -- dap tak bude možné rozbalit obvyklým způsobem jako obyčejný *tar.gz* archiv bez ztráty těchto informací. Vzhledem k použití formátu YAML pro asistenty[^format-asistentu] je pak žádoucí použít stejný formát.
 
