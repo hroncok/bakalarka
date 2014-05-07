@@ -50,7 +50,7 @@ S ohledem na požadavky uvedené [v části](#par:pozadavky-repozitar) se pokus�
 GitHub
 ------
 
-GitHub [@GiHub2014] ([na obrázku](#par:github)) je poměrně známá a oblíbená služba určená k hostování zdrojových kódů aplikací pomocí verzovacího systému git [@Chacon2009]. Ačkoli jsou jednotlivé asistenty v dapu vlastně zdrojovým kódem a verzování tohoto kódu na GitHubu je pochopitelně možné, nesplňuje GitHub požadavky týkající se formátu dapu -- je sice možné nahrát k repozitáři archivy, není ale možné zajistit jejich kontrolu na správnost.
+GitHub [@GiHub2014] ([na obrázku](#par:github)) je poměrně známá a oblíbená služba určená k hostování zdrojových kódů aplikací pomocí verzovacího systému git [@Chacon2009]. Ačkoli jsou jednotlivé asistenty v dapu vlastně zdrojovým kódem a verzování tohoto kódu na GitHubu je pochopitelně možné, nesplňuje GitHub požadavky týkající se formátu dapu -- je sice možné nahrát k repozitáři archivy, není ale možné zajistit jejich kontrolu na správnost. GitHub nadále nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu.
 
 ![Screenshot ze služby GitHub {#par:github}](images/github)
 
@@ -65,7 +65,7 @@ PyPI [@PythonSoftwareFoundation2014] ([na obrázku](#par:pypi)) je repozitář m
 
 ![Screenshot z hlavní instance PyPI {#par:pypi}](images/pypi)
 
-PyPI nesplňuje některé požadavky definované [v části](#par:pozadavky-repozitar). V první řadě je navržen na sdílení modulů do Pythonu a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. PyPI nepodporuje uživatelské hodnocení. Klasifikace je možná pouze pomocí kategorií definovaných přímo v nahrávaném balíku, je možné použít pouze předem dané kategorie [@PythonSoftwareFoundation2014b].
+PyPI nesplňuje některé požadavky definované [v části](#par:pozadavky-repozitar). V první řadě je navržen na sdílení modulů do Pythonu a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. PyPI nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu. Klasifikace je možná pouze pomocí kategorií definovaných přímo v nahrávaném balíku, je možné použít pouze předem dané kategorie [@PythonSoftwareFoundation2014b].
 
 Využití PyPI by vyžadovalo nemalou modifikaci jeho zdrojového kódu. To přináší řadu nevýhod, především nutnost prozkoumat cizí zdrojový kód a porozumět mu a následná nutnost synchronizování vlastních změn s aktuální verzí PyPI.
 
@@ -74,15 +74,20 @@ Využití PyPI by vyžadovalo nemalou modifikaci jeho zdrojového kódu. To při
 RubyGems.org
 ------------
 
-RubyGems.org [@Quaranto2014] ([na obrázku](#par:rubygems)) je repozitář gemů -- modulů do jazyka Ruby. Zdrojový kód [@Quaranto2014a] aplikace je dostupný pod permisivní licencí MIT a je tedy teoreticky možné RubyGems.org upravit a použít jako repozitář dapů.
+RubyGems.org [@Quaranto2014] ([na obrázku](#par:rubygems)) je repozitář gemů -- modulů do jazyka Ruby. Pro Ruby plní stejnou funkci jako PyPI pro Python. Zdrojový kód aplikace [@Quaranto2014a] je dostupný pod permisivní licencí MIT a je tedy teoreticky možné RubyGems.org upravit a použít jako repozitář dapů, stejně jako tomu je u PyPI.
 
 ![Screenshot z RubyGems.org {#par:rubygems}](images/rubygems)
 
-RubyGems.org nesplňuje některé požadavky definované [v části](#par:pozadavky-repozitar). V první řadě je navržen na sdílení modulů do Ruby a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. RubyGems.org nepodporuje uživatelské hodnocení ani klasifikaci.
+RubyGems.org ale také nesplňuje některé požadavky definované [v části](#par:pozadavky-repozitar). Trpí stejným neduhem jako PyPI -- je navržen na sdílení modulů do Ruby a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. RubyGems.org také nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu. Další nevýhodou je, že na rozdíl od PyPI nepodporuje žádnou možnost klasifikace.
 
-Využití RubyGems.org by vyžadovalo nemalou modifikaci jeho zdrojového kódu. To přináší řadu nevýhod, především nutnost prozkoumat cizí zdrojový kód a porozumět mu a následná nutnost synchronizování vlastních změn s aktuální verzí RubyGems.org.
+Využití RubyGems.org by taktéž vyžadovalo nemalou modifikaci jeho zdrojového kódu. To přináší stejné nevýhody jako v případě PyPI.
 
 **Závěr:** Využití RubyGems.org je tedy pro účely repozitáře dapů možné, ale nepříliš optimální, dokonce méně optimální než PyPI.
+
+Další podobné služby
+--------------------
+
+V rámci rešerše jsem prozkoumal další podobné služby (například npm [@Npm] nebo CPAN [@Perl.org2013]), všechny jsou ale příliš spjaty s konkrétním obsahem, který je na ně nahráván. Proto není jejich použití pro účely repozitáře dapů optimální.
 
 Vlastní řešení
 --------------
