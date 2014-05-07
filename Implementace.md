@@ -10,7 +10,7 @@ Jak bylo popsáno [v částech](#par:pozadavky-balik) [a](#par:reserse-balik), d
 Specifikace dapu
 ----------------
 
-Jeden dap je *tar.gz* archiv [@FreeSoftwareFoundation2013a][@FreeSoftwareFoundation2010] pojmenovaný `<název>-<verze>.dap`, konkrétně pak například `python-0.8.0.dap`. Název je zde uveden i s příponou -- typická přípona *tar.gz* archivu `.tar.gz` či `.tgz` je nahrazena příponou `.dap`.
+Jeden dap je *tar.gz* archiv [@Tar2013][@Gzip2010] pojmenovaný `<název>-<verze>.dap`, konkrétně pak například `python-0.8.0.dap`. Název je zde uveden i s příponou -- typická přípona *tar.gz* archivu `.tar.gz` či `.tgz` je nahrazena příponou `.dap`.
 
 Nahrazení typické přípony je provedeno proto, aby byl dap uživateli jasně identifikovatelný a aby nedocházelo k omylům při pokusu nainstalovat místo dapu běžný *tar.gz* archiv.
 
@@ -54,7 +54,7 @@ Adresáře, které nejsou využité (jsou prázdné) by dap neměl obsahovat. Ve
 
 Adresář `doc` byl přidán pro účely dapu, aby bylo možné společně s asistenty distribuovat i dokumentaci. Například povinně uváděný text licence, za jejíchž podmínek je obsah dapu distribuován.
 
-Adresářová struktura reálného dapu [@Kabrda2014] může vypadat například takto:
+Adresářová struktura reálného dapu [@da-fedora] může vypadat například takto:
 
 \dirtree{%
 	.1 python-0.8.0/.
@@ -117,11 +117,20 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#par:pozada
 >  * 1.1b
 >  * 1.1
 
+**summary**
+
+> Krátký popis dapu, povinný údaj. Slouží k rychlému obeznámení uživatele s obsahem dapu, měl by být napsaný v anglickém jazyce.
+> 
+> Příklady vhodných popisů:
+> 
+>  * Python assistants for cretaing Flask, Djnago and GTK3 apps or pure Python libraries
+>  * Set of assistants for students of FIT CTU in Prague
+
 **license**
 
-> Licence obsahu dapu, povinný údaj. Používají se specifikátory licencí z RPM balíčků distribuce Fedora [@Callaway2014a][@Callaway2014b]. Je možné použít pouze ve Fedoře povolené licence [@Callaway2014a][@Callaway2014b], které zaručují svobodné šíření obsahu. Tagy lze kombinovat pomocí slov `and` a `or` -- k tomuto účelu je možné použít i závorky a vyhodnocení probíhá podobně jako v jiných logických výrazech. Slovo `and` se používá v případě, že část obsahu je šířena pod jednou a část pod druhou licencí, slovo `or` se používá pokud je možné licenci si vybrat [@Callaway2013].
+> Licence obsahu dapu, povinný údaj. Používají se specifikátory licencí z RPM balíčků distribuce Fedora [@GoodLicenses][@GoodLicenses2]. Je možné použít pouze ve Fedoře povolené licence [@GoodLicenses][@GoodLicenses2], které zaručují svobodné šíření obsahu. Tagy lze kombinovat pomocí slov `and` a `or` -- k tomuto účelu je možné použít i závorky a vyhodnocení probíhá podobně jako v jiných logických výrazech. Slovo `and` se používá v případě, že část obsahu je šířena pod jednou a část pod druhou licencí, slovo `or` se používá pokud je možné licenci si vybrat [@LicensesCombined].
 > 
-> V případě zvýšené poptávky po možnosti uvedení nesvobodné licence [@Callaway2014], je možné později povolit v metadatech i tuto variantu. Pro účely repozitáře dapů ale bude nadále možné nahrávat jen svobodný obsah.
+> V případě zvýšené poptávky po možnosti uvedení nesvobodné licence [@BadLicenses], je možné později povolit v metadatech i tuto variantu. Pro účely repozitáře dapů ale bude nadále možné nahrávat jen svobodný obsah.
 > 
 > Příklady validních specifikátorů licence:
 > 
@@ -140,6 +149,10 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#par:pozada
 >  * Miroslav Hrončok \<miroslav.hroncok_at_fit.cvut.cz\>
 >  * Miroslav Hrončok
 >  * Никола I Петровић-Његош
+
+**description**
+
+> Delší, volitelný popis obsahu dapu. Slouží k podrobnějšímu obeznámení uživatelů s obsahem dapu a způsobu využití asistentů v něm obsažených. Obsah by se dal přirovnat k běžnému obsahu souboru README a měl by být v anglickém jazyce. V popisu lze použít formátování pomocí Markdownu [@Markdown2014].
 
 **homepage**
 

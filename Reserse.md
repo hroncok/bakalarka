@@ -31,13 +31,13 @@ Implementace ryze vlastního formátu by pak přinášela mnoho problémů, nap�
 Existující formát pro archivaci souborů
 ---------------------------------------
 
-Zbývající možností je využití nějakého existujícího formátu určeného pro archivaci souborů. Takových formátů je mnoho a je třeba zvolit takový formát, který bude možné použít na všech platformách podporovaných aplikací. Po konzultaci s vedoucím práce jsme zvolili formát *tar.gz* [@FreeSoftwareFoundation2013a][@FreeSoftwareFoundation2010], který je velmi rozšířený a otevřený.
+Zbývající možností je využití nějakého existujícího formátu určeného pro archivaci souborů. Takových formátů je mnoho a je třeba zvolit takový formát, který bude možné použít na všech platformách podporovaných aplikací. Po konzultaci s vedoucím práce jsme zvolili formát *tar.gz* [@Tar2013][@Gzip2010], který je velmi rozšířený a otevřený.
 
 ### Metadata {#par:reserse-metadata}
 
 Použitý archiv musí kromě souborů nést i metadata. Pro účely nezvyšování komplexnosti je vhodnější přidat do archivu soubor tyto metadata obsahující, než modifikovat hlavičku souboru -- dap tak bude možné rozbalit obvyklým způsobem jako obyčejný *tar.gz* archiv bez ztráty těchto informací. Vzhledem k použití formátu YAML pro asistenty[^format-asistentu] je pak žádoucí použít stejný formát.
 
-**Závěr:** Pro účely dapu bude použit archiv *tar.gz* obsahující YAML soubor s metadaty. Konkrétní implementace takového balíku je nastíněna v e-mailu, který tento formát navrhuje [@Kabrda2013b], a podrobně popsána v kapitole (TODO).
+**Závěr:** Pro účely dapu bude použit archiv *tar.gz* obsahující YAML soubor s metadaty. Konkrétní implementace takového balíku je nastíněna v e-mailu, který tento formát navrhuje [@Kabrda2013], a podrobně popsána v kapitole (TODO).
 
 [^format-asistentu]: Jak je popsáno [v kapitole](#par:asistenty).
 
@@ -87,7 +87,7 @@ Využití RubyGems.org by taktéž vyžadovalo nemalou modifikaci jeho zdrojové
 Další podobné služby
 --------------------
 
-V rámci rešerše jsem prozkoumal další podobné služby (například npm [@Npm] nebo CPAN [@Perl.org2013]), všechny jsou ale příliš spjaty s konkrétním obsahem, který je na ně nahráván. Proto není jejich použití pro účely repozitáře dapů optimální.
+V rámci rešerše jsem prozkoumal další podobné služby (například npm [@Npm] nebo CPAN [@CPAN2013]), všechny jsou ale příliš spjaty s konkrétním obsahem, který je na ně nahráván. Proto není jejich použití pro účely repozitáře dapů optimální.
 
 Vlastní řešení
 --------------
