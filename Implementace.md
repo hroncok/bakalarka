@@ -275,8 +275,7 @@ Kromě metody `check()` lze použít i program `daplint` (součást knihovny), k
 
 ```{caption="Příklad výstupu programu daplint {#daplint-output}"}
 $ daplint foo-1.0.0.dap 
-foo-1.0.0.dap: ERROR: out is outside foo-1.0.0 top-level directory
-foo-1.0.0.dap: ERROR: out.txt is outside foo-1.0.0 top-level directory
+foo-1.0.0.dap: ERROR: out is outside of foo-1.0.0 top-level directory
 foo-1.0.0.dap: WARNING: Only meta.yaml in dap
 ```
 
