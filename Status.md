@@ -9,7 +9,7 @@ DevAssistant je aplikací, která programátorům pomáhá vytvářet nové výv
 
 ![Grafické rozhraní aplikace DevAssistant {#pic:da-gui}](images/da-gui)
 
-Jedná se o svobodný software, je vydaný pod licencí GNU GPL verze 2 nebo vyšší [@RedHat2013].
+Jedná se o svobodný software, je vydaný pod licencí GNU GPL verze 2 [@GPLv2] nebo vyšší [@RedHat2013].
 
 Asistenty
 ---------

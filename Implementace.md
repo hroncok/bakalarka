@@ -240,5 +240,43 @@ Pro parsování souboru `meta.yaml` jsem použil modul PyYAML [@Simonov2014], ji
 
 Zvolil jsem metodu TDD a pro testování jsem použil nástroj pytest [@Krekel2013].
 
-> Programování řízené testy (z anglického *Test-driven development* (TDD)) je přístup k vývoji softwaru, který je založen na malých, stále se opakujících krocích, vedoucích ke zefektivnění celého vývoje.
+> Programování řízené testy (z anglického *Test-driven development* -- TDD) je přístup k vývoji softwaru, který je založen na malých, stále se opakujících krocích, vedoucích ke zefektivnění celého vývoje.
 Prvním krokem je definice funkcionality a následné napsání testu, který tuto funkcionalitu ověřuje. Poté přichází na řadu psaní kódu a nakonec úprava tohoto kódu. [@wiki-tdd]
+
+### Načtení dapu
+
+*Daploader* poskytuje třídu *Dap*. Její konstruktor načte dap a pokusí se z něj získat obsah souboru `meta.yaml` -- pokud se načtení nepodaří (nejedná se o *tar.gz* archiv nebo v archivu není právě jeden soubor `meta.yaml`), knihovna vyvolá výjimku. V případě správného načtení jsou jednotlivé položky se souboru `meta.yaml` k dispozici ve formě asociativního pole.
+
+### Kontroly
+
+Třída *Dap* obsahuje metodu `check()`, která spouští rutinu kontrol. Pokud některé kontroly selžou, chyby nebo varování jsou nahlášeny uživateli do zvoleného místa výstupu (výchozí je standardní chybový výstup), případně je vyvolána výjimka.
+
+Chybu vyvolá:
+
+ * chybějící povinná položka v souboru `meta.yaml`,
+ * nevalidní hodnota položky v souboru `meta.yaml`,
+ * přebytečná položka v souboru `meta.yaml` neobsažená ve specifikaci,
+ * špatně pojmenovaný hlavní adresář,
+ * soubor nebo adresář mimo hlavní adresář,
+ * špatně pojmenovaný soubor s dapem,
+ * soubor nebo adresář mimo povolenou strukturu,
+ * adresář s asistenty nebo snipety nižší úrovně bez patřičného asistentu nebo snipetu vyšší úrovně.
+
+Varování vyvolá:
+
+ * dap obsahující pouze soubor `meta.yaml`,
+ * prázný adresář v dapu,
+ * chybějící ikona pro asistent nebo snipet,
+ * vícenásobná ikona pro jeden asistent nebo snipet,
+ * přebytečná ikona pro neexistující asistent nebo snipet,
+ * přebytečné soubory pro neexistující asistent nebo snipet.
+
+### Testy
+
+Díky zvolené metodě TDD [@wiki-tdd] mají jednotlivé kontroly stoprocentní pokrytí testy. Testy jsou součástí zdrojových kódů knihovny, které naleznete na přiloženém médiu.
+
+### Licence
+
+Knihovna *daploader* je dostupná pod licencí GNU GPL verze 2 [@GPLv2] nebo vyšší. Plné znění licence je  součástí zdrojových kódů knihovny, které naleznete na přiloženém médiu.
+
+Tato licence byla zvolena podle licence aplikace DevAssistant, aby bylo v budoucnu možné libovolně přesouvat kód mezi knihovnou *daploader* a DevAssistantem, případně do aplikace knihovnu začlenit.
