@@ -186,7 +186,7 @@ authors: [Miro Hrončok <miro@hroncok.cz>]
 summary: Adds Travis CI to your projects
 ```
 
-```{caption="meta.yaml s využitím všech volitelných položek {#meta-yaml-extended}" .yaml}
+```{caption="Soubor meta.yaml s využitím všech volitelných položek {#meta-yaml-extended}" .yaml}
 package_name: travis
 version: 0.0.1dev
 license: ISC
