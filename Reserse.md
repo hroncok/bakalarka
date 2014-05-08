@@ -50,7 +50,7 @@ S ohledem na požadavky uvedené [v části](#pozadavky-repozitar) se pokusím p
 GitHub
 ------
 
-GitHub [@GiHub2014] ([na obrázku](#pic:github)) je poměrně známá a oblíbená služba určená k hostování zdrojových kódů aplikací pomocí verzovacího systému git [@Chacon2009]. Ačkoli jsou jednotlivé asistenty v dapu vlastně zdrojovým kódem a verzování tohoto kódu na GitHubu je pochopitelně možné, nesplňuje GitHub požadavky týkající se formátu dapu -- je sice možné nahrát k repozitáři archivy, není ale možné zajistit jejich kontrolu na správnost. GitHub nadále nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu.
+GitHub [@GitHub2014] ([na obrázku](#pic:github)) je poměrně známá a oblíbená služba určená k hostování zdrojových kódů aplikací pomocí verzovacího systému git [@Chacon2009]. Ačkoli jsou jednotlivé asistenty v dapu vlastně zdrojovým kódem a verzování tohoto kódu na GitHubu je pochopitelně možné, nesplňuje GitHub požadavky týkající se formátu dapu -- je sice možné nahrát k repozitáři archivy, není ale možné zajistit jejich kontrolu na správnost. GitHub nadále nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu.
 
 ![Screenshot ze služby GitHub {#pic:github}](images/github)
 
