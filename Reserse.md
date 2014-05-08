@@ -37,7 +37,7 @@ Zbývající možností je využití nějakého existujícího formátu určené
 
 Použitý archiv musí kromě souborů nést i metadata. Pro účely nezvyšování komplexnosti je vhodnější přidat do archivu soubor tyto metadata obsahující, než modifikovat hlavičku souboru -- dap tak bude možné rozbalit obvyklým způsobem jako obyčejný *tar.gz* archiv bez ztráty těchto informací. Vzhledem k použití formátu YAML pro asistenty[^format-asistentu] je pak žádoucí použít stejný formát.
 
-**Závěr:** Pro účely dapu bude použit archiv *tar.gz* obsahující YAML soubor s metadaty. Konkrétní implementace takového balíku je nastíněna v e-mailu, který tento formát navrhuje [@Kabrda2013], a podrobně popsána v kapitole (TODO).
+**Závěr:** Pro účely dapu bude použit archiv *tar.gz* obsahující YAML soubor s metadaty. Konkrétní implementace takového balíku je nastíněna v e-mailu, který tento formát navrhuje [@Kabrda2013], a podrobně popsána [v kapitole](#implementace-dap@).
 
 [^format-asistentu]: Jak je popsáno [v kapitole](#asistenty@).
 
@@ -50,7 +50,7 @@ S ohledem na požadavky uvedené [v části](#pozadavky-repozitar@) se pokusím 
 GitHub
 ------
 
-GitHub [@GitHub2014] ([na obrázku](#pic:github)) je poměrně známá a oblíbená služba určená k hostování zdrojových kódů aplikací pomocí verzovacího systému git [@Chacon2009]. Ačkoli jsou jednotlivé asistenty v dapu vlastně zdrojovým kódem a verzování tohoto kódu na GitHubu je pochopitelně možné, nesplňuje GitHub požadavky týkající se formátu dapu -- je sice možné nahrát k repozitáři archivy, není ale možné zajistit jejich kontrolu na správnost. GitHub nadále nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu.
+GitHub [@GitHub2014] ([na obrázku](#pic:github)) je poměrně známá a oblíbená služba určená k hostování zdrojových kódů aplikací pomocí verzovacího systému git [@Chacon2009]. Ačkoli jsou jednotlivé asistenty v dapu vlastně zdrojovým kódem a verzování tohoto kódu na GitHubu je pochopitelně možné, nesplňuje GitHub požadavky týkající se formátu dapu -- je sice možné nahrát k repozitáři archivy, není ale možné zajistit jejich kontrolu správnosti. GitHub nadále nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu.
 
 ![Screenshot ze služby GitHub {#pic:github}](images/github)
 
