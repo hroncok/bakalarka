@@ -15,7 +15,7 @@ acronyms.tex: acronyms.yml bin/convert
 	./bin/convert "$<"
 	vlna "$@" 2>/dev/null || :
 
-biblatex-iso690/%.cbx:
+biblatex-iso690/%:
 	git submodule init
 	git submodule update
 
