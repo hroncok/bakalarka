@@ -5,7 +5,7 @@ V této kapitole osvětlím problematiku své bakalářské práce s důrazem na
 DevAssistant
 ============
 
-DevAssistant je aplikací, která programátorům pomáhá vytvářet nové vývojářské projekty, vydávat kód a dělat další věci, které programátory zdržují od toho nejdůležitějšího, od psaní softwaru. Nezáleží na tom, jestli jste právě objevili svět vývoje softwaru, nebo jestli už programujete dvě dekády, vždy se najde něco, s čím vám DevAssistant ulehčí život [@RedHat2013]. DevAssistant je možné používat z příkazové řádky nebo pomocí GUI, jak je vidět na [obrázku](#pic:da-gui).
+DevAssistant je aplikací, která programátorům pomáhá vytvářet nové vývojářské projekty, vydávat kód a dělat další věci, které programátory zdržují od toho nejdůležitějšího, od psaní softwaru. Nezáleží na tom, jestli jste právě objevili svět vývoje softwaru, nebo jestli už programujete dvě dekády, vždy se najde něco, s čím vám DevAssistant ulehčí život [@RedHat2013]. DevAssistant je možné používat z příkazové řádky nebo pomocí GUI, jak je vidět na [obrázku](#pic:da-gui@).
 
 ![Grafické rozhraní aplikace DevAssistant {#pic:da-gui}](images/da-gui)
 
@@ -27,7 +27,7 @@ Jednotlivé asistenty jsou napsány ve speciálním DSL [@da-yaml], který je za
 
 > YAML je formát pro serializaci strukturovaných dat. Výhodou tohoto formátu je, že je dobře čitelný nejen strojem, ale i člověkem. [@wiki-yaml]
 
-YAML soubory asistentu definují jak metadata (název asistentu, krátký popis, závislosti), tak samotný kód, který je vykonán aplikací (spuštění příkazů na příkazové řádce). Ke každému asistentu mohou patřit ikony pro zobrazení v grafickém rozhraní (jako  [na obrázku](#pic:da-gui)) a další soubory, které může asistent použít při vlastním spuštění. Speciálními soubory jsou pak tzv. snipety, které umožňují sdílení kódu mezi jednotlivými asistenty -- jedná se, stejně jako v případě asistentů, o soubory ve formátu YAML.
+YAML soubory asistentu definují jak metadata (název asistentu, krátký popis, závislosti), tak samotný kód, který je vykonán aplikací (spuštění příkazů na příkazové řádce). Ke každému asistentu mohou patřit ikony pro zobrazení v grafickém rozhraní (jako  [na obrázku](#pic:da-gui@)) a další soubory, které může asistent použít při vlastním spuštění. Speciálními soubory jsou pak tzv. snipety, které umožňují sdílení kódu mezi jednotlivými asistenty -- jedná se, stejně jako v případě asistentů, o soubory ve formátu YAML.
 
 [V ukázce](#assistant-example) můžete vidět příklad jednoduchého vytvářecího asistentu.
 

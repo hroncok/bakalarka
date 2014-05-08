@@ -1,11 +1,11 @@
 % Rešerše
 
-V této kapitole nastíním možná řešení požadavků vyjmenovaných [v části](#pozadavky).
+V této kapitole nastíním možná řešení požadavků vyjmenovaných [v části](#pozadavky@).
 
 Balík (dap)  {#reserse-balik}
 ===========
 
-S ohledem na požadavky uvedené [v části](#pozadavky-balik) se pokusím představit možnosti, které vyvstávají při volbě vhodného formátu pro dap.
+S ohledem na požadavky uvedené [v části](#pozadavky-balik@) se pokusím představit možnosti, které vyvstávají při volbě vhodného formátu pro dap.
 Vzhledem k tomu, že dap obsahuje řadu souborů v adresářové struktuře a metadata, nabízejí se dvě možnosti:
 
  * vlastní binární formát vyvinutý pouze pro potřeby dapu,
@@ -39,12 +39,12 @@ Použitý archiv musí kromě souborů nést i metadata. Pro účely nezvyšová
 
 **Závěr:** Pro účely dapu bude použit archiv *tar.gz* obsahující YAML soubor s metadaty. Konkrétní implementace takového balíku je nastíněna v e-mailu, který tento formát navrhuje [@Kabrda2013], a podrobně popsána v kapitole (TODO).
 
-[^format-asistentu]: Jak je popsáno [v kapitole](#asistenty).
+[^format-asistentu]: Jak je popsáno [v kapitole](#asistenty@).
 
 Repozitář
 =========
 
-S ohledem na požadavky uvedené [v části](#pozadavky-repozitar) se pokusím představit služby a aplikace, které by teoreticky mohly být využity na sdílení dapů.
+S ohledem na požadavky uvedené [v části](#pozadavky-repozitar@) se pokusím představit služby a aplikace, které by teoreticky mohly být využity na sdílení dapů.
 
 
 GitHub
@@ -65,7 +65,7 @@ PyPI [@PythonSoftwareFoundation2014] ([na obrázku](#pic:pypi)) je repozitář m
 
 ![Screenshot z hlavní instance PyPI {#pic:pypi}](images/pypi)
 
-PyPI nesplňuje některé požadavky definované [v části](#pozadavky-repozitar). V první řadě je navržen na sdílení modulů do Pythonu a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. PyPI nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu. Klasifikace je možná pouze pomocí kategorií definovaných přímo v nahrávaném balíku, je možné použít pouze předem dané kategorie [@PythonSoftwareFoundation2014b].
+PyPI nesplňuje některé požadavky definované [v části](#pozadavky-repozitar@). V první řadě je navržen na sdílení modulů do Pythonu a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. PyPI nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu. Klasifikace je možná pouze pomocí kategorií definovaných přímo v nahrávaném balíku, je možné použít pouze předem dané kategorie [@PythonSoftwareFoundation2014b].
 
 Využití PyPI by vyžadovalo nemalou modifikaci jeho zdrojového kódu. To přináší řadu nevýhod, především nutnost prozkoumat cizí zdrojový kód a porozumět mu a následná nutnost synchronizování vlastních změn s aktuální verzí PyPI.
 
@@ -78,7 +78,7 @@ RubyGems.org [@Quaranto2014] ([na obrázku](#pic:rubygems)) je repozitář gemů
 
 ![Screenshot z RubyGems.org {#pic:rubygems}](images/rubygems)
 
-RubyGems.org ale také nesplňuje některé požadavky definované [v části](#pozadavky-repozitar). Trpí stejným neduhem jako PyPI -- je navržen na sdílení modulů do Ruby a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. RubyGems.org také nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu. Další nevýhodou je, že na rozdíl od PyPI nepodporuje žádnou možnost klasifikace.
+RubyGems.org ale také nesplňuje některé požadavky definované [v části](#pozadavky-repozitar@). Trpí stejným neduhem jako PyPI -- je navržen na sdílení modulů do Ruby a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. RubyGems.org také nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu. Další nevýhodou je, že na rozdíl od PyPI nepodporuje žádnou možnost klasifikace.
 
 Využití RubyGems.org by taktéž vyžadovalo nemalou modifikaci jeho zdrojového kódu. To přináší stejné nevýhody jako v případě PyPI.
 

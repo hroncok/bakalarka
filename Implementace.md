@@ -5,7 +5,7 @@ V této kapitole podrobně popíšu implementaci své bakalářské práce.
 Dap
 ===
 
-Jak bylo popsáno [v částech](#pozadavky-balik) [a](#reserse-balik), dap je *tar.gz* archiv obsahující soubory a metadata jednoho nebo více asistentů. V této části práce nejprve podrobně popíšu specifikaci formátu dap a dále implementaci knihovny, která s dapy umí pracovat.
+Jak bylo popsáno [v částech](#pozadavky-balik@) [a](#reserse-balik@), dap je *tar.gz* archiv obsahující soubory a metadata jednoho nebo více asistentů. V této části práce nejprve podrobně popíšu specifikaci formátu dap a dále implementaci knihovny, která s dapy umí pracovat.
 
 Specifikace dapu
 ----------------
@@ -84,7 +84,7 @@ Adresářová struktura reálného dapu [@da-fedora] může vypadat například 
 
 ### Soubor meta.yaml
 
-Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-balik). Z důvodů popsaných [v části](#reserse-metadata) se jedná o YAML soubor. Soubor obsahuje tyto direktivy:
+Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-balik@). Z důvodů popsaných [v části](#reserse-metadata@) se jedná o YAML soubor. Soubor obsahuje tyto direktivy:
 
 **package_name**
 
@@ -153,6 +153,8 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-
 **description**
 
 > Delší, volitelný popis obsahu dapu. Slouží k podrobnějšímu obeznámení uživatelů s obsahem dapu a způsobu využití asistentů v něm obsažených. Obsah by se dal přirovnat k běžnému obsahu souboru README a měl by být v anglickém jazyce. V popisu lze použít formátování pomocí Markdownu [@Markdown2014].
+> 
+> Příklad je uveden [v ukázce](#meta-yaml-extended@).
 
 **homepage**
 
@@ -174,7 +176,7 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-
 >  * miroslav.hroncok@fit.cvut.cz
 >  * devassistant@lists.fedoraproject.org
 
-[V ukázce](#meta-yaml-simple) můžete vidět příklad souboru `meta.yaml`, který obsahuje pouze povinné údaje, a [v ukázce](#meta-yaml-extended) pak příklad doplněný o údaje nepovinné.
+[V ukázce](#meta-yaml-simple) můžete vidět příklad souboru `meta.yaml`, který obsahuje pouze povinné údaje, a [v ukázce](#meta-yaml-extended@) pak příklad doplněný o údaje nepovinné.
 
 ```{caption="Minimální příklad souboru meta.yaml {#meta-yaml-simple}" .yaml}
 package_name: travis
@@ -193,6 +195,20 @@ homepage: https://github.com/hroncok/dap-travis
 summary: Adds Travis CI to your projects
 bugreports: https://github.com/hroncok/dap-travis/issues
 description: |
-    This mod assistant allows **Travis CI** for you project.
+    This mod assistant allows
+    [Travis CI](https://travis-ci.org/) for you project.
     Your project has to be already on GitHub.
+    
+    Run `da mod travis [-p <path>]` and DevAssistant will
+    check if the current working directory or path specified
+    by `-p` is a git repository with GitHub *remote* specified.
+    
+    If so, it will allow Travis checks for your project and add
+    `.travis.yml` (if not already present) with default content
+    for language guessed from `.devassistant`, or blank when
+    `.devassistant` is not available.
+    
+    ### More options:
+    
+     * `--url` - changes Travis CI URL, default https://travis-ci.org/
 ```
