@@ -279,6 +279,16 @@ foo-1.0.0.dap: ERROR: out is outside of foo-1.0.0 top-level directory
 foo-1.0.0.dap: WARNING: Only meta.yaml in dap
 ```
 
+### Další funkce
+
+Třída *Dap* také obsahuje metodu na extrahování dapu na určité místo. Knihovna nabízí porovnávací funkci verzí, která je možná použít například jako [v ukázce](#dapver).
+
+```{caption="Použití porovnávače verzí z Pythonu 2 {#dapver}" .python}
+from daploader import dapver
+versions = ['1.0', '1.0.5', '1.1dev', '1.1a', '1.1', '1.1.1', '1.2']
+assert versions == sorted(versions, cmp=dapver.compare)
+```
+
 ### Testy
 
 Díky zvolené metodě TDD [@wiki-tdd] mají jednotlivé kontroly stoprocentní pokrytí testy. Testy jsou součástí zdrojových kódů knihovny, které naleznete na přiloženém médiu.
