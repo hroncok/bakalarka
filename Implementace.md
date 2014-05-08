@@ -212,3 +212,33 @@ description: |
     
      * `--url` - changes Travis CI URL, default https://travis-ci.org/
 ```
+
+Knihovna pro načítání metadat dapů
+----------------------------------
+
+Strojově číst metadata dapu lze následujícím postupem:
+
+ 1. extrahovat dap jako *tar.gz* archiv,
+ 2. najít `meta.yaml` v jediné složce, která byla vyextrahována,
+ 3. parsovat YAML a číst potřebné údaje.
+
+Rozhodl jsem se tedy napsat knihovnu, která umožní tento postup automatizovat a kontrolovat, že načítaný dap splňuje specifikaci. Tato knihovna umožní:
+
+ * načítat dapy a programově přistupovat k jejich metadatům,
+ * rozbalovat dapy na určité místo,
+ * kontrolovat správnost dapu a vypisování chyb a varovní v případě nesprávných dat.
+
+Knihovnu jsem nazval *daploader*.
+
+### Použité technologie
+
+Vzhledem k tomu, že aplikace DevAssistant je napsána v programovacím jazyce Python [@Pilgrim2010] a je žádoucí, aby knihovna šla použít přímo z této aplikace, zvolil jsem také programovací jazyk Python. Implementace v jiném jazyce by sice byla možná, ale bylo by pak nutné řešit komunikaci této knihovny s aplikací DevAssistant pomocí nějaké mezivrstvy [@Altis2014], což by bylo zbytečně komplikované.
+
+Protože DevAssistent je napsán tak, aby jej bylo možné interpretovat jak Pythonem ve verzi 2, tak Pythonem ve verzi 3, a protože je to považováno za vhodné [@Pilgrim2010], podporuje *daploader* taktéž obě používané verze Pythonu.
+
+Pro parsování souboru `meta.yaml` jsem použil modul PyYAML [@Simonov2014], jinak jsem si vystačil se standardními moduly obsaženými v distribuci Pythonu.
+
+Zvolil jsem metodu TDD a pro testování jsem použil nástroj pytest [@Krekel2013].
+
+> Programování řízené testy (z anglického *Test-driven development* (TDD)) je přístup k vývoji softwaru, který je založen na malých, stále se opakujících krocích, vedoucích ke zefektivnění celého vývoje.
+Prvním krokem je definice funkcionality a následné napsání testu, který tuto funkcionalitu ověřuje. Poté přichází na řadu psaní kódu a nakonec úprava tohoto kódu. [@wiki-tdd]

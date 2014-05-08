@@ -61,7 +61,7 @@ Z uživatelského hlediska pak není příliš přívětivé rozlišení co na G
 PyPI
 ----
 
-PyPI [@PythonSoftwareFoundation2014] ([na obrázku](#pic:pypi)) je repozitář modulů do programovacího jazyka Python. Zdrojový kód aplikace [@PythonSoftwareFoundation2014a] je dostupný pod permisivní licencí BSD a je tedy teoreticky možné PyPI upravit a použít jako repozitář dapů.
+PyPI [@PythonSoftwareFoundation2014] ([na obrázku](#pic:pypi)) je repozitář modulů do programovacího jazyka Python [@Pilgrim2010]. Zdrojový kód aplikace [@PythonSoftwareFoundation2014a] je dostupný pod permisivní licencí BSD a je tedy teoreticky možné PyPI upravit a použít jako repozitář dapů.
 
 ![Screenshot z hlavní instance PyPI {#pic:pypi}](images/pypi)
 
