@@ -15,15 +15,15 @@ acronyms.tex: acronyms.yml bin/convert
 	./bin/convert "$<"
 	vlna "$@" 2>/dev/null || :
 
-%.cbx: biblatex-iso690/%.cbx biblatex-iso690/README
+biblatex-iso690/%.cbx:
+	git submodule init
+	git submodule update
+
+%.cbx: biblatex-iso690/%.cbx
 	ln -s "$<" .
 
 images/%.pdf: images/%.png bin/png2scaledpdf
 	./bin/png2scaledpdf "$<"
-
-biblatex-iso690/README:
-	git submodule init
-	git submodule update
 
 clean:
 	git clean -Xf
