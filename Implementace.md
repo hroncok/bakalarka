@@ -22,10 +22,10 @@ Dap má uvnitř archivu striktně danou adresářovou strukturu, která odpovíd
 	.1 <název>-<verze>/\DTcomment{hlavní adresář}.
 		.2 assistants/\DTcomment{adresář s asistenty}.
 			.3 crt|mod|prep|task/\DTcomment{adresáře s asistenty daného typu}.
-			.3 <název>.yaml\DTcomment{asistent první úrovně}.
-			.3 <název>/\DTcomment{adresář s asistenty druhé úrovně}.
-				.4 *.yaml/\DTcomment{asistenty druhé úrovně}.
-				.4 */\DTcomment{adresáře s asistenty další úrovně (dále obdobně)}.
+				.4 <název>.yaml\DTcomment{asistent první úrovně}.
+				.4 <název>/\DTcomment{adresář s asistenty druhé úrovně}.
+					.5 *.yaml/\DTcomment{asistenty druhé úrovně}.
+					.5 */\DTcomment{adresáře s asistenty další úrovně (dále obdobně)}.
 		.2 doc/\DTcomment{adresář s dokumentací}.
 			.3 <název>/.
 				.4 *\DTcomment{libovolné soubory a adresáře s dokumentací}.
@@ -60,24 +60,24 @@ Adresářová struktura reálného dapu [@da-fedora] může vypadat například 
 	.1 python-0.8.0/.
 		.2 assistants/.
 			.3 crt/.
-			.3 python.yaml.
-			.3 python/.
-				.4 django.yaml.
-				.4 flask.yaml.
-				.4 gtk3.yaml.
-				.4 lib.yaml.
+				.4 python.yaml.
+				.4 python/.
+					.5 django.yaml.
+					.5 flask.yaml.
+					.5 gtk3.yaml.
+					.5 lib.yaml.
 		.2 doc/.
 			.3 python/.
 				.4 LICENSE.
 		.2 files/.
 			.3 crt/.
 				.4 python/.
-				.5 lib/.
-					.6 setup.py\ldots.
+					.5 lib/.
+						.6 setup.py\ldots.
 		.2 icons/.
 			.3 crt/.
-			.4 python.svg.
-			.2 meta.yaml.
+				.4 python.svg.
+		.2 meta.yaml.
 }
 
 [^libovolne]: V rámci pravidel souborového systému.
