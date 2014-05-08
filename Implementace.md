@@ -173,3 +173,26 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#par:pozada
 >  * https://github.com/hroncok/dap-travis/issues
 >  * miroslav.hroncok@fit.cvut.cz
 >  * devassistant@lists.fedoraproject.org
+
+[V ukázce](#par:meta-yaml-simple) můžete vidět příklad souboru `meta.yaml`, který obsahuje pouze povinné údaje, a [v ukázce](#par:meta-yaml-extended) pak příklad doplněný o údaje nepovinné.
+
+```{caption="Minimální příklad souboru meta.yaml {#par:meta-yaml-simple}" .yaml}
+package_name: travis
+version: 0.0.1dev
+license: ISC
+authors: [Miro Hrončok <miro@hroncok.cz>]
+summary: Adds Travis CI to your projects
+```
+
+```{caption="Příklad souboru meta.yaml s využitím všech volitelných položek {#par:meta-yaml-extended}" .yaml}
+package_name: travis
+version: 0.0.1dev
+license: ISC
+authors: [Miro Hrončok <miro@hroncok.cz>]
+homepage: https://github.com/hroncok/dap-travis
+summary: Adds Travis CI to your projects
+bugreports: https://github.com/hroncok/dap-travis/issues
+description: |
+    This mod assistant allows **Travis CI** for you project.
+    Your project has to be on GitHub already.
+```
