@@ -5,7 +5,7 @@ V této kapitole podrobně popíšu implementaci své bakalářské práce.
 Dap
 ===
 
-Jak bylo popsáno [v částech](#par:pozadavky-balik) [a](#par:reserse-balik), dap je *tar.gz* archiv obsahující soubory a metadata jednoho nebo více asistentů. V této části práce nejprve podrobně popíšu specifikaci formátu dap a dále implementaci knihovny, která s dapy umí pracovat.
+Jak bylo popsáno [v částech](#pozadavky-balik) [a](#reserse-balik), dap je *tar.gz* archiv obsahující soubory a metadata jednoho nebo více asistentů. V této části práce nejprve podrobně popíšu specifikaci formátu dap a dále implementaci knihovny, která s dapy umí pracovat.
 
 Specifikace dapu
 ----------------
@@ -84,7 +84,7 @@ Adresářová struktura reálného dapu [@da-fedora] může vypadat například 
 
 ### Soubor meta.yaml
 
-Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#par:pozadavky-balik). Z důvodů popsaných [v části](#par:reserse-metadata) se jedná o YAML soubor. Soubor obsahuje tyto direktivy:
+Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-balik). Z důvodů popsaných [v části](#reserse-metadata) se jedná o YAML soubor. Soubor obsahuje tyto direktivy:
 
 **package_name**
 
@@ -174,9 +174,9 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#par:pozada
 >  * miroslav.hroncok@fit.cvut.cz
 >  * devassistant@lists.fedoraproject.org
 
-[V ukázce](#par:meta-yaml-simple) můžete vidět příklad souboru `meta.yaml`, který obsahuje pouze povinné údaje, a [v ukázce](#par:meta-yaml-extended) pak příklad doplněný o údaje nepovinné.
+[V ukázce](#meta-yaml-simple) můžete vidět příklad souboru `meta.yaml`, který obsahuje pouze povinné údaje, a [v ukázce](#meta-yaml-extended) pak příklad doplněný o údaje nepovinné.
 
-```{caption="Minimální příklad souboru meta.yaml {#par:meta-yaml-simple}" .yaml}
+```{caption="Minimální příklad souboru meta.yaml {#meta-yaml-simple}" .yaml}
 package_name: travis
 version: 0.0.1dev
 license: ISC
@@ -184,7 +184,7 @@ authors: [Miro Hrončok <miro@hroncok.cz>]
 summary: Adds Travis CI to your projects
 ```
 
-```{caption="Příklad souboru meta.yaml s využitím všech volitelných položek {#par:meta-yaml-extended}" .yaml}
+```{caption="meta.yaml s využitím všech volitelných položek {#meta-yaml-extended}" .yaml}
 package_name: travis
 version: 0.0.1dev
 license: ISC
@@ -194,5 +194,5 @@ summary: Adds Travis CI to your projects
 bugreports: https://github.com/hroncok/dap-travis/issues
 description: |
     This mod assistant allows **Travis CI** for you project.
-    Your project has to be on GitHub already.
+    Your project has to be already on GitHub.
 ```

@@ -5,13 +5,13 @@ V této kapitole osvětlím problematiku své bakalářské práce s důrazem na
 DevAssistant
 ============
 
-DevAssistant je aplikací, která programátorům pomáhá vytvářet nové vývojářské projekty, vydávat kód a dělat další věci, které programátory zdržují od toho nejdůležitějšího, od psaní softwaru. Nezáleží na tom, jestli jste právě objevili svět vývoje softwaru, nebo jestli už programujete dvě dekády, vždy se najde něco, s čím vám DevAssistant ulehčí život [@RedHat2013]. DevAssistant je možné používat z příkazové řádky nebo pomocí GUI, jak je vidět na [obrázku](#par:da-gui).
+DevAssistant je aplikací, která programátorům pomáhá vytvářet nové vývojářské projekty, vydávat kód a dělat další věci, které programátory zdržují od toho nejdůležitějšího, od psaní softwaru. Nezáleží na tom, jestli jste právě objevili svět vývoje softwaru, nebo jestli už programujete dvě dekády, vždy se najde něco, s čím vám DevAssistant ulehčí život [@RedHat2013]. DevAssistant je možné používat z příkazové řádky nebo pomocí GUI, jak je vidět na [obrázku](#pic:da-gui).
 
-![Grafické rozhraní aplikace DevAssistant {#par:da-gui}](images/da-gui)
+![Grafické rozhraní aplikace DevAssistant {#pic:da-gui}](images/da-gui)
 
 Jedná se o svobodný software, je vydaný pod licencí GNU GPL verze 2 nebo vyšší [@RedHat2013].
 
-Asistenty  {#par:asistenty}
+Asistenty
 ---------
 
 DevAssistant je vlastně nástroj umožňující spouštění takzvaných asistentů, které lze zařadit do čtyř kategorií:
@@ -27,11 +27,11 @@ Jednotlivé asistenty jsou napsány ve speciálním DSL [@da-yaml], který je za
 
 > YAML je formát pro serializaci strukturovaných dat. Výhodou tohoto formátu je, že je dobře čitelný nejen strojem, ale i člověkem. [@wiki-yaml]
 
-YAML soubory asistentu definují jak metadata (název asistentu, krátký popis, závislosti), tak samotný kód, který je vykonán aplikací (spuštění příkazů na příkazové řádce). Ke každému asistentu mohou patřit ikony pro zobrazení v grafickém rozhraní (jako  [na obrázku](#par:da-gui)) a další soubory, které může asistent použít při vlastním spuštění. Speciálními soubory jsou pak tzv. snipety, které umožňují sdílení kódu mezi jednotlivými asistenty -- jedná se, stejně jako v případě asistentů, o soubory ve formátu YAML.
+YAML soubory asistentu definují jak metadata (název asistentu, krátký popis, závislosti), tak samotný kód, který je vykonán aplikací (spuštění příkazů na příkazové řádce). Ke každému asistentu mohou patřit ikony pro zobrazení v grafickém rozhraní (jako  [na obrázku](#pic:da-gui)) a další soubory, které může asistent použít při vlastním spuštění. Speciálními soubory jsou pak tzv. snipety, které umožňují sdílení kódu mezi jednotlivými asistenty -- jedná se, stejně jako v případě asistentů, o soubory ve formátu YAML.
 
-[V ukázce](#par:assistant-example) můžete vidět příklad jednoduchého vytvářecího asistentu.
+[V ukázce](#assistant-example) můžete vidět příklad jednoduchého vytvářecího asistentu.
 
-```{caption="Ukázka vlastního asistentu z dokumentace \autocite{da-tutorial} {#par:assistant-example}" .yaml}
+```{caption="Ukázka vlastního asistentu z dokumentace \autocite{da-tutorial} {#assistant-example}" .yaml}
 fullname: Argh Script Template
 description: Create a template of simple script that uses argh library
 project_type: [python]
@@ -71,12 +71,12 @@ Přestože je technicky možné distribuovat uživatelům asistent ve formě arc
 
 Proto vyvstává potřeba vytvořit jednotný formát distribuovatelných asistentů a místo, kde takové asistenty sdílet [@Kabrda2013].
 
-Požadavky {#par:pozadavky}
+Požadavky {#pozadavky}
 =========
 
 V této části popíšu požadavky na řešení problému popsaného na konci předchozí části.
 
-Balík (dap) {#par:pozadavky-balik}
+Balík (dap) {#pozadavky-balik}
 -----------
 
 *Balík* je jedna distribuovatelná jednotka obsahující několik asistentů. Pro naše potřeby musí splňovat následující požadavky:
@@ -104,7 +104,7 @@ A volitelně pak také:
 
 Pro potřeby rozlišení balíku pro DevAssistant od jiných balíků (např. RPM) je tento balík pojmenován *DevAssistant Package*, zkráceně dap[^dap].
 
-Repozitář {#par:pozadavky-repozitar}
+Repozitář {#pozadavky-repozitar}
 ---------
 
 *Repozitář* je místo, kde mohou uživatelé sdílet a vyhledávat nasdílené dapy. Z důvodu uživatelské přívětivosti a dostupnosti je takovým místem webové úložiště (webová aplikace). Takové úložiště musí pro naše potřeby splňovat následující požadavky:

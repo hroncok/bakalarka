@@ -1,11 +1,11 @@
 % Rešerše
 
-V této kapitole nastíním možná řešení požadavků vyjmenovaných [v části](#par:pozadavky).
+V této kapitole nastíním možná řešení požadavků vyjmenovaných [v části](#pozadavky).
 
-Balík (dap)  {#par:reserse-balik}
+Balík (dap)  {#reserse-balik}
 ===========
 
-S ohledem na požadavky uvedené [v části](#par:pozadavky-balik) se pokusím představit možnosti, které vyvstávají při volbě vhodného formátu pro dap.
+S ohledem na požadavky uvedené [v části](#pozadavky-balik) se pokusím představit možnosti, které vyvstávají při volbě vhodného formátu pro dap.
 Vzhledem k tomu, že dap obsahuje řadu souborů v adresářové struktuře a metadata, nabízejí se dvě možnosti:
 
  * vlastní binární formát vyvinutý pouze pro potřeby dapu,
@@ -33,26 +33,26 @@ Existující formát pro archivaci souborů
 
 Zbývající možností je využití nějakého existujícího formátu určeného pro archivaci souborů. Takových formátů je mnoho a je třeba zvolit takový formát, který bude možné použít na všech platformách podporovaných aplikací. Po konzultaci s vedoucím práce jsme zvolili formát *tar.gz* [@Tar2013][@Gzip2010], který je velmi rozšířený a otevřený.
 
-### Metadata {#par:reserse-metadata}
+### Metadata {#reserse-metadata}
 
 Použitý archiv musí kromě souborů nést i metadata. Pro účely nezvyšování komplexnosti je vhodnější přidat do archivu soubor tyto metadata obsahující, než modifikovat hlavičku souboru -- dap tak bude možné rozbalit obvyklým způsobem jako obyčejný *tar.gz* archiv bez ztráty těchto informací. Vzhledem k použití formátu YAML pro asistenty[^format-asistentu] je pak žádoucí použít stejný formát.
 
 **Závěr:** Pro účely dapu bude použit archiv *tar.gz* obsahující YAML soubor s metadaty. Konkrétní implementace takového balíku je nastíněna v e-mailu, který tento formát navrhuje [@Kabrda2013], a podrobně popsána v kapitole (TODO).
 
-[^format-asistentu]: Jak je popsáno [v kapitole](#par:asistenty).
+[^format-asistentu]: Jak je popsáno [v kapitole](#asistenty).
 
 Repozitář
 =========
 
-S ohledem na požadavky uvedené [v části](#par:pozadavky-repozitar) se pokusím představit služby a aplikace, které by teoreticky mohly být využity na sdílení dapů.
+S ohledem na požadavky uvedené [v části](#pozadavky-repozitar) se pokusím představit služby a aplikace, které by teoreticky mohly být využity na sdílení dapů.
 
 
 GitHub
 ------
 
-GitHub [@GiHub2014] ([na obrázku](#par:github)) je poměrně známá a oblíbená služba určená k hostování zdrojových kódů aplikací pomocí verzovacího systému git [@Chacon2009]. Ačkoli jsou jednotlivé asistenty v dapu vlastně zdrojovým kódem a verzování tohoto kódu na GitHubu je pochopitelně možné, nesplňuje GitHub požadavky týkající se formátu dapu -- je sice možné nahrát k repozitáři archivy, není ale možné zajistit jejich kontrolu na správnost. GitHub nadále nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu.
+GitHub [@GiHub2014] ([na obrázku](#pic:github)) je poměrně známá a oblíbená služba určená k hostování zdrojových kódů aplikací pomocí verzovacího systému git [@Chacon2009]. Ačkoli jsou jednotlivé asistenty v dapu vlastně zdrojovým kódem a verzování tohoto kódu na GitHubu je pochopitelně možné, nesplňuje GitHub požadavky týkající se formátu dapu -- je sice možné nahrát k repozitáři archivy, není ale možné zajistit jejich kontrolu na správnost. GitHub nadále nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu.
 
-![Screenshot ze služby GitHub {#par:github}](images/github)
+![Screenshot ze služby GitHub {#pic:github}](images/github)
 
 Z uživatelského hlediska pak není příliš přívětivé rozlišení co na GitHubu je dap a co ne - procházení jednotlivých projektů na GitHubu z aplikace DevAssistant a vyhledávání dapů je tak nemožné, nebo by bylo příliš komplikované. Obsah by také nebyl pod kontrolou vývojářů DevAssistantu a případné odstranění škodlivých dapů by vyžadovalo vyjednávání s provozovateli GitHubu.
 
@@ -61,11 +61,11 @@ Z uživatelského hlediska pak není příliš přívětivé rozlišení co na G
 PyPI
 ----
 
-PyPI [@PythonSoftwareFoundation2014] ([na obrázku](#par:pypi)) je repozitář modulů do programovacího jazyka Python. Zdrojový kód aplikace [@PythonSoftwareFoundation2014a] je dostupný pod permisivní licencí BSD a je tedy teoreticky možné PyPI upravit a použít jako repozitář dapů.
+PyPI [@PythonSoftwareFoundation2014] ([na obrázku](#pic:pypi)) je repozitář modulů do programovacího jazyka Python. Zdrojový kód aplikace [@PythonSoftwareFoundation2014a] je dostupný pod permisivní licencí BSD a je tedy teoreticky možné PyPI upravit a použít jako repozitář dapů.
 
-![Screenshot z hlavní instance PyPI {#par:pypi}](images/pypi)
+![Screenshot z hlavní instance PyPI {#pic:pypi}](images/pypi)
 
-PyPI nesplňuje některé požadavky definované [v části](#par:pozadavky-repozitar). V první řadě je navržen na sdílení modulů do Pythonu a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. PyPI nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu. Klasifikace je možná pouze pomocí kategorií definovaných přímo v nahrávaném balíku, je možné použít pouze předem dané kategorie [@PythonSoftwareFoundation2014b].
+PyPI nesplňuje některé požadavky definované [v části](#pozadavky-repozitar). V první řadě je navržen na sdílení modulů do Pythonu a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. PyPI nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu. Klasifikace je možná pouze pomocí kategorií definovaných přímo v nahrávaném balíku, je možné použít pouze předem dané kategorie [@PythonSoftwareFoundation2014b].
 
 Využití PyPI by vyžadovalo nemalou modifikaci jeho zdrojového kódu. To přináší řadu nevýhod, především nutnost prozkoumat cizí zdrojový kód a porozumět mu a následná nutnost synchronizování vlastních změn s aktuální verzí PyPI.
 
@@ -74,11 +74,11 @@ Využití PyPI by vyžadovalo nemalou modifikaci jeho zdrojového kódu. To při
 RubyGems.org
 ------------
 
-RubyGems.org [@Quaranto2014] ([na obrázku](#par:rubygems)) je repozitář gemů -- modulů do jazyka Ruby. Pro Ruby plní stejnou funkci jako PyPI pro Python. Zdrojový kód aplikace [@Quaranto2014a] je dostupný pod permisivní licencí MIT a je tedy teoreticky možné RubyGems.org upravit a použít jako repozitář dapů, stejně jako tomu je u PyPI.
+RubyGems.org [@Quaranto2014] ([na obrázku](#pic:rubygems)) je repozitář gemů -- modulů do jazyka Ruby. Pro Ruby plní stejnou funkci jako PyPI pro Python. Zdrojový kód aplikace [@Quaranto2014a] je dostupný pod permisivní licencí MIT a je tedy teoreticky možné RubyGems.org upravit a použít jako repozitář dapů, stejně jako tomu je u PyPI.
 
-![Screenshot z RubyGems.org {#par:rubygems}](images/rubygems)
+![Screenshot z RubyGems.org {#pic:rubygems}](images/rubygems)
 
-RubyGems.org ale také nesplňuje některé požadavky definované [v části](#par:pozadavky-repozitar). Trpí stejným neduhem jako PyPI -- je navržen na sdílení modulů do Ruby a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. RubyGems.org také nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu. Další nevýhodou je, že na rozdíl od PyPI nepodporuje žádnou možnost klasifikace.
+RubyGems.org ale také nesplňuje některé požadavky definované [v části](#pozadavky-repozitar). Trpí stejným neduhem jako PyPI -- je navržen na sdílení modulů do Ruby a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. RubyGems.org také nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu. Další nevýhodou je, že na rozdíl od PyPI nepodporuje žádnou možnost klasifikace.
 
 Využití RubyGems.org by taktéž vyžadovalo nemalou modifikaci jeho zdrojového kódu. To přináší stejné nevýhody jako v případě PyPI.
 
