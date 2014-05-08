@@ -282,3 +282,9 @@ Díky zvolené metodě TDD [@wiki-tdd] mají jednotlivé kontroly stoprocentní 
 Knihovna *daploader* je dostupná pod licencí GNU GPL verze 2 [@GPLv2] nebo vyšší. Plné znění licence je  součástí zdrojových kódů knihovny, které naleznete na přiloženém médiu.
 
 Tato licence byla zvolena podle licence aplikace DevAssistant, aby bylo v budoucnu možné libovolně přesouvat kód mezi knihovnou *daploader* a DevAssistantem, případně do aplikace knihovnu začlenit.
+
+### Instalace
+
+Knihovna *daploader* je dostupná v repozitáři PyPI [@PythonSoftwareFoundation2014] a je možné ji nainstalovat například pomocí porgramu `pip` [@PyPA2014]:
+
+    pip install daploader
