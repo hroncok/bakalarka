@@ -61,7 +61,7 @@ run:
 - log_i: Project "$proj_name" has been created in "$name".
 ```
 
-DevAssistant může načítat asistenty z vice různých adresářů. Každý z těchto adresářů má pevně definovanou strukturu [@da-tutorial], která mimo jiné určuje, do které z výše uvedených kategorií asistent patří. Navíc je v této struktuře přesně definované místo pro ikony a případně další soubory asistentů.
+DevAssistant může načítat asistenty z více různých adresářů. Každý z těchto adresářů má pevně definovanou strukturu [@da-tutorial], která mimo jiné určuje, do které z výše uvedených kategorií asistent patří. Navíc je v této struktuře přesně definované místo pro ikony a případně další soubory asistentů.
 
 Zatímco existuje základní sada asistentů, která je v některých případech distribuována společně s aplikací [@da-fedora], existuje také možnost vytvářet a používat své vlastní asistenty [@da-tutorial]. Distribuování základní sady asistentů společně s aplikací však přináší řadu potíží - například nutnost kompatibility se všemi platformami, na kterých aplikace běží, či snaha vyhovět požadavkům všech uživatelů (jejichž představy se pochopitelně různí).
 
