@@ -271,7 +271,14 @@ Varování vyvolá:
  * přebytečná ikona pro neexistující asistent nebo snipet,
  * přebytečné soubory pro neexistující asistent nebo snipet.
 
-Kromě metody `check()` lze použít i program `daplint` (součást knihovny), který umožní provádět kontroly z příkazové řádky.
+Kromě metody `check()` lze použít i program `daplint` (součást knihovny), který umožní provádět kontroly z příkazové řádky jako [v ukázce](#daplint-output).
+
+```{caption="Příklad výstupu programu daplint {#daplint-output}"}
+$ daplint foo-1.0.0.dap 
+foo-1.0.0.dap: ERROR: out is outside foo-1.0.0 top-level directory
+foo-1.0.0.dap: ERROR: out.txt is outside foo-1.0.0 top-level directory
+foo-1.0.0.dap: WARNING: Only meta.yaml in dap
+```
 
 ### Testy
 
@@ -285,6 +292,8 @@ Tato licence byla zvolena podle licence aplikace DevAssistant, aby bylo v budouc
 
 ### Instalace
 
-Knihovna *daploader* je dostupná v repozitáři PyPI [@PythonSoftwareFoundation2014] a je možné ji nainstalovat například pomocí porgramu `pip` [@PyPA2014]:
+Knihovna *daploader* je dostupná v repozitáři PyPI [@PythonSoftwareFoundation2014] a je možné ji nainstalovat například pomocí porgramu `pip` [@PyPA2014] ([v ukázce](#daploader-install)).
 
-    pip install daploader
+```{caption="Instalace knihovny daploader {#daploader-install}"}
+pip install daploader
+```
