@@ -271,6 +271,8 @@ Varování vyvolá:
  * přebytečná ikona pro neexistující asistent nebo snipet,
  * přebytečné soubory pro neexistující asistent nebo snipet.
 
+Kromě metody `check()` lze použít i program `daplint` (součást knihovny), který umožní provádět kontroly z příkazové řádky.
+
 ### Testy
 
 Díky zvolené metodě TDD [@wiki-tdd] mají jednotlivé kontroly stoprocentní pokrytí testy. Testy jsou součástí zdrojových kódů knihovny, které naleznete na přiloženém médiu.
