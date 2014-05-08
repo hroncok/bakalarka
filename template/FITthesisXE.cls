@@ -559,6 +559,7 @@ of works or by adapting the Work (including translation), and at the same time m
 \AtBeginDocument{
 % 	\if@langczech\frontmatter*\else\frontmatter\fi %cislovani stranek pred prvni kapitolou
 	\frontmatter
+	\pagenumbering{roman}
 %	\thispagestyle{empty}
 %	\if@langczech{Sem vložte zadání Vaší práce.}\else{Insert here your thesis' task.}\fi
 
