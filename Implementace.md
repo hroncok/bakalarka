@@ -322,7 +322,7 @@ pip install daploader
 Repozitář
 =========
 
-V této části je popsána implementace repozitáře dapů.
+V této části je popsána implementace repozitáře dapů nazvaná *Dapi* -- *DevAssistant Package Index*.
 
 Použité technologie
 -------------------
@@ -351,4 +351,53 @@ Použil jsem další moduly do Pythonu k řešení vyvstaných problémů nespec
 
 A samozřejmě knihovnu *daploader*.
 
+Architektura
+------------
+
+Dapi obsahuje několik modelů reprezentující dapy, uživatele apod. Jejich vztahy jsou znázorněny [na obrázku](#pic:models). Bílé obdélníčky znázorňují modely převzaté z Djanga nebo z některých použitých modulů.
+
 ![ERM diagram aplikace {#pic:models}](pdfs/models)
+
+### MetaDap
+
+*MetaDap* uchovává informace o dapu, bez ohledu na jeho konkrétní verzi. Tedy název dapu, vlastníka, spoluvlastníky, hodnocení, tagy, hlášení a informace o tom, je-li *MetaDap* aktivní[^aktivni]. Dále obsahuje odkaz na poslední a poslední stabilní verzi dapu, pokud je k dispozici.
+
+Informace o celkovém počtu hodnocení a průměrném hodnocení je uchována v databázi a přepočítává se, až když dojde k nějaké změně. Je to proto, aby se při každém načtení stránky s dapem nemusely z databáze načítat všechna jeho hodnocení. Stejným způsobem fungují odkazy na poslední a poslední stabilní verzi dapu.
+
+[^aktivni]: Neaktivní MetaDap plní roli smazaného dapu bez nutnosti ho úplně smazat.
+
+### Dap
+
+*Dap* představuje dap v jedné konkrétní verzi. Uchovává metadata dapu (kromě názvu) a odkaz na *MetaDap*.
+
+### Author
+
+Author představuje jednoho autora dapu. Je vázán na konkrétní verzi dapu, tedy na model *Dap*.
+
+### Report
+
+*Report* představuje hlášení o škodlivém dapu. Uchovává se odkaz na *MetaDap*, druh škodlivosti, obsah hlášení, informace, jestli je hlášení vyřízeno, a odkaz na uživatele, který dap nahlásil, případě volitelně e-mailová adresa, pokud šlo o nepřihlášeného uživatele a ten ji vyplnil. Dále je uchováván odkaz na příslušné verze (modely *Dap*), pokud byly při hlášení uvedeny.
+
+V aplikaci existují tyto druhy škodlivosti:
+
+ * legální problém (problémy s autorským právem, nesvobodný nebo patentovaný obsah),
+ * malware (škodlivý kód),
+ * nenávistný nebo jinak nevhodný obsah (rasismus, sexismus, podněcování k nenávisti, pornografie apod.),
+ * spam.
+
+### Rank
+
+*Rank* představuje hodnocení jednoho uživatele jednoho *MetaDapu*. Uchovává odkaz na *MetaDap* a uživatele (model *User* z Djanga) a výši hodnocení (1 až 5 „hvězdiček“).
+
+### Profile
+
+Django poskytuje model *User* reprezentující uživatele aplikace. Do tohoto modelu není možné přidávat atributy, proto existuje model *Profile*, který se váže právě na jednoho uživatele a který uchovává dodatečné informace [@DjangoSoftwareFoundation2014a].
+
+V případě Dapi je to odkaz na služby, pomocí kterých když se uživatel přihlásí, tak přepíší data uživatele (jméno a e-mailovou adresu). To je nutné proto, že uživatel se může přihlašovat přes více služeb, které mohou poskytovat různé údaje. Takto si může vybrat, které údaje mají platit. Ve výchozím stavu takto přepisuje data první použitá služba.
+
+*Profil* nadále může obsahovat další data chybějící v modelu *User*, pokud by bylo rozhodnuto, že to je potřeba -- například telefonní číslo a podobně.
+
+Dummy kapitola
+--------------
+
+Tady bude určitě ještě jedna kapitola. Teď je tady jen z hecu (kvůli rozbitému labelu u posledního obrázku). TODO pryč s tim.
