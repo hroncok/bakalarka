@@ -370,7 +370,7 @@ Informace o celkovém počtu hodnocení a průměrném hodnocení je uchována v
 
 ### Dap
 
-*Dap* představuje dap v jedné konkrétní verzi. Uchovává metadata dapu (kromě názvu) a odkaz na *MetaDap*.
+*Dap* představuje dap v jedné konkrétní verzi. Uchovává metadata dapu (kromě názvu), odkaz na *MetaDap* a cestu k souboru s dapem.
 
 ### Author
 
