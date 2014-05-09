@@ -350,3 +350,5 @@ Použil jsem další moduly do Pythonu k řešení vyvstaných problémů nespec
  * markdown2 [@Mick2014] pro zobrazení dlouhých popisů dapů.
 
 A samozřejmě knihovnu *daploader*.
+
+![ERM diagram aplikace {#pic:models}](pdfs/models)

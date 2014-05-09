@@ -1,0 +1,30 @@
+digraph ER {
+  rankdir=LR;
+  node [shape=record, fillcolor=grey75, style=filled, fontname="Linux Libertine"];
+    MetaDap[label="MetaDap|id\lpackage_name\lactive\laverage_rank\lrank_count\l"];
+    Dap[label="Dap|id\lfile\lversion\llicense\lhomepage\lbugreports\lsummary\ldescription\l"];
+    Author[label="Author|id\lauthor\l"];
+    Profile[label="Profile|id\l"];
+    Rank[label="Rank|id\lrank\l"];
+    Report[label="Report|id\lproblem\lemail\lmessage\lsolved\l"];
+  node [fillcolor=lightgrey];
+    User;
+    UserSocialAuth;
+    TaggableManager;
+  edge[dir=both, labelfontname="Linux Libertine", fontname="Linux Libertine"];
+  Profile -> User [arrowhead=tee arrowtail=tee, label="is"];
+  MetaDap -> User [arrowhead=tee arrowtail=crowodot, label="owner"];
+  MetaDap -> User [arrowhead=crowodot arrowtail=crowodot, label="comaintainers"];
+  MetaDap -> Dap [arrowhead=crowodot arrowtail=tee, label="version"];
+  MetaDap -> Dap [arrowhead=teeodot arrowtail=tee, label="latest"];
+  MetaDap -> Dap [arrowhead=teeodot arrowtail=tee, label="latest_stable"];
+  Dap -> Author [arrowhead=crowtee arrowtail=tee, label="has"];
+  Rank -> MetaDap [arrowhead=tee arrowtail=crowodot, label="ranked"];
+  Rank -> User [arrowhead=tee arrowtail=crowodot, label="ranker"];
+  Profile -> UserSocialAuth [arrowhead=crowodot arrowtail=teeodot, label="syncs"];
+  User -> UserSocialAuth [arrowhead=crowtee arrowtail=tee, label="associated"];
+  MetaDap -> TaggableManager [arrowhead=tee arrowtail=tee, label="tags"];
+  Report -> MetaDap [arrowhead=tee arrowtail=crowodot, label="reported"];
+  Report -> User [arrowhead=teeodot arrowtail=crowodot, label="reporter"];
+  Report -> Dap [arrowhead=crowodot arrowtail=crowodot, label="versions"];
+}
