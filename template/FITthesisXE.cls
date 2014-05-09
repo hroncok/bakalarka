@@ -105,12 +105,12 @@
 					sorting=nyt, urldate=iso8601]{ biblatex }
 
 	\renewcommand*{\acronymname}{Seznam použitých zkratek}
-	\DeclareFloatingEnvironment[name={Adresářová struktura}]{dirfigure}
+	\DeclareFloatingEnvironment[name={Adresářová struktura},listname={Seznam adresářových struktur}]{dirfigure}
 \else
 	\setdefaultlanguage [variant=british] {english}
 	\RequirePackage [backend=biber, citestyle=iso-numeric, autolang=other,%
 					sorting=nyt, urldate=iso8601]{ biblatex }
-	\DeclareFloatingEnvironment[name={Directory structure}]{dirfigure}
+	\DeclareFloatingEnvironment[name={Directory structure},listname={List of directory structures}]{dirfigure}
 \fi
 
 % disable per-chapter numbering for footnotes
@@ -129,6 +129,9 @@
 \DeclareRobustCommand {\listoftablescond} {%
 	\@ifundefined {r@tab:was:used:in:doc} {} {\listoftables*} 
 }
+
+\renewcommand{\memchapinfo}[4]{%
+  \addtocontents{lol}{\protect\addvspace{10pt}}}
 
 % declare conditional list of listings that prints list only if there's some
 % listing in the document
@@ -152,6 +155,18 @@
 }
 \DeclareRobustCommand {\listoffigurescond} {%
 	\@ifundefined {r@figure:was:used:in:doc} {} {\listoffigures*} 
+}
+
+% declare conditional list of dirfigures that prints list only if there's some
+% dirfigure in the document
+\AtEndEnvironment {dirfigure} {%
+	\gdef \there@is@a@dirfigure{}
+}
+\AtEndDocument {%
+	\ifdefined \there@is@a@dirfigure \label{dirfigure:was:used:in:doc} \fi
+}
+\DeclareRobustCommand {\listofdirfigurescond} {%
+	\@ifundefined {r@dirfigure:was:used:in:doc} {} {\listofdirfigures} 
 }
 
 % line breaks in URL
@@ -578,6 +593,9 @@ of works or by adapting the Work (including translation), and at the same time m
 
 	\cleardoublepage
 	\listoflistingscond
+
+	\cleardoublepage
+	\listofdirfigurescond
 
 	\cleardoublepage
 	\listoftablescond
