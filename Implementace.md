@@ -89,7 +89,7 @@ Adresář `doc` byl přidán pro účely dapu, aby bylo možné společně s asi
 Soubor meta.yaml
 ----------------
 
-Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-balik@). Z důvodů popsaných [v části](#reserse-metadata@) se jedná o YAML soubor. Soubor obsahuje tyto direktivy:
+Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-balik@). Z důvodů popsaných [v části](#reserse-archiv@) se jedná o YAML soubor. Soubor obsahuje tyto direktivy:
 
 **package_name**
 
@@ -318,3 +318,6 @@ Knihovna *daploader* je dostupná v repozitáři PyPI [@PythonSoftwareFoundation
 ```{caption="Instalace knihovny daploader {#daploader-install}"}
 pip install daploader
 ```
+
+Repozitář
+=========
