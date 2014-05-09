@@ -2,19 +2,17 @@
 
 V této kapitole podrobně popíšu implementaci své bakalářské práce.
 
-Dap {#implementace-dap}
-===
+Specifikace dapu {#implementace-dap}
+================
 
-Jak bylo popsáno [v částech](#pozadavky-balik@) [a](#reserse-balik@), dap je *tar.gz* archiv obsahující soubory a metadata jednoho nebo více asistentů. V této části práce nejprve podrobně popíšu specifikaci formátu dap a dále implementaci knihovny, která s dapy umí pracovat.
-
-Specifikace dapu
-----------------
+Jak bylo popsáno [v částech](#pozadavky-balik@) [a](#reserse-balik@), dap je *tar.gz* archiv obsahující soubory a metadata jednoho nebo více asistentů. V této části práce podrobně popíšu specifikaci formátu dap.
 
 Jeden dap je *tar.gz* archiv [@Tar2013][@Gzip2010] pojmenovaný `<název>-<verze>.dap`, konkrétně pak například `python-0.8.0.dap`. Název je zde uveden i s příponou -- typická přípona *tar.gz* archivu `.tar.gz` či `.tgz` je nahrazena příponou `.dap`.
 
 Nahrazení typické přípony je provedeno proto, aby byl dap uživateli jasně identifikovatelný a aby nedocházelo k omylům při pokusu nainstalovat místo dapu běžný *tar.gz* archiv.
 
-### Adresářová struktura uvnitř archivu
+Adresářová struktura uvnitř archivu
+-----------------------------------
 
 Dap má uvnitř archivu striktně danou adresářovou strukturu, která odpovídá adresářové struktuře, kterou očekává DevAssistant, doplněnou o další soubory a adresáře potřebné pouze pro dap:
 
@@ -82,7 +80,8 @@ Adresářová struktura reálného dapu [@da-fedora] může vypadat například 
 
 [^libovolne]: V rámci pravidel souborového systému.
 
-### Soubor meta.yaml
+Soubor meta.yaml
+----------------
 
 Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-balik@). Z důvodů popsaných [v části](#reserse-metadata@) se jedná o YAML soubor. Soubor obsahuje tyto direktivy:
 
@@ -214,7 +213,7 @@ description: |
 ```
 
 Knihovna pro načítání metadat dapů
-----------------------------------
+==================================
 
 Strojově číst metadata dapu lze následujícím postupem:
 
@@ -230,7 +229,8 @@ Rozhodl jsem se tedy napsat knihovnu, která umožní tento postup automatizovat
 
 Knihovnu jsem nazval *daploader*.
 
-### Použité technologie
+Použité technologie
+-------------------
 
 Vzhledem k tomu, že aplikace DevAssistant je napsána v programovacím jazyce Python [@Pilgrim2010] a je žádoucí, aby knihovna šla použít přímo z této aplikace, zvolil jsem také programovací jazyk Python. Implementace v jiném jazyce by sice byla možná, ale bylo by pak nutné řešit komunikaci této knihovny s aplikací DevAssistant pomocí nějaké mezivrstvy [@Altis2014], což by bylo zbytečně komplikované.
 
@@ -243,11 +243,13 @@ Zvolil jsem metodu TDD a pro testování jsem použil nástroj pytest [@Krekel20
 > Programování řízené testy (z anglického *Test-driven development* -- TDD) je přístup k vývoji softwaru, který je založen na malých, stále se opakujících krocích, vedoucích ke zefektivnění celého vývoje.
 Prvním krokem je definice funkcionality a následné napsání testu, který tuto funkcionalitu ověřuje. Poté přichází na řadu psaní kódu a nakonec úprava tohoto kódu. [@wiki-tdd]
 
-### Načtení dapu
+Načtení dapu
+------------
 
 *Daploader* poskytuje třídu *Dap*. Její konstruktor načte dap a pokusí se z něj získat obsah souboru `meta.yaml` -- pokud se načtení nepodaří (nejedná se o *tar.gz* archiv nebo v archivu není právě jeden soubor `meta.yaml`), knihovna vyvolá výjimku. V případě správného načtení jsou jednotlivé položky ze souboru `meta.yaml` k dispozici ve formě asociativního pole.
 
-### Kontroly
+Kontroly
+--------
 
 Třída *Dap* obsahuje metodu `check()`, která spouští rutinu kontrol. Pokud některé kontroly selžou, chyby nebo varování jsou nahlášeny uživateli do zvoleného místa výstupu (výchozí je standardní chybový výstup), případně je vyvolána výjimka.
 
@@ -279,7 +281,8 @@ foo-1.0.0.dap: ERROR: out is outside of foo-1.0.0 top-level directory
 foo-1.0.0.dap: WARNING: Only meta.yaml in dap
 ```
 
-### Další funkce
+Další funkce
+------------
 
 Třída *Dap* také obsahuje metodu na extrahování dapu na určité místo. Knihovna nabízí porovnávací funkci verzí, která je možná použít například jako [v ukázce](#dapver).
 
@@ -289,17 +292,20 @@ versions = ['1.0', '1.0.5', '1.1dev', '1.1a', '1.1', '1.1.1', '1.2']
 assert versions == sorted(versions, cmp=dapver.compare)
 ```
 
-### Testy
+Testy
+-----
 
 Díky zvolené metodě TDD [@wiki-tdd] mají jednotlivé kontroly stoprocentní pokrytí testy. Testy jsou součástí zdrojových kódů knihovny, které naleznete na přiloženém médiu.
 
-### Licence
+Licence
+-------
 
 Knihovna *daploader* je dostupná pod licencí GNU GPL verze 2 [@GPLv2] nebo vyšší. Plné znění licence je  součástí zdrojových kódů knihovny, které naleznete na přiloženém médiu.
 
 Tato licence byla zvolena podle licence aplikace DevAssistant, aby bylo v budoucnu možné libovolně přesouvat kód mezi knihovnou *daploader* a DevAssistantem, případně do aplikace knihovnu začlenit.
 
-### Instalace
+Instalace
+---------
 
 Knihovna *daploader* je dostupná v repozitáři PyPI [@PythonSoftwareFoundation2014] a je možné ji nainstalovat například pomocí porgramu `pip` [@PyPA2014] ([v ukázce](#daploader-install)).
 
