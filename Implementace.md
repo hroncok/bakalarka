@@ -91,7 +91,7 @@ Soubor meta.yaml
 
 Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-balik@). Z důvodů popsaných [v části](#reserse-archiv@) se jedná o YAML soubor. Soubor obsahuje tyto direktivy:
 
-**package_name**
+### package_name
 
 > Název dapu, povinný údaj. Smí obsahovat malá písmena obsažená v tabulce ASCII[^ascii], číslice a znaky podtržítko (`_`) a spojovník (`-`), avšak první a poslední znak smí být pouze písmeno nebo číslice.
 > 
@@ -108,7 +108,7 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-
 
 [^ascii]: Tedy písmena anglické abecedy.
 
-**version**
+### version
 
 > Verze dapu, povinný údaj. Verze musí obsahovat alespoň jedno nezáporné číslo a může obsahovat neomezeně dalších nezáporných čísel oddělených tečkou. Číslice se uvádí bez nadbytečných úvodních nul. Za číselnou verzí může být bez oddělení uveden text `dev`, `a`, nebo `b` značící v uvedeném pořadí blíže nespecifikovanou vývojovou verzi, alfa verzi a betaverzi.
 > 
@@ -122,7 +122,7 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-
 >  * 1.1b
 >  * 1.1
 
-**summary**
+### summary
 
 > Krátký popis dapu, povinný údaj. Slouží k rychlému obeznámení uživatele s obsahem dapu, měl by být napsaný v anglickém jazyce.
 > 
@@ -131,7 +131,7 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-
 >  * Python assistants for creating Flask, Djnago and GTK3 apps or pure Python libraries
 >  * Set of assistants for students of FIT CTU in Prague
 
-**license**
+### license
 
 > Licence obsahu dapu, povinný údaj. Používají se specifikátory licencí z RPM balíčků distribuce Fedora [@GoodLicenses][@GoodLicenses2]. Je možné použít pouze ve Fedoře povolené licence [@GoodLicenses][@GoodLicenses2], které zaručují svobodné šíření obsahu. Tagy lze kombinovat pomocí slov `and` a `or` -- k tomuto účelu je možné použít i závorky a vyhodnocení probíhá podobně jako v jiných logických výrazech. Slovo `and` se používá v případě, že část obsahu je šířena pod jednou a část pod druhou licencí, slovo `or` se používá pokud je možné licenci si vybrat [@LicensesCombined].
 > 
@@ -144,7 +144,7 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-
 >  * GPLv2+
 >  * LGPLv2+ and LGPLv2 and LGPLv3+ and (GPLv3 or LGPLv2) and (GPLv3+ or LGPLv2) and (CC-BY-SA or LGPLv2+) and (CC-BY-SA or LGPLv2) and CC-BY and BSD and MIT and Public Domain
 
-**authors**
+### authors
 
 > Seznam autorů obsahu dapu, povinný údaj. U každého autora je nejprve uvedeno celé jméno a poté volitelně e-mailová adresa v lomených závorkách, podobně jako při e-mailové komunikaci. Zavináč v adrese lze nahradit sekvencí `_at_`.
 > 
@@ -155,13 +155,13 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-
 >  * Miroslav Hrončok
 >  * Никола I Петровић-Његош
 
-**description**
+### description
 
 > Delší, volitelný popis obsahu dapu. Slouží k podrobnějšímu obeznámení uživatelů s obsahem dapu a způsobu využití asistentů v něm obsažených. Obsah by se dal přirovnat k běžnému obsahu souboru README a měl by být v anglickém jazyce. V popisu lze použít formátování pomocí Markdownu [@Markdown2014].
 > 
 > Příklad je uveden [v ukázce](#meta-yaml-extended@).
 
-**homepage**
+### homepage
 
 > Webová stránka dapu, nepovinný údaj. Zadána ve formě platného URL. Je možné použít adresy využívající protokoly HTTP, HTTPS a FTP. Není možné použít adresy s IP adresou místo jména domény. Jako webová stránka dapu může sloužit například odkaz na repozitář s kódem.
 > 
@@ -171,7 +171,7 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-
 >  * http://users.fit.cvut.cz/~hroncmir/dap-travis
 >  * ftp://users.fit.cvut.cz/hroncmir/dap-travis
 
-**bugreports**
+### bugreports
 
 > Místo, kam reportovat chyby, nepovinný údaj. Buďto validní URL podle stejných podmínek jako v případě *homepage*, nebo e-mailová adresa. Zavináč v adrese lze nahradit sekvencí `_at_`.
 > 

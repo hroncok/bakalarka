@@ -5,7 +5,7 @@
 
 PANDOC_OPTS="-f markdown -t latex --no-wrap --listings --no-tex-ligatures --biblatex --bibliography=library.bib"
 FILTERS_PRE=( 'title' 'header_label' )
-FILTERS_POST=( 'listings' 'hyperrefs' 'hyperrefs_page' 'itemizes' 'hotfix_1' 'hotfix_2' 'dash' )
+FILTERS_POST=( 'listings' 'hyperrefs' 'hyperrefs_page' 'itemizes' 'subsubsection' 'hotfix_1' 'hotfix_2' 'dash' )
 FILES="${@:-*.md *.yml}"
 SKIP_FILES="README.md"
 
@@ -100,6 +100,12 @@ filter_hotfix_1() {
 filter_hotfix_2() {
 	$SED -i 's/{#/\\label{/g' \
 		"$1" || echo "filter hotfix_realizace failed" >&2
+}
+
+# Do not add numbers tu subsubsection
+filter_subsubsection() {
+	$SED -i 's/\\subsubsection{/\\subsubsection*{/g' \
+		"$1" || echo "filter subsubsection failed" >&2
 }
 
 # Remove weird dash defunctor
