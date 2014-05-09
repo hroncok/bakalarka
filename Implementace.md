@@ -351,6 +351,8 @@ Použil jsem další moduly do Pythonu k řešení vyvstaných problémů nespec
 
 A samozřejmě knihovnu *daploader*.
 
+TODO PostgreSQL!
+
 Architektura
 ------------
 
