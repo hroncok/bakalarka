@@ -14,8 +14,9 @@ Nahrazení typické přípony je provedeno proto, aby byl dap uživateli jasně 
 Adresářová struktura uvnitř archivu
 -----------------------------------
 
-Dap má uvnitř archivu striktně danou adresářovou strukturu, která odpovídá adresářové struktuře, kterou očekává DevAssistant, doplněnou o další soubory a adresáře potřebné pouze pro dap:
+Dap má uvnitř archivu striktně danou [adresářovou strukturu](#dap-dir@), která odpovídá adresářové struktuře, kterou očekává DevAssistant, doplněnou o další soubory a adresáře potřebné pouze pro dap.
 
+\begin{dirfigure}
 \dirtree{%
 	.1 <název>-<verze>/\DTcomment{hlavní adresář}.
 		.2 assistants/\DTcomment{adresář s asistenty}.
@@ -43,6 +44,8 @@ Dap má uvnitř archivu striktně danou adresářovou strukturu, která odpovíd
 				.4 */\DTcomment{adresáře se snipety další úrovně (dále obdobně)}.
 		.2 meta.yaml\DTcomment{soubor s metadaty}.
 }
+\caption{Generický dap \label{dap-dir}}
+\end{dirfigure}
 
 Asistenty a snipety mají hierarchickou strukturu. Platí, že asistent nejvyšší úrovně musí mít vždy stejný název jako dap, ve kterém je obsažen. Asistenty či spinety dalších úrovní se mohou jmenovat libovolně[^libovolne]. Pokud je v dapu asistent nižší úrovně, vždy v něm musí být i asistent úrovně vyšší. Například pro asistent `crt/python/flask.yaml` musí existovat asistent `crt/python.yaml` -- ten ale může obsahovat jen metadata a nemusí sám o sobě nic vykovávat.
 
@@ -52,8 +55,9 @@ Adresáře, které nejsou využité (jsou prázdné) by dap neměl obsahovat. Ve
 
 Adresář `doc` byl přidán pro účely dapu, aby bylo možné společně s asistenty distribuovat i dokumentaci. Například povinně uváděný text licence, za jejíchž podmínek je obsah dapu distribuován.
 
-Adresářová struktura reálného dapu [@da-fedora] může vypadat například takto:
+[Adresářová struktura](#dap-dir-example@) ukazuje příklad u reálného dapu [@da-fedora].
 
+\begin{dirfigure}
 \dirtree{%
 	.1 python-0.8.0/.
 		.2 assistants/.
@@ -77,6 +81,8 @@ Adresářová struktura reálného dapu [@da-fedora] může vypadat například 
 				.4 python.svg.
 		.2 meta.yaml.
 }
+\caption{Reálný dap \label{dap-dir-example}}
+\end{dirfigure}
 
 [^libovolne]: V rámci pravidel souborového systému.
 

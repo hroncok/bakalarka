@@ -87,6 +87,8 @@
 	}
 }
 
+\RequirePackage {newfloat}
+
 \if@langczech
 	\setmainlanguage {czech}
 	\setotherlanguage {english}
@@ -103,10 +105,12 @@
 					sorting=nyt, urldate=iso8601]{ biblatex }
 
 	\renewcommand*{\acronymname}{Seznam použitých zkratek}
+	\DeclareFloatingEnvironment[name={Adresářová struktura}]{dirfigure}
 \else
 	\setdefaultlanguage [variant=british] {english}
 	\RequirePackage [backend=biber, citestyle=iso-numeric, autolang=other,%
 					sorting=nyt, urldate=iso8601]{ biblatex }
+	\DeclareFloatingEnvironment[name={Directory structure}]{dirfigure}
 \fi
 
 % disable per-chapter numbering for footnotes
