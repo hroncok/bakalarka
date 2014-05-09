@@ -547,20 +547,11 @@ of works or by adapting the Work (including translation), and at the same time m
 }
 
 \DeclareRobustCommand{\abstractpage}{%
-	\chapter*{Abstract}
-	\if@abstractendefined%
-		\theabstracten
-	\else
-		\ClassError{FITthesis}{Abstract in English unspecified}{Specify abstract in English using the \abstractEN command.}
-	\fi
-	\if@keywordsendefined%
-		\paragraph*{Keywords} \thekeywordsen{}
-	\else
-		\ClassError{FITthesis}{English keywords unspecified}{Specify the keywords in English of your thesis using \keywordsEN command.}
-	\fi
-
-	\newpage
 	\if@abstractcsdefined
+		\cleardoublepage
+		\thispagestyle{empty}
+		~
+		\vfill
 		\chapterstyletitle{Abstrakt}\theabstractcs
 	\else
 		\ClassError{FITthesis}{Abstract in Czech unspecified}{Specify abstract in Czech language using the \abstractCS command.}
@@ -571,8 +562,22 @@ of works or by adapting the Work (including translation), and at the same time m
 	\else
 		\ClassError{FITthesis}{Czech keywords unspecified}{Specify the keywords in Czech of your thesis using \keywordsCS command.}
 	\fi
-	
-	\vfill
+
+	\if@abstractendefined
+		%\cleardoublepage
+		%\thispagestyle{empty}
+		%~
+		%\vfill
+		\chapterstyletitle{Abstract}\theabstracten
+	\else
+		\ClassError{FITthesis}{Abstract in English unspecified}{Specify abstract in English using the \abstractEN command.}
+	\fi
+	\if@keywordsendefined%
+		\paragraph*{Keywords} \thekeywordsen{}
+	\else
+		\ClassError{FITthesis}{English keywords unspecified}{Specify the keywords in English of your thesis using \keywordsEN command.}
+	\fi
+
 }
 
 \AtBeginDocument{
