@@ -128,7 +128,7 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-
 > 
 > Příklady vhodných popisů:
 > 
->  * Python assistants for cretaing Flask, Djnago and GTK3 apps or pure Python libraries
+>  * Python assistants for creating Flask, Djnago and GTK3 apps or pure Python libraries
 >  * Set of assistants for students of FIT CTU in Prague
 
 **license**
