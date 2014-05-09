@@ -557,7 +557,7 @@ of works or by adapting the Work (including translation), and at the same time m
 }
 
 \AtBeginDocument{
-	\pagestyle{plain}
+	%\pagestyle{plain}
 	\cleardoublepage
 	\titlepage
 	
