@@ -1,11 +1,12 @@
 % Rešerše
 
-V této kapitole nastíním možná řešení požadavků vyjmenovaných [v části](#pozadavky@).
+V této kapitole jsou nastíněna možná řešení požadavků vyjmenovaných [v části](#pozadavky@).
 
 Balík (dap)  {#reserse-balik}
 ===========
 
-S ohledem na požadavky uvedené [v části](#pozadavky-balik@) se pokusím představit možnosti, které vyvstávají při volbě vhodného formátu pro dap.
+S ohledem na požadavky uvedené [v části](#pozadavky-balik@) jsou zde představeny možnosti, které vyvstávají při volbě vhodného formátu pro dap.
+
 Vzhledem k tomu, že dap obsahuje řadu souborů v adresářové struktuře a metadata, nabízejí se dvě možnosti:
 
  * vlastní binární formát vyvinutý pouze pro potřeby dapu,
@@ -44,7 +45,7 @@ Použitý archiv musí kromě souborů nést i metadata. Pro účely nezvyšová
 Repozitář
 =========
 
-S ohledem na požadavky uvedené [v části](#pozadavky-repozitar@) se pokusím představit služby a aplikace, které by teoreticky mohly být využity na sdílení dapů.
+S ohledem na požadavky uvedené [v části](#pozadavky-repozitar@) jsou zde představeny služby a aplikace, které by teoreticky mohly být využity na sdílení dapů.
 
 
 GitHub

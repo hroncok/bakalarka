@@ -1,11 +1,11 @@
 % Implementace
 
-V této kapitole podrobně popíšu implementaci své bakalářské práce.
+V této kapitole podrobně popisuji implementaci své bakalářské práce.
 
 Specifikace dapu {#implementace-dap}
 ================
 
-Jak bylo popsáno [v částech](#pozadavky-balik@) [a](#reserse-balik@), dap je *tar.gz* archiv obsahující soubory a metadata jednoho nebo více asistentů. V této části práce podrobně popíšu specifikaci formátu dap.
+Jak bylo popsáno [v částech](#pozadavky-balik@) [a](#reserse-balik@), dap je *tar.gz* archiv obsahující soubory a metadata jednoho nebo více asistentů. V této části práce je podrobně popsána specifikace formátu dap.
 
 Jeden dap je *tar.gz* archiv [@Tar2013][@Gzip2010] pojmenovaný `<název>-<verze>.dap`, konkrétně pak například `python-0.8.0.dap`. Název je zde uveden i s příponou -- typická přípona *tar.gz* archivu `.tar.gz` či `.tgz` je nahrazena příponou `.dap`.
 

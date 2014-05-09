@@ -1,6 +1,6 @@
 % Status quo a požadavky
 
-V této kapitole osvětlím problematiku své bakalářské práce s důrazem na důvody vedoucí k její potřebě.
+V této kapitole je osvětlena problematika této bakalářské práce s důrazem na důvody vedoucí k její potřebě.
 
 DevAssistant
 ============
@@ -74,7 +74,7 @@ Proto vyvstává potřeba vytvořit jednotný formát distribuovatelných asiste
 Požadavky {#pozadavky}
 =========
 
-V této části popíšu požadavky na řešení problému popsaného na konci předchozí části.
+V této části jsou popsány požadavky na řešení problému popsaného na konci předchozí části.
 
 Balík (dap) {#pozadavky-balik}
 -----------
