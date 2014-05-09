@@ -2,6 +2,7 @@ AGPL: Affero General Public License
 API: Application Programming Interface
 ASCII: American Standard Code for Information Interchange
 BSD: Berkeley Software Distribution
+CAPTCHA: Completely Automated Public Turing test to tell Computers and Humans Apart
 CPAN: Comprehensive Perl Archive Network
 CTU: Czech Technical University
 ČVUT: České vysoké učení technické
@@ -17,6 +18,7 @@ HTTPS: Hypertext Transfer Protocol Secure
 ISC: Internet Systems Consortium
 LGPL: Lesser General Public License
 MIT: Massachusetts Institute of Technology
+MVC: Model-view-controller
 npm: Node Packaged Modules
 PDF: Portable Document Format
 PyPI: Python Package Index

@@ -218,7 +218,7 @@ description: |
      * `--url` - changes Travis CI URL, default https://travis-ci.org/
 ```
 
-Knihovna pro načítání metadat dapů
+Knihovna pro načítání metadat dapů {#daploader}
 ==================================
 
 Strojově číst metadata dapu lze následujícím postupem:
@@ -321,3 +321,32 @@ pip install daploader
 
 Repozitář
 =========
+
+V této části je popsána implementace repozitáře dapů.
+
+Použité technologie
+-------------------
+
+Aby bylo jednoduché použít vytvořenou knihovnu *daploader* popsanou [v části](#daploader@), zvolil jsem programovací jazyk Python [@Pilgrim2010]. Opět platí, že použít jiný programovací jazyk by bylo možné, ale zbytečně komplikované kvůli nutnosti přidat mezivrstvu [@Altis2014].
+
+Pro vytváření webových aplikací v programovacím jazyce Python existuje celá řada frameworků [@Athanasias2014]. Výběr mezi nimi je záležitostí poskytovaných funkcí, množství dokumentace, dostupných modulů, ale i osobních preferencí.
+
+Zvolil jsem framework Django [@DjangoSoftwareFoundation2014][@Holovaty2008], který poskytuje softwarovou architekturu MVC.
+
+> Model-view-controller (MVC) je softwarová architektura, která rozděluje datový model aplikace, uživatelské rozhraní a řídicí logiku do tří nezávislých komponent tak, že modifikace některé z nich má jen minimální vliv na ostatní. [@wiki-mvc]
+
+Pro Django navíc existuje celá řada doplňků, modulů do Pythonu, která umožňuje řešit některé požadavky na repozitář specifikované [v části](#pozadavky-repozitar@):
+
+ * django-taggit [@Gaynor2014] pro klasifikaci pomocí tagů,
+ * Haystack [@Lindsley2011] a Whoosh [@Chaput2013] pro fulltextové vyhledávání,
+ * Django REST framework [@Christie2014] pro API,
+ * Python Social Auth [@Aguirre2012] pro autentizaci pomocí služeb třetích stran.
+
+Použil jsem další moduly do Pythonu k řešení vyvstaných problémů nespecifikovaných v požadavcích:
+
+ * South [@Godwin2010] pro migraci dat při změně modelů,
+ * Django Simple Captcha [@Bonetti2013] pro zobrazení CAPTCHA u formulářů dostupných pro nepřihlášené uživatele,
+ * django-gravatar2 [@Waddington2013] pro zobrazení Gravatarů [@Gravatar2014] uživatelů,
+ * markdown2 [@Mick2014] pro zobrazení dlouhých popisů dapů.
+
+A samozřejmě knihovnu *daploader*.
