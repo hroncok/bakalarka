@@ -47,7 +47,7 @@
      id="namedview367"
      showgrid="false"
      inkscape:zoom="2.3319084"
-     inkscape:cx="249.44172"
+     inkscape:cx="250.29939"
      inkscape:cy="89.518122"
      inkscape:window-x="64"
      inkscape:window-y="0"
@@ -352,7 +352,7 @@
         <title
            id="title103">User</title>
         <polygon
-           style="fill:#d3d3d3;stroke:#000000"
+           style="fill:#ffffff;stroke:#000000;fill-opacity:1"
            id="polygon105"
            points="405,-109 459,-109 459,-73 405,-73 405,-73 " />
         <text
@@ -460,7 +460,7 @@
         <title
            id="title140">TaggableManager</title>
         <polygon
-           style="fill:#d3d3d3;stroke:#000000"
+           style="fill:#ffffff;stroke:#000000;fill-opacity:1"
            id="polygon142"
            points="372.5,-179 491.5,-179 491.5,-143 372.5,-143 372.5,-143 " />
         <text
@@ -952,7 +952,7 @@
         <title
            id="title327">UserSocialAuth</title>
         <polygon
-           style="fill:#d3d3d3;stroke:#000000"
+           style="fill:#ffffff;stroke:#000000;fill-opacity:1"
            id="polygon329"
            points="150,-36 254,-36 254,0 150,0 150,0 " />
         <text

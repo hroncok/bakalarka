@@ -7,7 +7,7 @@ digraph ER {
     Profile[label="Profile|id\l"];
     Rank[label="Rank|id\lrank\l"];
     Report[label="Report|id\lproblem\lemail\lmessage\lsolved\l"];
-  node [fillcolor=lightgrey];
+  node [fillcolor=white];
     User;
     UserSocialAuth;
     TaggableManager;
