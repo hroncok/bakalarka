@@ -428,7 +428,17 @@ V případě Dapi je to odkaz na služby, pomocí kterých když se uživatel p�
 
 *Profil* nadále může obsahovat další data chybějící v modelu *User*, pokud by bylo rozhodnuto, že to je potřeba -- například telefonní číslo apod. Podobně metody, který by se normálně implementovali v modelu *User* jsou implementovány v modelu *Profile*.
 
-Dummy kapitola
---------------
+Stránky
+-------
 
-Tady bude určitě ještě jedna kapitola. Teď je tady jen z hecu (kvůli rozbitému labelu u posledního obrázku). TODO pryč s tim.
+TODO (index, login, upload, view, admin, apod.)
+
+API
+---
+
+TODO (implementace, použití, dapi-cli)
+
+Licence
+-------
+
+TODO (AGPL verze 3 - důvody apod.)
