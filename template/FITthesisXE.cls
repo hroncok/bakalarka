@@ -215,8 +215,13 @@
 %\tolerance=1000
 
 % try to minimalize widows and orphans
-\widowpenalty=10000
-\clubpenalty=10000
+\clubpenalty 10000 % prvni radek odstavce nebude sam na konci stranky 
+\widowpenalty 10000 % posl. radek odstavce nepujde na novou stranku
+\brokenpenalty 10000
+
+\setcounter{biburlnumpenalty}{600}
+\setcounter{biburlucpenalty}{900}
+\setcounter{biburllcpenalty}{600}
 
 % adjust settings for minted if used
 \AtBeginDocument {%
@@ -585,6 +590,11 @@ of works or by adapting the Work (including translation), and at the same time m
 	\fi
 
 }
+
+
+\makeatletter
+\renewcommand*{\l@listing}{\@dottedtocline{1}{0em}{2.3em}}
+\makeatother
 
 \AtBeginDocument{
 	%\pagestyle{plain}
