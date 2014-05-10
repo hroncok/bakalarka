@@ -351,7 +351,7 @@ Použil jsem další moduly do Pythonu k řešení vyvstaných problémů nespec
  * django-gravatar2 [@Waddington2013] pro zobrazení Gravatarů [@Gravatar2014] uživatelů,
  * markdown2 [@Mick2014] pro zobrazení dlouhých popisů dapů.
 
-A samozřejmě knihovnu *daploader*.
+A samozřejmě knihovnu daploader.
 
 ### Databáze
 
@@ -365,7 +365,7 @@ Pro nasazení aplikace jsem pak použil PostgreSQL, které poskytuje oproti MySQ
 
 ### Frontend
 
-TODO (jQuery, Bootstrap, js knihovny)!
+V části, která interaguje s uživatelem, jsem použil knihovny jQuery [@jQuery2014] a Bootstrap [@Otto2014], abych se vzhledem přiblížil k webové stránce aplikace DevAssistant [@RedHat2013] a abych mohl řešit layout webového rozhraní dostatečně progresivně. Dále jsem použil javascriptové knihovny chosen [@Harvest2013] pro uživatelsky přívětivější formuláře a toc [@Allen2014] pro vygenerování obsahu stránky.
 
 Architektura
 ------------
