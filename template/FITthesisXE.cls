@@ -87,7 +87,7 @@
 	}
 }
 
-\RequirePackage {newfloat}
+\newfloat{dirfigure}{htbp}{lod}[chapter]
 
 \if@langczech
 	\setmainlanguage {czech}
@@ -105,13 +105,19 @@
 					sorting=nyt, urldate=iso8601]{ biblatex }
 
 	\renewcommand*{\acronymname}{Seznam použitých zkratek}
-	\DeclareFloatingEnvironment[name={Adresářová struktura},listname={Seznam adresářových struktur}]{dirfigure}
+	\renewcommand*{\dirfigurename}{Adresářová struktura}
+	\newcommand{\listdirfigurename}{Seznam adresářových struktur}
 \else
 	\setdefaultlanguage [variant=british] {english}
 	\RequirePackage [backend=biber, citestyle=iso-numeric, autolang=other,%
 					sorting=nyt, urldate=iso8601]{ biblatex }
-	\DeclareFloatingEnvironment[name={Directory structure},listname={List of directory structures}]{dirfigure}
+	\renewcommand*{\dirfigurename}{Directory structure}
+	\newcommand{\listdirfigurename}{List of Directory structures}
 \fi
+
+\newlistof{listofdirfigures}{lod}{\listdirfigurename}
+\newlistentry{dirfigure}{lod}{0}
+\floatsetup[dirfigure]{justification=justified}
 
 % disable per-chapter numbering for footnotes
 \counterwithout* {footnote} {chapter}
@@ -166,7 +172,7 @@
 	\ifdefined \there@is@a@dirfigure \label{dirfigure:was:used:in:doc} \fi
 }
 \DeclareRobustCommand {\listofdirfigurescond} {%
-	\@ifundefined {r@dirfigure:was:used:in:doc} {} {\listofdirfigures} 
+	\@ifundefined {r@dirfigure:was:used:in:doc} {} {\listofdirfigures*} 
 }
 
 % line breaks in URL
