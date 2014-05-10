@@ -327,6 +327,8 @@ V této části je popsána implementace repozitáře dapů nazvaná *Dapi* -- *
 Použité technologie
 -------------------
 
+### Backend
+
 Aby bylo jednoduché použít vytvořenou knihovnu *daploader* popsanou [v části](#daploader@), zvolil jsem programovací jazyk Python [@Pilgrim2010]. Opět platí, že použít jiný programovací jazyk by bylo možné, ale zbytečně komplikované kvůli nutnosti přidat mezivrstvu [@Altis2014].
 
 Pro vytváření webových aplikací v programovacím jazyce Python existuje celá řada frameworků [@Athanasias2014]. Výběr mezi nimi je záležitostí poskytovaných funkcí, množství dokumentace, dostupných modulů, ale i osobních preferencí.
@@ -335,7 +337,7 @@ Zvolil jsem framework Django [@DjangoSoftwareFoundation2014][@Holovaty2008], kte
 
 > Model-view-controller (MVC) je softwarová architektura, která rozděluje datový model aplikace, uživatelské rozhraní a řídicí logiku do tří nezávislých komponent tak, že modifikace některé z nich má jen minimální vliv na ostatní. [@wiki-mvc]
 
-Pro Django navíc existuje celá řada doplňků, modulů do Pythonu, která umožňuje řešit některé požadavky na repozitář specifikované [v části](#pozadavky-repozitar@):
+Pro Django navíc existuje celá řada doplňků, modulů do Pythonu, které umožňují řešit některé požadavky na repozitář specifikované [v části](#pozadavky-repozitar@):
 
  * django-taggit [@Gaynor2014] pro klasifikaci pomocí tagů,
  * Haystack [@Lindsley2011] a Whoosh [@Chaput2013] pro fulltextové vyhledávání,
@@ -351,7 +353,19 @@ Použil jsem další moduly do Pythonu k řešení vyvstaných problémů nespec
 
 A samozřejmě knihovnu *daploader*.
 
-TODO PostgreSQL!
+### Databáze
+
+Framework Django umožňuje použít databázové systémy SQLite [@SQLite], MySQL[^mysql] [@Oracle2014] nebo PostgreSQL [@PostgreSQL2014]. Díky dostatečné úrovni abstrakce z hlediska programování na použitém databázovém systému nezáleží.
+
+Pro vývoj a běh aplikace na vlastním systému jsem použil SQLite -- odlehčenou databázi uloženou v jednom souboru vhodnou právě na tento účel [@Tezer2014].
+
+Pro nasazení aplikace jsem pak použil PostgreSQL, které poskytuje oproti MySQL řadu výhod, především absolutně otevřený vývoj a lépe zajištěnou integritu dat [@Tezer2014] nebo speciální možnosti pro ukládání NoSQL dat [@Haas2014].
+
+[^mysql]: Případě kompatibilní náhrady jako MariaDB [@MariaDBFoundation2014]
+
+### Frontend
+
+TODO (jQuery, Bootstrap, js knihovny)!
 
 Architektura
 ------------
@@ -397,7 +411,7 @@ Django poskytuje model *User* reprezentující uživatele aplikace. Do tohoto mo
 
 V případě Dapi je to odkaz na služby, pomocí kterých když se uživatel přihlásí, tak přepíší data uživatele (jméno a e-mailovou adresu). To je nutné proto, že uživatel se může přihlašovat přes více služeb, které mohou poskytovat různé údaje. Takto si může vybrat, které údaje mají platit. Ve výchozím stavu takto přepisuje data první použitá služba.
 
-*Profil* nadále může obsahovat další data chybějící v modelu *User*, pokud by bylo rozhodnuto, že to je potřeba -- například telefonní číslo a podobně.
+*Profil* nadále může obsahovat další data chybějící v modelu *User*, pokud by bylo rozhodnuto, že to je potřeba -- například telefonní číslo apod. Podobně metody, který by se normálně implementovali v modelu *User* jsou implementovány v modelu *Profile*.
 
 Dummy kapitola
 --------------
