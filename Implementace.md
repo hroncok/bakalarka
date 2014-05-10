@@ -353,6 +353,8 @@ Použil jsem další moduly do Pythonu k řešení vyvstaných problémů nespec
 
 A samozřejmě knihovnu daploader.
 
+Aplikace je psaná pro Python 2.7, na podporu Pythonu 3 nebyl kladen důraz, přesto je kód psán tak, aby případné portování na Python 3 probíhalo bez závažných problémů.
+
 ### Databáze
 
 Framework Django umožňuje použít databázové systémy SQLite [@SQLite], MySQL[^mysql] [@Oracle2014] nebo PostgreSQL [@PostgreSQL2014]. Díky dostatečné úrovni abstrakce z hlediska programování na použitém databázovém systému nezáleží.
