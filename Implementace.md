@@ -431,7 +431,21 @@ V případě Dapi je to odkaz na služby, pomocí kterých když se uživatel p�
 Stránky
 -------
 
-TODO (index, login, upload, view, admin, apod.)
+Uživatel interaguje s aplikací prostřednictvím jednotlivých stránek. Zde je popsán jejich obsah, případně zvolený způsob implementace, v případě, že není zřejmý.
+
+Součástí všech stránek je navigační prvek -- horní lišta obsahující odkazy na jednotlivé části aplikace, dokumentaci a přihlášení či odhlášení a vyhledávací políčko. V případě, že je uživatel přihlášen, obsahuje navigace odkaz na stránku s jeho profilem a na stránku, kde může svůj profil upravit.
+
+### Hlavní stránka aplikace
+
+Hlavní stránka aplikace je místem, kudy uživatel na stránku vstupuje, pokud nepoužil odkaz vedoucí na konkrétní obsah. Obsahuje velmi stručnou informaci o aplikaci a seznam nejlépe hodnocených, nejčastěji hodnocených a nejnověji nahraných dapů.
+
+### Přihlašovací stránka
+
+Přihlašovací stránka nabízí uživateli přihlášení pomocí služeb třetích stran, konkrétně dle zadání GitHub [@GitHub2014] a Fedora [@RedHat2013a]. Uživateli je zobrazena v případě, že se nepřihlášený pokusí přistoupit na stránku, kde je přihlášení vyžadováno.
+
+### Nahrání dapu
+
+Stránka s formulářem sloužícím k nahrání dapu. Je zobrazena pouze přihlášeným uživatelům. Po nahrání je dap zkontrolován knihovnou daploader a v případě, že na to má uživatel oprávnění, je zařazen do repozitáře.
 
 API
 ---
