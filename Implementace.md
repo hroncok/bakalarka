@@ -369,6 +369,10 @@ V části, která interaguje s uživatelem, jsem použil knihovny jQuery [@jQuer
 
 ![Knihovna chosen v praxi {#pic:chosen}](images/chosen)
 
+### Nasazení
+
+TODO Openshift
+
 Architektura
 ------------
 
