@@ -365,12 +365,14 @@ Pro nasazení aplikace jsem pak použil PostgreSQL, které poskytuje oproti MySQ
 
 ### Frontend
 
-V části, která interaguje s uživatelem, jsem použil knihovny jQuery [@jQuery2014] a Bootstrap [@Otto2014], abych se vzhledem přiblížil k webové stránce aplikace DevAssistant [@RedHat2013] a abych mohl řešit layout webového rozhraní dostatečně progresivně. Dále jsem použil javascriptové knihovny chosen [@Harvest2013] pro uživatelsky přívětivější formuláře a toc [@Allen2014] pro vygenerování obsahu stránky.
+V části, která interaguje s uživatelem, jsem použil knihovny jQuery [@jQuery2014] a Bootstrap [@Otto2014], abych se vzhledem přiblížil k webové stránce aplikace DevAssistant [@RedHat2013] a abych mohl řešit layout webového rozhraní dostatečně progresivně. Dále jsem použil javascriptové knihovny chosen [@Harvest2013] pro uživatelsky přívětivější formuláře ([na obrázku](#pic:chosen@)) a toc [@Allen2014] pro vygenerování obsahu stránky.
+
+![Knihovna chosen v praxi {#pic:chosen}](images/chosen)
 
 Architektura
 ------------
 
-Dapi obsahuje několik modelů reprezentující dapy, uživatele apod. Jejich vztahy jsou znázorněny [na obrázku](#pic:models). Bílé obdélníčky znázorňují modely převzaté z Djanga nebo z některých použitých modulů.
+Dapi obsahuje několik modelů reprezentující dapy, uživatele apod. Jejich vztahy jsou znázorněny [na obrázku](#pic:models@). Bílé obdélníčky znázorňují modely převzaté z Djanga nebo z některých použitých modulů.
 
 ![ERM diagram aplikace {#pic:models}](pdfs/models)
 
