@@ -445,7 +445,9 @@ Přihlašovací stránka nabízí uživateli přihlášení pomocí služeb tře
 
 ### Nahrání dapu
 
-Stránka s formulářem sloužícím k nahrání dapu. Je zobrazena pouze přihlášeným uživatelům. Po nahrání je dap zkontrolován knihovnou daploader a v případě, že na to má uživatel oprávnění, je zařazen do repozitáře.
+Stránka s formulářem sloužícím k nahrání dapu. Je zobrazena pouze přihlášeným uživatelům. Po nahrání je dap zkontrolován knihovnou daploader a v případě, že na to má uživatel oprávnění, je zařazen do repozitáře -- tento proces je zobrazen [na obrázku](#pic:logic@).
+
+![Vývojový diagram nahrávání dapu {#pic:logic}](pdfs/logic)
 
 API
 ---
