@@ -451,6 +451,50 @@ Stránka s formulářem sloužícím k nahrání dapu. Je zobrazena pouze přihl
 
 ![Vývojový diagram nahrávání dapu {#pic:logic}](pdfs/logic)
 
+### Zobrazení dapu
+
+TODO
+
+### Administrace dapu
+
+TODO
+
+### Správa tagů dapu
+
+TODO
+
+### Opuštění dapu
+
+TODO
+
+### Nahlášení dapu
+
+TODO
+
+### Seznam hlášení dapu
+
+TODO
+
+### Zobrazení uživatele
+
+TODO
+
+### Zobrazení tagu
+
+TODO
+
+### Úprava uživatele
+
+TODO
+
+### Výsledky vyhledávání
+
+TODO
+
+### Podmínky služby
+
+TODO
+
 API
 ---
 
