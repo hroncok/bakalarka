@@ -104,7 +104,7 @@
            id="polygon12"
            points="151,-269 253,-269 253,-163 151,-163 151,-163 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            id="text14"
            font-size="14.00"
            y="-253.8"
@@ -114,31 +114,31 @@
            id="polyline16"
            points="151,-246 253,-246 " />
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text18"
            font-size="14.00"
            y="-230.8"
            x="159">id</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text20"
            font-size="14.00"
            y="-215.8"
            x="159">package_name</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text22"
            font-size="14.00"
            y="-200.8"
            x="159">active</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text24"
            font-size="14.00"
            y="-185.8"
            x="159">average_rank</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text26"
            font-size="14.00"
            y="-170.8"
@@ -154,7 +154,7 @@
            id="polygon31"
            points="392,-400.5 472,-400.5 472,-249.5 392,-249.5 392,-249.5 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            id="text33"
            font-size="14.00"
            y="-385.29999"
@@ -164,49 +164,49 @@
            id="polyline35"
            points="392,-377.5 472,-377.5 " />
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text37"
            font-size="14.00"
            y="-362.29999"
            x="400">id</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text39"
            font-size="14.00"
            y="-347.29999"
            x="400">file</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text41"
            font-size="14.00"
            y="-332.29999"
            x="400">version</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text43"
            font-size="14.00"
            y="-317.29999"
            x="400">license</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text45"
            font-size="14.00"
            y="-302.29999"
            x="400">homepage</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text47"
            font-size="14.00"
            y="-287.29999"
            x="400">bugreports</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text49"
            font-size="14.00"
            y="-272.29999"
            x="400">summary</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text51"
            font-size="14.00"
            y="-257.29999"
@@ -247,7 +247,7 @@
            cy="-269.32599"
            cx="381.24899" />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            transform="matrix(0.97944585,-0.20170726,0.20170726,0.97944585,0,0)"
            id="text66"
            font-size="14.00"
@@ -293,7 +293,7 @@
            cy="-327.401"
            cx="382.80899" />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            transform="matrix(0.9837988,-0.17927611,0.17927611,0.9837988,0,0)"
            id="text83"
            font-size="14.00"
@@ -339,7 +339,7 @@
            cy="-297.52802"
            cx="383.97101" />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            transform="matrix(0.9872205,-0.15936026,0.15936026,0.9872205,0,0)"
            id="text100"
            font-size="14.00"
@@ -356,7 +356,7 @@
            id="polygon105"
            points="405,-109 459,-109 459,-73 405,-73 405,-73 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            id="text107"
            font-size="14.00"
            y="-87.300003"
@@ -397,7 +397,7 @@
            id="polyline120"
            points="404.857,-91.6671 399.861,-91.8598 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            transform="matrix(0.97478455,0.22314812,-0.22314812,0.97478455,0,0)"
            id="text122"
            font-size="14.00"
@@ -447,7 +447,7 @@
            cy="-109.753"
            cx="392.29199" />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            transform="matrix(0.94969773,0.31316803,-0.31316803,0.94969773,0,0)"
            id="text137"
            font-size="14.00"
@@ -464,7 +464,7 @@
            id="polygon142"
            points="372.5,-179 491.5,-179 491.5,-143 372.5,-143 372.5,-143 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            id="text144"
            font-size="14.00"
            y="-157.3"
@@ -497,7 +497,7 @@
            id="polyline157"
            points="372.496,-167.212 367.542,-167.888 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            id="text159"
            font-size="14.00"
            y="-230.6584"
@@ -514,7 +514,7 @@
            id="polygon164"
            points="173.5,-449.5 230.5,-449.5 230.5,-388.5 173.5,-388.5 173.5,-388.5 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            id="text166"
            font-size="14.00"
            y="-434.29999"
@@ -524,13 +524,13 @@
            id="polyline168"
            points="173.5,-426.5 230.5,-426.5 " />
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text170"
            font-size="14.00"
            y="-411.29999"
            x="181.5">id</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text172"
            font-size="14.00"
            y="-396.29999"
@@ -567,7 +567,7 @@
            id="polyline187"
            points="391.823,-349.39 387.48,-351.868 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            transform="matrix(0.9470681,0.32103273,-0.32103273,0.9470681,0,0)"
            id="text189"
            font-size="14.00"
@@ -584,7 +584,7 @@
            id="polygon194"
            points="568,-51 622,-51 622,-5 568,-5 568,-5 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            id="text196"
            font-size="14.00"
            y="-35.799999"
@@ -594,7 +594,7 @@
            id="polyline198"
            points="568,-28 622,-28 " />
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text200"
            font-size="14.00"
            y="-12.8"
@@ -610,7 +610,7 @@
            id="polygon205"
            points="568,-138.5 622,-138.5 622,-77.5 568,-77.5 568,-77.5 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            id="text207"
            font-size="14.00"
            y="-123.3"
@@ -620,13 +620,13 @@
            id="polyline209"
            points="568,-115.5 622,-115.5 " />
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text211"
            font-size="14.00"
            y="-100.3"
            x="576">id</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text213"
            font-size="14.00"
            y="-85.300003"
@@ -667,7 +667,7 @@
            id="polyline226"
            points="253.07,-219.53 258.066,-219.71 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            transform="matrix(0.96972031,0.24421818,-0.24421818,0.96972031,0,0)"
            id="text228"
            font-size="14.00"
@@ -684,7 +684,7 @@
            id="polygon233"
            points="0,-269 64,-269 64,-163 0,-163 0,-163 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            id="text235"
            font-size="14.00"
            y="-253.8"
@@ -694,31 +694,31 @@
            id="polyline237"
            points="0,-246 64,-246 " />
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text239"
            font-size="14.00"
            y="-230.8"
            x="8">id</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text241"
            font-size="14.00"
            y="-215.8"
            x="8">problem</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text243"
            font-size="14.00"
            y="-200.8"
            x="8">email</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text245"
            font-size="14.00"
            y="-185.8"
            x="8">message</text>
         <text
-           style="font-size:14px;text-anchor:start;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:start;font-family:Linux Libertine Display O"
            id="text247"
            font-size="14.00"
            y="-170.8"
@@ -759,7 +759,7 @@
            id="polyline260"
            points="150.822,-216 145.822,-216 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            id="text262"
            font-size="14.00"
            y="-219.8"
@@ -808,7 +808,7 @@
            cy="-339.04401"
            cx="378.241" />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            transform="matrix(0.92750721,-0.37380527,0.37380527,0.92750721,0,0)"
            id="text277"
            font-size="14.00"
@@ -863,7 +863,7 @@
            cy="-87.370499"
            cx="395.87399" />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            transform="matrix(0.91334258,0.40719201,-0.40719201,0.91334258,0,0)"
            id="text294"
            font-size="14.00"
@@ -897,7 +897,7 @@
            id="polyline307"
            points="567.785,-38.2579 563.129,-40.0799 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            transform="matrix(0.9757761,0.21877159,-0.21877159,0.9757761,0,0)"
            id="text309"
            font-size="14.00"
@@ -939,7 +939,7 @@
            cy="-103.762"
            cx="553.86298" />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            transform="matrix(0.99123146,-0.13213699,0.13213699,0.99123146,0,0)"
            id="text324"
            font-size="14.00"
@@ -956,7 +956,7 @@
            id="polygon329"
            points="150,-36 254,-36 254,0 150,0 150,0 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            id="text331"
            font-size="14.00"
            y="-14.3"
@@ -1010,7 +1010,7 @@
            cy="-27.0949"
            cx="558.612" />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            id="text348"
            font-size="14.00"
            y="-29.799999"
@@ -1047,7 +1047,7 @@
            id="polyline363"
            points="404.907,-73.7237 400.629,-71.1354 " />
         <text
-           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine O"
+           style="font-size:14px;text-anchor:middle;font-family:Linux Libertine Display O"
            transform="matrix(0.95942798,-0.2819538,0.2819538,0.95942798,0,0)"
            id="text365"
            font-size="14.00"
