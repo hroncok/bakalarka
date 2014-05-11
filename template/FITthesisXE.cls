@@ -225,7 +225,7 @@
 
 % adjust settings for minted if used
 \AtBeginDocument {%
-	\renewcommand*{\today}{10. května 2014} % FIXME
+	\renewcommand*{\today}{15. května 2014} % FIXME
 	\@ifpackageloaded {minted} {%
 		% use smaller font in code listings
 		\AtBeginEnvironment {minted} { \singlespacing \fontsize{11}{11} \selectfont }
