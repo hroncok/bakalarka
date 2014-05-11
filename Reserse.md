@@ -36,9 +36,9 @@ Zbývající možností je využití nějakého existujícího formátu určené
 
 Použitý archiv musí kromě souborů nést i metadata. Pro účely nezvyšování komplexnosti je vhodnější přidat do archivu soubor tyto metadata obsahující, než modifikovat hlavičku souboru -- dap tak bude možné rozbalit obvyklým způsobem jako obyčejný *tar.gz* archiv bez ztráty těchto informací. Vzhledem k použití formátu YAML pro asistenty[^format-asistentu] je pak žádoucí použít stejný formát.
 
-**Závěr:** Pro účely dapu bude použit archiv *tar.gz* obsahující YAML soubor s metadaty. Konkrétní implementace takového balíku je nastíněna v e-mailu, který tento formát navrhuje [@Kabrda2013], a podrobně popsána [v kapitole](#implementace-dap@).
+**Závěr:** Pro účely dapu bude použit archiv *tar.gz* obsahující YAML soubor s metadaty. Konkrétní implementace takového balíku je nastíněna v e-mailu, který tento formát navrhuje [@Kabrda2013], a podrobně popsána [v části](#implementace-dap@).
 
-[^format-asistentu]: Jak je popsáno [v kapitole](#asistenty@).
+[^format-asistentu]: Jak je popsáno [v části](#asistenty@).
 
 Repozitář
 =========
