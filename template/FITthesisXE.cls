@@ -102,7 +102,7 @@
 	\setquotestyle {czech}
 
 	\RequirePackage [backend=biber, style=iso-numeric, autolang=other,%
-					sorting=nyt, sortlocale=cs_CZ]{ biblatex }
+					sorting=nyt, sortlocale=cs_CZ, spacecolon=false]{ biblatex }
 
 	\renewcommand*{\acronymname}{Seznam použitých zkratek}
 	\renewcommand*{\dirfigurename}{Adresářová struktura}
@@ -110,7 +110,7 @@
 \else
 	\setdefaultlanguage [variant=british] {english}
 	\RequirePackage [backend=biber, style=iso-numeric, autolang=other,%
-					sorting=nyt, sortlocale=en_US]{ biblatex }
+					sorting=nyt, sortlocale=en_US, spacecolon=false]{ biblatex }
 	\renewcommand*{\dirfigurename}{Directory structure}
 	\newcommand{\listdirfigurename}{List of Directory structures}
 \fi
