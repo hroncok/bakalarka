@@ -514,7 +514,113 @@ Podmínky zajišťují, že provozovatel služby nezískává žádná speciáln
 API
 ---
 
-TODO (implementace, použití, dapi-cli)
+Dapi nabízí API pro práci s repozitářem například z aplikace DevAssistant. Na základě pokynů od vedoucího práce jde zatím pomocí API provádět jen neautorizované čtecí operace. Tedy:
+
+ * získat seznam uživatelů,
+ * získat podrobnosti uživatele,
+ * získat seznam *MetaDapů*,
+ * získat podrobnosti *MetaDapu*,
+ * získat seznam *Dapů*,
+ * získat podrobnosti *Dapu*,
+ * získat výsledky vyhledávání.
+
+API je realizováno pomocí modulu Django REST framework [@Christie2014]. Díky tomu je možné API procházet přímo v prohlížeči v rámci aplikace Dapi. Použití Django REST frameworku také zjednodušuje budoucí možnou implementaci zapisovací části API.
+
+Jednotlivé objekty a jejich seznamy jsou serializovány pomocí YAMLu -- to je sice pro API poměrně netradiční řešení, ale vzhledem k tomu, že DevAssistant již závisí na knihovnách, které YAML parsují, je YAML nejvhodnější volbou. Příklad serializovaného dapu můžete vidět [v ukázce](#api-dap@) -- tam, kde je to vhodné, jsou serializována i data metadapu (například název dapu).
+
+> Při práci na Dapi jsem přispěl i do projektu Django REST framework, aby bylo možné vhodně a čitelně serializovat v YAMLu i řetězce se znaky mimo ASCII tabulku, například moje příjmení.
+
+```{caption="Příklad použití API {#api-dap}"}
+$ curl http://dapi.devassistant.org/api/daps/python-0.8.0/
+active: true
+api_link: http://dapi.devassistant.org/api/daps/python-0.8.0/
+authors: [Bohuslav Kabrda <bkabrda@redhat.com>]
+bugreports: https://github.com/bkabrda/devassistant/issues
+description: 'Set of crt assistants for Python.
+
+  Contains assistants that let you kickstart new Django or
+  Flask web application. Pure Python library or GTK3 app.
+
+  Supports both Python 2 and 3.'
+download: http://dapi.devassistant.org/download/python-0.8.0.dap
+homepage: https://github.com/bkabrda/devassistant-assistants-fedora
+human_link: http://dapi.devassistant.org/dap/python/0.8.0/
+id: 4
+is_latest: true
+is_latest_stable: true
+is_pre: false
+license: GPLv2+
+metadap: http://dapi.devassistant.org/api/metadaps/python/
+package_name: python
+reports: 0
+summary: Python assistants originally shipped with devassistant itself
+version: 0.8.0
+```
+
+### Testy
+
+Základní funkcionalita API je při každém nasazení aplikace na OpenShift automaticky ověřena službou Runscope [@Runscope2014].
+
+### Daploader
+
+Do knihovny daploader jsem doplnil funkce na práci s API Dapi. Při kontrole je možné volitelně rozhodnout, zda kontrolovat i přítomnost dapu stejného jména na Dapi. Kontrola v případě pozitivního nálezu vyvolá varování.
+
+Zároveň jsem knihovnu rozšířil o program `dapi`, který umožňuje zobrazovat data z Dapi a instalovat jednotlivé dapy do adresářů, kde je DevAssistant očekává. Jedná se ale pouze o technologické demo - metadata z instalovaných dapů nejsou nikam ukládána a není tedy možné sledovat, zda jsou nainstalované dapy aktuální, případně jestli byly nainstalovány z Dapi, či nikoli. Program `dapi` umožňuje:
+
+ * Vyhledávat dapy
+ * Zobrazit informace o dapu v poslední nebo konkrétní verzi
+ * Nainstalovat dap poslední nebo konkrétní verze
+ * Aktualizovat[^aktualizovat] dap poslední nebo konkrétní verze
+ * Nainstalovat nebo aktualizovat dap ze souboru
+ * Aktualizovat všechny nainstalované dapy
+ * Odinstalovat dap
+ * Zobrazit všechny nainstalované dapy
+
+[^aktualizovat]: Tedy nahradit nainstalovanou verzi jinou
+
+Příklad práce s `dapi` můžete vidět [v ukázce](#dapi-cli@).
+
+```{caption="Příklad práce s dapi {#dapi-cli}"}
+$ dapi search flask
+python - Python assistants originally shipped with devassistant itself
+$ file .devassistant
+.devassistant: ERROR: cannot open `.devassistant' (No such file or dir
+ectory)
+$ dapi install python
+$ tree .devassistant
+.devassistant
+├── assistants
+│   └── crt
+│       ├── python
+│       │   ├── django.yaml
+│       │   ├── flask.yaml
+│       │   ├── gtk3.yaml
+│       │   └── lib.yaml
+│       └── python.yaml
+├── doc
+│   └── python
+│       ├── LICENSE
+│       └── NOTICE
+├── files
+(...zkráceno...)
+└── icons
+    └── crt
+        └── python.svg
+
+14 directories, 22 files
+$ dapi uninstall python
+$ tree .devassistant
+.devassistant
+├── assistants
+│   └── crt
+├── doc
+├── files
+│   └── crt
+└── icons
+    └── crt
+
+7 directories, 0 files
+```
 
 Licence
 -------
