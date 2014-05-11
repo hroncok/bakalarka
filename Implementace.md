@@ -509,7 +509,7 @@ Stránkovaný seznam s výpisem všech dapů odpovídajících hledané frázi, 
 
 Statická stránka zobrazující podmínky použití služby. Pro větší přehlednost je zobrazen obsah pomocí javascriptové knihovny toc [@Allen2014]. Text podmínek dodal Richard Fontana, zaměstnanec firmy Red Hat [@RedHat2014].
 
-Podmínky zajišťují to, že provozovatel služby nezískává žádná speciální práva na uživateli nahraný obsah (kromě práva tento obsah zobrazit a šířit uživatelům), ale také za daný obsah nepřejímá zodpovědnost.
+Podmínky zajišťují, že provozovatel služby nezískává žádná speciální práva na uživateli nahraný obsah (kromě práva tento obsah zobrazit a šířit uživatelům), ale také za daný obsah nepřejímá zodpovědnost.
 
 API
 ---
