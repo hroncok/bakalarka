@@ -101,16 +101,16 @@
 		{\textquoteright}		% closing inner mark
 	\setquotestyle {czech}
 
-	\RequirePackage [backend=biber, citestyle=iso-numeric, autolang=other,%
-					sorting=nyt, urldate=iso8601]{ biblatex }
+	\RequirePackage [backend=biber, style=iso-numeric, autolang=other,%
+					sorting=nyt, sortlocale=cs_CZ]{ biblatex }
 
 	\renewcommand*{\acronymname}{Seznam použitých zkratek}
 	\renewcommand*{\dirfigurename}{Adresářová struktura}
 	\newcommand{\listdirfigurename}{Seznam adresářových struktur}
 \else
 	\setdefaultlanguage [variant=british] {english}
-	\RequirePackage [backend=biber, citestyle=iso-numeric, autolang=other,%
-					sorting=nyt, urldate=iso8601]{ biblatex }
+	\RequirePackage [backend=biber, style=iso-numeric, autolang=other,%
+					sorting=nyt, sortlocale=en_US]{ biblatex }
 	\renewcommand*{\dirfigurename}{Directory structure}
 	\newcommand{\listdirfigurename}{List of Directory structures}
 \fi

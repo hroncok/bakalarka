@@ -41,7 +41,7 @@ Note that maybe not all those packages are really necessary and some may be miss
 
 You'll also need to install [biblatex-iso690](https://github.com/michal-h21/biblatex-iso690). For me, the following helped:
 
- 1. copy `iso-numeric.cbx` to `/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/`
+ 1. copy the folder to `/usr/share/texlive/texmf-dist/tex/latex/biblatex/`
  2. run `texhash` as root
 
 Once I'll have time, I'll package it for Fedora.
