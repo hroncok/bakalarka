@@ -578,7 +578,7 @@ Zároveň jsem knihovnu rozšířil o program `dapi`, který umožňuje zobrazov
 
 [^aktualizovat]: Tedy nahradit nainstalovanou verzi jinou
 
-Příklad práce s `dapi` můžete vidět [v ukázce](#dapi-cli@).
+Příklad práce s `dapi` můžete vidět [v ukázce](#dapi-cli@). Nápověda je pak součástí programu (přepínač `--help`).
 
 ```{caption="Příklad práce s dapi {#dapi-cli}"}
 $ dapi search flask
