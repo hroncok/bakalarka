@@ -519,4 +519,6 @@ TODO (implementace, použití, dapi-cli)
 Licence
 -------
 
-TODO (AGPL verze 3 + CC - důvody apod.)
+Z důvodu licenční kompatibility s knihovnou daploader musí být Dapi vydáno pod licencí kompatibilní s GNU GPL verze 2 [@GPLv2] nebo vyšší. Nabízí se použití stejné licence, zvolil jsem ale raději licenci GNU AGPL verze 3 [@AGPLv3], která je kompatibilní s GNU GPL verze 3[^verze] [@GPLv3]. Licence AGPL na rozdíl od GPL upravuje podmínky při vzdálenému přistupování k aplikaci -- tedy například přes webové rozhraní nebo API. Poskytování vzdáleného přístupu je u AGLP vyhodnoceno jako šíření aplikace.
+
+[^verze]: AGPL verze 2 není kompatibilní s GPL verze 2
