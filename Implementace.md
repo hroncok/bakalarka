@@ -433,7 +433,7 @@ V případě Dapi je to odkaz na služby, pomocí kterých když se uživatel p�
 Stránky
 -------
 
-Uživatel interaguje s aplikací prostřednictvím jednotlivých stránek. Zde je popsán jejich obsah, případně zvolený způsob implementace, v případě, že není zřejmý.
+Uživatel interaguje s aplikací prostřednictvím jednotlivých stránek. Zde je popsán jejich obsah, případně zvolený způsob implementace, pokud není triviální.
 
 Součástí všech stránek je navigační prvek -- horní lišta obsahující odkazy na jednotlivé části aplikace, dokumentaci a přihlášení či odhlášení a vyhledávací políčko. V případě, že je uživatel přihlášen, obsahuje navigace odkaz na stránku s jeho profilem a na stránku, kde může svůj profil upravit.
 
@@ -445,19 +445,21 @@ Hlavní stránka aplikace je místem, kudy uživatel na stránku vstupuje, pokud
 
 Přihlašovací stránka nabízí uživateli přihlášení pomocí služeb třetích stran, konkrétně dle zadání GitHub [@GitHub2014] a Fedora [@RedHat2013a]. Uživateli je zobrazena v případě, že se nepřihlášený pokusí přistoupit na stránku, kde je přihlášení vyžadováno.
 
+Analogicky existuje stránka odhlašovací, ta však nemá žádný obsah a odhlášeného uživatele přesměruje na hlavní stránku.
+
 ### Nahrání dapu
 
-Stránka s formulářem sloužícím k nahrání dapu. Je zobrazena pouze přihlášeným uživatelům. Po nahrání je dap zkontrolován knihovnou daploader a v případě, že na to má uživatel oprávnění, je zařazen do repozitáře -- tento proces je zobrazen [na obrázku](#pic:logic@).
+Stránka s formulářem sloužícím k nahrání dapu. Je zobrazena pouze přihlášeným uživatelům. Po nahrání je dap zkontrolován knihovnou daploader a v případě, že na to má uživatel oprávnění, je zařazen do repozitáře -- tento proces je zobrazen [na obrázku](#pic:logic).
 
 ![Vývojový diagram nahrávání dapu {#pic:logic}](pdfs/logic)
 
 ### Zobrazení dapu
 
-Stránka s detaily dapu -- je zobrazena [na obrázku](#pic:dap). Zobrazuje informace z modelu *Dap* a *MetaDap*. Pokud není určeno specificky, jako verzi zobrazit, je zobrazena poslední stabilní verze. Pokud žádná stabilní verze není dostupná, je zobrazena poslední vývojová. Pokud dap neobsahuje žádnou verzi, jsou zobrazeny pouze informace z modelu *MetaDap*.
+Stránka s detaily dapu -- je zobrazena [na obrázku](#pic:dap). Zobrazuje informace z modelu *Dap* a *MetaDap*. Pokud není určeno specificky, jakou verzi zobrazit, je zobrazena poslední stabilní verze. Pokud žádná stabilní verze není dostupná, je zobrazena poslední vývojová. Pokud dap neobsahuje žádnou verzi, jsou zobrazeny pouze informace z modelu *MetaDap*.
 
 ![Stránka s dapem {#pic:dap}](images/dap)
 
-Vlastníkovi a spoluvlastníkovi dapu a administrátorovi repozitáře je umožněno mazat jednotlivé verze dapu. Všem jsou v některých případech zobrazena varování:
+Vlastníkovi a spoluvlastníkovi dapu a administrátorovi repozitáře je umožněno mazat jednotlivé verze dapu. Všem návštěvníkům jsou v některých případech zobrazena varování:
 
  * Toto není nejnovější stabilní verze dapu.
  * Toto není nejnovější verze dapu.
@@ -471,7 +473,7 @@ Stránka je dostupná pouze vlastníkovi dapu, případně administrátorovi rep
 
 ### Správa tagů dapu
 
-Vlastníkovi a spoluvlastníkovi dapu a administrátorovi repozitáře je umožněno nastavit tagy pro dap.
+Vlastníkovi a spoluvlastníkovi dapu a administrátorovi repozitáře je zde umožněno nastavit tagy pro dap.
 
 ### Opuštění dapu
 
@@ -487,7 +489,7 @@ Seznam nezpracovaných hlášení daného dapu. Administrátor může jednotliv�
 
 ### Zobrazení tagu
 
-Stránkovaný seznam všech dapů se zvoleným tagem, je zobrazen při kliknutí na tag. Obsahuje název, krátký popis, vlastníka a hodnocení dapu. Název dapu slouží jako odkaz na jeho detailní zobrazení.
+Stránkovaný seznam všech dapů se zvoleným tagem -- je zobrazen při kliknutí na tag. Obsahuje název, krátký popis, vlastníka a hodnocení dapu. Název dapu slouží jako odkaz na jeho detailní zobrazení.
 
 ### Zobrazení uživatele
 
@@ -501,7 +503,7 @@ Stránka s profilem uživatele -- je zobrazena [na obrázku](#pic:user). Obráze
 
 ### Výsledky vyhledávání
 
-Stránkovaná stránka s výpisem všech dapů odpovídajících hledané frázi, zobrazená stejně jako seznam dapů se zvoleným tagem. Vyhledávání je realizováno přes souborovou databázi Whoosh [@Chaput2013] -- při každém uložení nebo smazání dapu je tato databáze aktualizována. V případě většího provozu na webové aplikaci je možné databázi místo toho aktualizovat asynchronně pomocí služby cron [@wiki-cron].
+Stránkovaný seznam s výpisem všech dapů odpovídajících hledané frázi, zobrazený stejně jako seznam dapů se zvoleným tagem. Vyhledávání je realizováno přes souborovou databázi Whoosh [@Chaput2013] -- při každém uložení nebo smazání dapu je tato databáze aktualizována. V případě většího provozu na webové aplikaci je možné databázi místo toho aktualizovat asynchronně pomocí služby cron [@wiki-cron].
 
 ### Podmínky služby
 
