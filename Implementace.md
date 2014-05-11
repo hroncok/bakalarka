@@ -519,4 +519,4 @@ TODO (implementace, použití, dapi-cli)
 Licence
 -------
 
-TODO (AGPL verze 3 - důvody apod.)
+TODO (AGPL verze 3 + CC - důvody apod.)
