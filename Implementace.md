@@ -453,47 +453,61 @@ Stránka s formulářem sloužícím k nahrání dapu. Je zobrazena pouze přihl
 
 ### Zobrazení dapu
 
-TODO
+Stránka s detaily dapu -- je zobrazena [na obrázku](#pic:dap). Zobrazuje informace z modelu *Dap* a *MetaDap*. Pokud není určeno specificky, jako verzi zobrazit, je zobrazena poslední stabilní verze. Pokud žádná stabilní verze není dostupná, je zobrazena poslední vývojová. Pokud dap neobsahuje žádnou verzi, jsou zobrazeny pouze informace z modelu *MetaDap*.
+
+![Stránka s dapem {#pic:dap}](images/dap)
+
+Vlastníkovi a spoluvlastníkovi dapu a administrátorovi repozitáře je umožněno mazat jednotlivé verze dapu. Všem jsou v některých případech zobrazena varování:
+
+ * Toto není nejnovější stabilní verze dapu.
+ * Toto není nejnovější verze dapu.
+ * Toto není stabilní verze dapu.
+ * Tento dap má nevyřízená hlášení.
+ * Tento dap není aktivní.
 
 ### Administrace dapu
 
-TODO
+Stránka je dostupná pouze vlastníkovi dapu, případně administrátorovi repozitáře. Umožňuje spravovat spoluvlastníky, označit dap jako neaktivní, úplně jej smazat, případně darovat jinému uživateli.
 
 ### Správa tagů dapu
 
-TODO
+Vlastníkovi a spoluvlastníkovi dapu a administrátorovi repozitáře je umožněno nastavit tagy pro dap.
 
 ### Opuštění dapu
 
-TODO
+Spoluvlastníkovi dapu je zde umožněno na pozici spoluvlastníka rezignovat.
 
 ### Nahlášení dapu
 
-TODO
+Návštěvník stránky zde může nahlásit dap jako škodlivý. Pro nepřihlášené uživatele je zde možnost zadat i e-mailovou adresu a nutnost opsat CAPTCHA kód z obrázku. Po nahlášení je odeslán informační e-mail vlastníkovi dapu a administrátorovi či administrátorům repozitáře.
 
 ### Seznam hlášení dapu
 
-TODO
-
-### Zobrazení uživatele
-
-TODO
+Seznam nezpracovaných hlášení daného dapu. Administrátor může jednotlivá hlášení označit jako zpracovaná/vyřízená -- tato hlášení pak nikdo jiný nevidí.
 
 ### Zobrazení tagu
 
-TODO
+Stránkovaný seznam všech dapů se zvoleným tagem, je zobrazen při kliknutí na tag. Obsahuje název, krátký popis, vlastníka a hodnocení dapu. Název dapu slouží jako odkaz na jeho detailní zobrazení.
+
+### Zobrazení uživatele
+
+Stránka s profilem uživatele -- je zobrazena [na obrázku](#pic:user). Obrázek uživatele je načten ze služby Gravtar [@Gravatar2014].
+
+![Stránka s uživatelským profilem {#pic:user}](images/user)
 
 ### Úprava uživatele
 
-TODO
+Úprava uživatelského profilu -- je dostupná pouze danému uživateli nebo administrátorovi repozitáře. Umožňuje změnu uživatelských údajů (přihlašovacího jména, křestního jména, příjmení, e-mailové adresy), asociování a deasociování jednotlivých služeb pro přihlášení, správu služeb, které přepisují uživatelské údaje při přihlášení, a smazání uživatele, pokud nevlastní žádné dapy.
 
 ### Výsledky vyhledávání
 
-TODO
+Stránkovaná stránka s výpisem všech dapů odpovídajících hledané frázi, zobrazená stejně jako seznam dapů se zvoleným tagem. Vyhledávání je realizováno přes souborovou databázi Whoosh [@Chaput2013] -- při každém uložení nebo smazání dapu je tato databáze aktualizována. V případě většího provozu na webové aplikaci je možné databázi místo toho aktualizovat asynchronně pomocí služby cron [@wiki-cron].
 
 ### Podmínky služby
 
-TODO
+Statická stránka zobrazující podmínky použití služby. Pro větší přehlednost je zobrazen obsah pomocí javascriptové knihovny toc [@Allen2014]. Text podmínek dodal Richard Fontana, zaměstnanec firmy Red Hat [@RedHat2014].
+
+Podmínky zajišťují to, že provozovatel služby nezískává žádná speciální práva na uživateli nahraný obsah (kromě práva tento obsah zobrazit a šířit uživatelům), ale také za daný obsah nepřejímá zodpovědnost.
 
 API
 ---
