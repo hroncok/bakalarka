@@ -73,7 +73,7 @@ Využití PyPI by vyžadovalo nemalou modifikaci jeho zdrojového kódu. To při
 RubyGems.org
 ------------
 
-RubyGems.org [@Quaranto2014] ([na obrázku](#pic:rubygems@)) je repozitář gemů -- modulů do jazyka Ruby. Pro Ruby plní stejnou funkci jako PyPI pro Python. Zdrojový kód aplikace [@Quaranto2014a] je dostupný pod permisivní licencí MIT a je tedy teoreticky možné RubyGems.org upravit a použít jako repozitář dapů, stejně jako tomu je u PyPI.
+RubyGems.org [@Quaranto2014] ([na obrázku](#pic:rubygems)) je repozitář gemů -- modulů do jazyka Ruby. Pro Ruby plní stejnou funkci jako PyPI pro Python. Zdrojový kód aplikace [@Quaranto2014a] je dostupný pod permisivní licencí MIT a je tedy teoreticky možné RubyGems.org upravit a použít jako repozitář dapů, stejně jako tomu je u PyPI.
 
 ![Screenshot z RubyGems.org {#pic:rubygems}](images/rubygems)
 
