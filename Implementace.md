@@ -242,7 +242,7 @@ Použité technologie
 
 Vzhledem k tomu, že aplikace DevAssistant je napsána v programovacím jazyce Python [@Pilgrim2010] a je žádoucí, aby knihovna šla použít přímo z této aplikace, zvolil jsem také programovací jazyk Python. Implementace v jiném jazyce by sice byla možná, ale bylo by pak nutné řešit komunikaci této knihovny s aplikací DevAssistant pomocí nějaké mezivrstvy [@Altis2014], což by bylo zbytečně komplikované.
 
-Protože DevAssistant je napsán tak, aby jej bylo možné interpretovat jak Pythonem ve verzi 2, tak Pythonem ve verzi 3, a protože je to považováno za vhodné [@Pilgrim2010], podporuje *daploader* taktéž obě používané verze Pythonu.
+Protože DevAssistant je napsán tak, aby jej bylo možné interpretovat jak Pythonem ve verzi 2, tak Pythonem ve verzi 3, a protože je to považováno za vhodné [@Pilgrim2010], podporuje daploader taktéž obě používané verze Pythonu.
 
 Pro parsování souboru `meta.yaml` jsem použil modul PyYAML [@Simonov2014], jinak jsem si vystačil se standardními moduly obsaženými v distribuci Pythonu.
 
@@ -254,7 +254,7 @@ Prvním krokem je definice funkcionality a následné napsání testu, který tu
 Načtení dapu
 ------------
 
-*Daploader* poskytuje třídu *Dap*. Její konstruktor načte dap a pokusí se z něj získat obsah souboru `meta.yaml` -- pokud se načtení nepodaří (nejedná se o *tar.gz* archiv nebo v archivu není právě jeden soubor `meta.yaml`), knihovna vyvolá výjimku. V případě správného načtení jsou jednotlivé položky ze souboru `meta.yaml` k dispozici ve formě asociativního pole[^pole].
+Daploader poskytuje třídu *Dap*. Její konstruktor načte dap a pokusí se z něj získat obsah souboru `meta.yaml` -- pokud se načtení nepodaří (nejedná se o *tar.gz* archiv nebo v archivu není právě jeden soubor `meta.yaml`), knihovna vyvolá výjimku. V případě správného načtení jsou jednotlivé položky ze souboru `meta.yaml` k dispozici ve formě asociativního pole[^pole].
 
 [^pole]: V Pythonu nazvaného slovník -- *dict*
 
@@ -310,14 +310,14 @@ Díky zvolené metodě TDD [@wiki-tdd] mají všechny kontroly testy, které ov�
 Licence
 -------
 
-Knihovna *daploader* je dostupná pod licencí GNU GPL verze 2 [@GPLv2] nebo vyšší. Plné znění licence je  součástí zdrojových kódů knihovny, které naleznete na přiloženém médiu.
+Knihovna daploader je dostupná pod licencí GNU GPL verze 2 [@GPLv2] nebo vyšší. Plné znění licence je  součástí zdrojových kódů knihovny, které naleznete na přiloženém médiu.
 
-Tato licence byla zvolena podle licence aplikace DevAssistant, aby bylo v budoucnu možné libovolně přesouvat kód mezi knihovnou *daploader* a DevAssistantem, případně do aplikace knihovnu začlenit.
+Tato licence byla zvolena podle licence aplikace DevAssistant, aby bylo v budoucnu možné libovolně přesouvat kód mezi knihovnou daploader a DevAssistantem, případně do aplikace knihovnu začlenit.
 
 Instalace
 ---------
 
-Knihovna *daploader* je dostupná v repozitáři PyPI [@PythonSoftwareFoundation2014] a je možné ji nainstalovat například pomocí programu `pip` [@PyPA2014] ([v ukázce](#daploader-install)).
+Knihovna daploader je dostupná v repozitáři PyPI [@PythonSoftwareFoundation2014] a je možné ji nainstalovat například pomocí programu `pip` [@PyPA2014] ([v ukázce](#daploader-install)).
 
 ```{caption="Instalace knihovny daploader {#daploader-install}"}
 pip install daploader
@@ -333,7 +333,7 @@ Použité technologie
 
 ### Backend
 
-Aby bylo jednoduché použít vytvořenou knihovnu *daploader* popsanou [v části](#daploader@), zvolil jsem programovací jazyk Python [@Pilgrim2010]. Opět platí, že použít jiný programovací jazyk by bylo možné, ale zbytečně komplikované kvůli nutnosti přidat mezivrstvu [@Altis2014].
+Aby bylo jednoduché použít vytvořenou knihovnu daploader popsanou [v části](#daploader@), zvolil jsem programovací jazyk Python [@Pilgrim2010]. Opět platí, že použít jiný programovací jazyk by bylo možné, ale zbytečně komplikované kvůli nutnosti přidat mezivrstvu [@Altis2014].
 
 Pro vytváření webových aplikací v programovacím jazyce Python existuje celá řada frameworků [@Athanasias2014]. Výběr mezi nimi je záležitostí poskytovaných funkcí, množství dokumentace, dostupných modulů, ale i osobních preferencí.
 
