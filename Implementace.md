@@ -532,7 +532,7 @@ Dapi nabízí API pro práci s repozitářem například z aplikace DevAssistant
 
 API je realizováno pomocí modulu Django REST framework [@Christie2014]. Díky tomu je možné API procházet přímo v prohlížeči v rámci aplikace Dapi. Použití Django REST frameworku také zjednodušuje budoucí možnou implementaci zapisovací části API.
 
-Jednotlivé objekty a jejich seznamy jsou serializovány pomocí YAMLu -- to je sice pro API poměrně netradiční řešení[^tradicni], ale vzhledem k tomu, že DevAssistant již závisí na knihovnách, které YAML parsují, je YAML nejvhodnější volbou. Příklad serializovaného dapu můžete vidět [v ukázce](#api-dap@) -- tam, kde je to vhodné, jsou serializována i data metadapu (například název dapu).
+Jednotlivé objekty a jejich seznamy jsou serializovány pomocí YAMLu -- to je sice pro API poměrně netradiční řešení[^tradicni], ale vzhledem k tomu, že DevAssistant již závisí na knihovnách, které YAML parsují, je YAML nejvhodnější volbou. Příklad serializovaného *Dapu* můžete vidět [v ukázce](#api-dap@) -- tam, kde je to vhodné, jsou serializována i data *MetaDapu* (například název dapu).
 
 > Při práci na Dapi jsem přispěl i do projektu Django REST framework, aby bylo možné vhodně a čitelně serializovat v YAMLu i řetězce se znaky mimo ASCII tabulku, například moje příjmení.
 
