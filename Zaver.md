@@ -1,6 +1,6 @@
 Cílem práce bylo implementovat formát pro šíření asistentů do aplikace DevAssistant a jejich webový repozitář. Tento cíl byl úspěšně naplněn.
 
-Existuje formát dap, který je vhodný na distribuování asistentů a repozitář Dapi, spuštěný na adrese `http://dapi.devassistant.org`.
+Existuje formát dap, který je vhodný na distribuování asistentů, a repozitář Dapi, spuštěný na adrese `http://dapi.devassistant.org`.
 
 Možnosti rozvoje
 ================
