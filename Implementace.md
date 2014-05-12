@@ -382,7 +382,7 @@ Aplikaci jsem nasadil na cloudovou platformu OpenShift [@RedHat2014a]. Která mi
 
 > Cron je softwarový démon, který v operačních systémech automatizovaně spouští v určitý čas nějaký příkaz resp. proces (skript, program apod.). Jedná se vlastně o specializovaný systémový proces, který v operačním systému slouží jakožto plánovač úloh, jenž umožňuje opakované spouštění periodicky se opakujících procesů (např. noční běhy dávkových úloh při hromadném zpracování dat) apod. [@wiki-cron]
 
-Základní využití je navíc zcela zdarma a v případě vyšších nároků je výhodou, že službu provozuje firma Red Hat [@RedHat2014], která je taktéž zadavatelem této práce (TODO - formulace).
+Základní využití je navíc zcela zdarma.
 
 Architektura
 ------------
