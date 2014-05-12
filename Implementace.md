@@ -419,7 +419,7 @@ Django poskytuje model *User* reprezentující uživatele aplikace. Do tohoto mo
 
 V případě Dapi je to odkaz na služby, pomocí kterých když se uživatel přihlásí, tak přepíší data uživatele (jméno a e-mailovou adresu). To je nutné proto, že uživatel se může přihlašovat přes více služeb, které mohou poskytovat různé údaje. Takto si může vybrat, které údaje mají platit. Ve výchozím stavu takto přepisuje data první použitá služba.
 
-*Profile* nadále může obsahovat další data chybějící v modelu *User*, pokud by bylo rozhodnuto, že to je potřeba -- například telefonní číslo apod. Podobně metody, který by se normálně implementovaly v modelu *User* jsou implementovány v modelu *Profile*.
+*Profile* nadále může obsahovat další data chybějící v modelu *User*, pokud by bylo rozhodnuto, že to je potřeba -- například telefonní číslo apod. Podobně jsou metody, které by se normálně implementovaly v modelu *User*, implementovány v modelu *Profile*.
 
 ### Rank
 
