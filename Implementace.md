@@ -47,7 +47,7 @@ Dap má uvnitř archivu striktně danou [adresářovou strukturu](#dap-dir@), kt
 \caption{Generický dap \label{dap-dir}}
 \end{dirfigure}
 
-Asistenty a snipety mají hierarchickou strukturu. Platí, že asistent nejvyšší úrovně musí mít vždy stejný název jako dap, ve kterém je obsažen. Asistenty či snipety dalších úrovní se mohou jmenovat libovolně[^libovolne]. Pokud je v dapu asistent nižší úrovně, vždy v něm musí být i asistent úrovně vyšší. Například pro asistent `crt/python/flask.yaml` musí existovat asistent `crt/python.yaml` -- ten ale může obsahovat jen metadata a nemusí sám o sobě nic vykovávat.
+Asistenty a snipety mají hierarchickou strukturu. Platí, že asistent či snipet nejvyšší úrovně musí mít vždy stejný název jako dap, ve kterém je obsažen. Asistenty a snipety dalších úrovní se mohou jmenovat libovolně[^libovolne]. Pokud je v dapu asistent nižší úrovně, vždy v něm musí být i asistent úrovně vyšší. Například pro asistent `crt/python/flask.yaml` musí existovat asistent `crt/python.yaml` -- ten ale může obsahovat jen metadata a nemusí sám o sobě nic vykovávat.
 
 Ikony (`icons`) a soubory (`files`) náleží jednotlivým asistentům a je tedy nutné je patřičně zařadit. Například asistentu `crt/python/flask.yaml` náleží ikona `crt/python/flask.svg` či `crt/python/flask.png` ze složky `icons` a žádná jiná.
 
@@ -164,7 +164,7 @@ Následují nepovinné údaje.
 > Příklady validních záznamů pro položku *bugreports*:
 > 
 >  * https://github.com/hroncok/dap-travis/issues
->  * miroslav.hroncok@fit.cvut.cz
+>  * miroslav.hroncok_at_fit.cvut.cz
 >  * devassistant@lists.fedoraproject.org
 
 ### description
