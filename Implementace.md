@@ -305,7 +305,7 @@ assert versions == sorted(versions, cmp=dapver.compare)
 Testy
 -----
 
-Díky zvolené metodě TDD [@wiki-tdd] mají jednotlivé kontroly stoprocentní pokrytí testy. Testy jsou součástí zdrojových kódů knihovny, které naleznete na přiloženém médiu.
+Díky zvolené metodě TDD [@wiki-tdd] mají všechny kontroly testy, které ověřují, že správně fungují. Testy jsou součástí zdrojových kódů knihovny, které naleznete na přiloženém médiu.
 
 Licence
 -------
