@@ -67,7 +67,7 @@ Zatímco existuje základní sada asistentů, která je v některých případec
 
 > Jako příklad vlastního asistentu si můžeme představit vytvářecí asistent, který studentům prvního ročníku Fakulty informačních technologií ČVUT v Praze pomůže s vytvořením úloh z předmětu *Programování a algoritmizace 1*. Takový asistent by zajistil, že studenti mají k dispozici potřebné programy (kompilátor apod.), a pomohl jim zkompilovat úlohy pomocí programu make [@Make2013]. Přestože by tento asistent byl jistě přínosný pro zmíněné studenty, pro další uživatele by nedávalo smysl, aby takový asistent byl distribuovaný společně s aplikací DevAssistant.
 
-Přestože je technicky možné distribuovat uživatelům asistent ve formě archivu, který je potřeba extrahovat na určité místo, jedná se o poměrně nepraktické řešení. Uživatelé mohou například archiv omylem rozbalit na špatné místo. Odstranění takového asistentu je problematické -- je potřeba dohledat, které soubory jsou v archivu a ze složky s asistenty je odstranit. Jednotlivé archivy spolu mohou navzájem kolidovat.
+Přestože je technicky možné distribuovat uživatelům asistent ve formě archivu, který je potřeba extrahovat na určité místo, jedná se o poměrně nepraktické řešení. Uživatelé mohou například archiv omylem rozbalit na špatné místo. Odstranění takového asistentu je problematické -- je potřeba dohledat, které soubory jsou v archivu, a ze složky s asistenty je odstranit. Jednotlivé archivy spolu mohou navzájem kolidovat.
 
 Proto vyvstává potřeba vytvořit jednotný formát distribuovatelných asistentů a místo, kde takové asistenty sdílet [@Kabrda2013].
 
