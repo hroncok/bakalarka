@@ -386,7 +386,7 @@ Aplikaci jsem nasadil na cloudovou platformu OpenShift [@RedHat2014a]. Která mi
  * použití Pythonu [@Pilgrim2010] a PostgreSQL [@PostgreSQL2014],
  * pravidelné spouštění skriptů pomocí cronu.
 
-> Cron je softwarový démon, který v operačních systémech automatizovaně spouští v určitý čas nějaký příkaz resp. proces (skript, program apod.). Jedná se vlastně o specializovaný systémový proces, který v operačním systému slouží jakožto plánovač úloh, jenž umožňuje opakované spouštění periodicky se opakujících procesů (např. noční běhy dávkových úloh při hromadném zpracování dat) apod. [@wiki-cron]
+> Cron je softwarový démon, který v operačních systémech automatizovaně spouští v určitý čas nějaký příkaz resp. proces (skript, program apod.). Jedná se vlastně o specializovaný systémový proces, který v operačním systému slouží jakožto plánovač úloh, jenž umožňuje opakované spouštění periodicky se opakujících procesů (např. noční běhy dávkových úloh při hromadném zpracování dat apod.). [@wiki-cron]
 
 Základní využití je navíc zcela zdarma.
 
