@@ -91,6 +91,30 @@ Soubor meta.yaml
 
 Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-balik@). Z důvodů popsaných [v části](#reserse-archiv@) se jedná o YAML soubor. Soubor obsahuje tyto direktivy:
 
+### authors
+
+> Seznam autorů obsahu dapu, povinný údaj. U každého autora je nejprve uvedeno celé jméno a poté volitelně e-mailová adresa v lomených závorkách, podobně jako při e-mailové komunikaci. Zavináč v adrese lze nahradit sekvencí `_at_`.
+> 
+> Příklady validních autorů:
+> 
+>  * Miroslav Hrončok \<miroslav.hroncok@fit.cvut.cz\>
+>  * Miroslav Hrončok \<miroslav.hroncok_at_fit.cvut.cz\>
+>  * Miroslav Hrončok
+>  * Никола I Петровић-Његош
+
+### license
+
+> Licence obsahu dapu, povinný údaj. Používají se specifikátory licencí z RPM balíčků distribuce Fedora [@GoodLicenses][@GoodLicenses2]. Je možné použít pouze ve Fedoře povolené licence [@GoodLicenses][@GoodLicenses2], které zaručují svobodné šíření obsahu. Tagy lze kombinovat pomocí slov `and` a `or` -- k tomuto účelu je možné použít i závorky a vyhodnocení probíhá podobně jako v jiných logických výrazech. Slovo `and` se používá v případě, že část obsahu je šířena pod jednou a část pod druhou licencí, slovo `or` se používá pokud je možné licenci si vybrat [@LicensesCombined].
+> 
+> V případě zvýšené poptávky po možnosti uvedení nesvobodné licence [@BadLicenses], je možné později povolit v metadatech i tuto variantu. Pro účely repozitáře dapů ale bude nadále možné nahrávat jen svobodný obsah.
+> 
+> Příklady validních specifikátorů licence:
+> 
+>  * AGPLv3
+>  * GPL+ or Artistic
+>  * GPLv2+
+>  * LGPLv2+ and LGPLv2 and LGPLv3+ and (GPLv3 or LGPLv2) and (GPLv3+ or LGPLv2) and (CC-BY-SA or LGPLv2+) and (CC-BY-SA or LGPLv2) and CC-BY and BSD and MIT and Public Domain
+
 ### package_name
 
 > Název dapu, povinný údaj. Smí obsahovat malá písmena obsažená v tabulce ASCII[^ascii], číslice a znaky podtržítko (`_`) a spojovník (`-`), avšak první a poslední znak smí být pouze písmeno nebo číslice.
@@ -108,6 +132,15 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-
 
 [^ascii]: Tedy písmena anglické abecedy.
 
+### summary
+
+> Krátký popis dapu, povinný údaj. Slouží k rychlému obeznámení uživatele s obsahem dapu, měl by být napsaný v anglickém jazyce.
+> 
+> Příklady vhodných popisů:
+> 
+>  * Python assistants for creating Flask, Djnago and GTK3 apps or pure Python libraries
+>  * Set of assistants for students of FIT CTU in Prague
+
 ### version
 
 > Verze dapu, povinný údaj. Verze musí obsahovat alespoň jedno nezáporné číslo a může obsahovat neomezeně dalších nezáporných čísel oddělených tečkou. Číslice se uvádí bez nadbytečných úvodních nul. Za číselnou verzí může být bez oddělení uveden text `dev`, `a`, nebo `b` značící v uvedeném pořadí blíže nespecifikovanou vývojovou verzi, alfa verzi a betaverzi.
@@ -122,38 +155,17 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-
 >  * 1.1b
 >  * 1.1
 
-### summary
+Následují nepovinné údaje.
 
-> Krátký popis dapu, povinný údaj. Slouží k rychlému obeznámení uživatele s obsahem dapu, měl by být napsaný v anglickém jazyce.
-> 
-> Příklady vhodných popisů:
-> 
->  * Python assistants for creating Flask, Djnago and GTK3 apps or pure Python libraries
->  * Set of assistants for students of FIT CTU in Prague
+### bugreports
 
-### license
-
-> Licence obsahu dapu, povinný údaj. Používají se specifikátory licencí z RPM balíčků distribuce Fedora [@GoodLicenses][@GoodLicenses2]. Je možné použít pouze ve Fedoře povolené licence [@GoodLicenses][@GoodLicenses2], které zaručují svobodné šíření obsahu. Tagy lze kombinovat pomocí slov `and` a `or` -- k tomuto účelu je možné použít i závorky a vyhodnocení probíhá podobně jako v jiných logických výrazech. Slovo `and` se používá v případě, že část obsahu je šířena pod jednou a část pod druhou licencí, slovo `or` se používá pokud je možné licenci si vybrat [@LicensesCombined].
+> Místo, kam reportovat chyby, nepovinný údaj. Buďto validní URL podle stejných podmínek jako v případě *homepage* (popsáno dále), nebo e-mailová adresa. Zavináč v adrese lze nahradit sekvencí `_at_`.
 > 
-> V případě zvýšené poptávky po možnosti uvedení nesvobodné licence [@BadLicenses], je možné později povolit v metadatech i tuto variantu. Pro účely repozitáře dapů ale bude nadále možné nahrávat jen svobodný obsah.
+> Příklady validních záznamů pro položku *bugreports*:
 > 
-> Příklady validních specifikátorů licence:
-> 
->  * AGPLv3
->  * GPL+ or Artistic
->  * GPLv2+
->  * LGPLv2+ and LGPLv2 and LGPLv3+ and (GPLv3 or LGPLv2) and (GPLv3+ or LGPLv2) and (CC-BY-SA or LGPLv2+) and (CC-BY-SA or LGPLv2) and CC-BY and BSD and MIT and Public Domain
-
-### authors
-
-> Seznam autorů obsahu dapu, povinný údaj. U každého autora je nejprve uvedeno celé jméno a poté volitelně e-mailová adresa v lomených závorkách, podobně jako při e-mailové komunikaci. Zavináč v adrese lze nahradit sekvencí `_at_`.
-> 
-> Příklady validních autorů:
-> 
->  * Miroslav Hrončok \<miroslav.hroncok@fit.cvut.cz\>
->  * Miroslav Hrončok \<miroslav.hroncok_at_fit.cvut.cz\>
->  * Miroslav Hrončok
->  * Никола I Петровић-Његош
+>  * https://github.com/hroncok/dap-travis/issues
+>  * miroslav.hroncok@fit.cvut.cz
+>  * devassistant@lists.fedoraproject.org
 
 ### description
 
@@ -170,16 +182,6 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-
 >  * https://github.com/hroncok/dap-travis
 >  * http://users.fit.cvut.cz/~hroncmir/dap-travis
 >  * ftp://users.fit.cvut.cz/hroncmir/dap-travis
-
-### bugreports
-
-> Místo, kam reportovat chyby, nepovinný údaj. Buďto validní URL podle stejných podmínek jako v případě *homepage*, nebo e-mailová adresa. Zavináč v adrese lze nahradit sekvencí `_at_`.
-> 
-> Příklady validních záznamů pro položku *bugreports*:
-> 
->  * https://github.com/hroncok/dap-travis/issues
->  * miroslav.hroncok@fit.cvut.cz
->  * devassistant@lists.fedoraproject.org
 
 [V ukázce](#meta-yaml-simple) můžete vidět příklad souboru `meta.yaml`, který obsahuje pouze povinné údaje, a [v ukázce](#meta-yaml-extended@) pak příklad doplněný o údaje nepovinné.
 
@@ -393,6 +395,14 @@ Dapi obsahuje několik modelů reprezentující dapy, uživatele apod. Jejich vz
 
 ![ERM diagram aplikace {#pic:models}](pdfs/models)
 
+### Author
+
+*Author* představuje jednoho autora dapu. Je vázán na konkrétní verzi dapu, tedy na model *Dap*.
+
+### Dap
+
+*Dap* představuje dap v jedné konkrétní verzi. Uchovává metadata dapu (kromě názvu), odkaz na *MetaDap* a cestu k souboru s dapem.
+
 ### MetaDap
 
 *MetaDap* uchovává informace o dapu, bez ohledu na jeho konkrétní verzi. Tedy název dapu, vlastníka, spoluvlastníky, hodnocení, tagy, hlášení a informace o tom, je-li *MetaDap* aktivní[^aktivni]. Dále obsahuje odkaz na poslední a poslední stabilní verzi dapu, pokud je k dispozici.
@@ -401,13 +411,17 @@ Informace o celkovém počtu hodnocení a průměrném hodnocení je uchována v
 
 [^aktivni]: Neaktivní MetaDap plní roli smazaného dapu bez nutnosti ho úplně smazat.
 
-### Dap
+### Profile
 
-*Dap* představuje dap v jedné konkrétní verzi. Uchovává metadata dapu (kromě názvu), odkaz na *MetaDap* a cestu k souboru s dapem.
+Django poskytuje model *User* reprezentující uživatele aplikace. Do tohoto modelu není možné přidávat atributy, proto existuje model *Profile*, který se váže právě na jednoho uživatele a který uchovává dodatečné informace [@DjangoSoftwareFoundation2014a].
 
-### Author
+V případě Dapi je to odkaz na služby, pomocí kterých když se uživatel přihlásí, tak přepíší data uživatele (jméno a e-mailovou adresu). To je nutné proto, že uživatel se může přihlašovat přes více služeb, které mohou poskytovat různé údaje. Takto si může vybrat, které údaje mají platit. Ve výchozím stavu takto přepisuje data první použitá služba.
 
-Author představuje jednoho autora dapu. Je vázán na konkrétní verzi dapu, tedy na model *Dap*.
+*Profile* nadále může obsahovat další data chybějící v modelu *User*, pokud by bylo rozhodnuto, že to je potřeba -- například telefonní číslo apod. Podobně metody, který by se normálně implementovaly v modelu *User* jsou implementovány v modelu *Profile*.
+
+### Rank
+
+*Rank* představuje hodnocení jednoho uživatele jednoho *MetaDapu*. Uchovává odkaz na *MetaDap* a uživatele (model *User* z Djanga) a výši hodnocení (1 až 5 „hvězdiček“).
 
 ### Report
 
@@ -419,18 +433,6 @@ V aplikaci existují tyto druhy škodlivosti:
  * malware (škodlivý kód),
  * nenávistný nebo jinak nevhodný obsah (rasismus, sexismus, podněcování k nenávisti, pornografie apod.),
  * spam.
-
-### Rank
-
-*Rank* představuje hodnocení jednoho uživatele jednoho *MetaDapu*. Uchovává odkaz na *MetaDap* a uživatele (model *User* z Djanga) a výši hodnocení (1 až 5 „hvězdiček“).
-
-### Profile
-
-Django poskytuje model *User* reprezentující uživatele aplikace. Do tohoto modelu není možné přidávat atributy, proto existuje model *Profile*, který se váže právě na jednoho uživatele a který uchovává dodatečné informace [@DjangoSoftwareFoundation2014a].
-
-V případě Dapi je to odkaz na služby, pomocí kterých když se uživatel přihlásí, tak přepíší data uživatele (jméno a e-mailovou adresu). To je nutné proto, že uživatel se může přihlašovat přes více služeb, které mohou poskytovat různé údaje. Takto si může vybrat, které údaje mají platit. Ve výchozím stavu takto přepisuje data první použitá služba.
-
-*Profil* nadále může obsahovat další data chybějící v modelu *User*, pokud by bylo rozhodnuto, že to je potřeba -- například telefonní číslo apod. Podobně metody, který by se normálně implementovaly v modelu *User* jsou implementovány v modelu *Profile*.
 
 Stránky
 -------
