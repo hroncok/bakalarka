@@ -409,7 +409,7 @@ Dapi obsahuje několik modelů reprezentující dapy, uživatele apod. Jejich vz
 
 *MetaDap* uchovává informace o dapu, bez ohledu na jeho konkrétní verzi. Tedy název dapu, vlastníka, spoluvlastníky, hodnocení, tagy, hlášení a informace o tom, je-li *MetaDap* aktivní[^aktivni]. Dále obsahuje odkaz na poslední a poslední stabilní verzi dapu, pokud je k dispozici.
 
-Informace o celkovém počtu hodnocení a průměrném hodnocení je uchována v databázi a přepočítává se, až když dojde k nějaké změně. Je to proto, aby se při každém načtení stránky s dapem nemusely z databáze načítat všechna jeho hodnocení. Stejným způsobem fungují odkazy na poslední a poslední stabilní verzi dapu.
+Informace o celkovém počtu hodnocení a průměrném hodnocení je uchována v databázi a přepočítává se, až když dojde k nějaké změně. Jedná se o vědomé porušení 3. normální formy [@wiki-3nf]. Je to proto, aby se při každém načtení stránky s dapem nemusely z databáze načítat všechna jeho hodnocení. Stejným způsobem fungují odkazy na poslední a poslední stabilní verzi dapu.
 
 [^aktivni]: Neaktivní MetaDap plní roli smazaného dapu bez nutnosti ho úplně smazat.
 
