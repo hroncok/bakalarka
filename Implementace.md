@@ -47,7 +47,7 @@ Dap má uvnitř archivu striktně danou [adresářovou strukturu](#dap-dir@), kt
 \caption{Generický dap \label{dap-dir}}
 \end{dirfigure}
 
-Asistenty a snipety mají hierarchickou strukturu. Platí, že asistent nejvyšší úrovně musí mít vždy stejný název jako dap, ve kterém je obsažen. Asistenty či spinety dalších úrovní se mohou jmenovat libovolně[^libovolne]. Pokud je v dapu asistent nižší úrovně, vždy v něm musí být i asistent úrovně vyšší. Například pro asistent `crt/python/flask.yaml` musí existovat asistent `crt/python.yaml` -- ten ale může obsahovat jen metadata a nemusí sám o sobě nic vykovávat.
+Asistenty a snipety mají hierarchickou strukturu. Platí, že asistent nejvyšší úrovně musí mít vždy stejný název jako dap, ve kterém je obsažen. Asistenty či snipety dalších úrovní se mohou jmenovat libovolně[^libovolne]. Pokud je v dapu asistent nižší úrovně, vždy v něm musí být i asistent úrovně vyšší. Například pro asistent `crt/python/flask.yaml` musí existovat asistent `crt/python.yaml` -- ten ale může obsahovat jen metadata a nemusí sám o sobě nic vykovávat.
 
 Ikony (`icons`) a soubory (`files`) náleží jednotlivým asistentům a je tedy nutné je patřičně zařadit. Například asistentu `crt/python/flask.yaml` náleží ikona `crt/python/flask.svg` či `crt/python/flask.png` ze složky `icons` a žádná jiná.
 
@@ -240,7 +240,7 @@ Použité technologie
 
 Vzhledem k tomu, že aplikace DevAssistant je napsána v programovacím jazyce Python [@Pilgrim2010] a je žádoucí, aby knihovna šla použít přímo z této aplikace, zvolil jsem také programovací jazyk Python. Implementace v jiném jazyce by sice byla možná, ale bylo by pak nutné řešit komunikaci této knihovny s aplikací DevAssistant pomocí nějaké mezivrstvy [@Altis2014], což by bylo zbytečně komplikované.
 
-Protože DevAssistent je napsán tak, aby jej bylo možné interpretovat jak Pythonem ve verzi 2, tak Pythonem ve verzi 3, a protože je to považováno za vhodné [@Pilgrim2010], podporuje *daploader* taktéž obě používané verze Pythonu.
+Protože DevAssistant je napsán tak, aby jej bylo možné interpretovat jak Pythonem ve verzi 2, tak Pythonem ve verzi 3, a protože je to považováno za vhodné [@Pilgrim2010], podporuje *daploader* taktéž obě používané verze Pythonu.
 
 Pro parsování souboru `meta.yaml` jsem použil modul PyYAML [@Simonov2014], jinak jsem si vystačil se standardními moduly obsaženými v distribuci Pythonu.
 
@@ -313,7 +313,7 @@ Tato licence byla zvolena podle licence aplikace DevAssistant, aby bylo v budouc
 Instalace
 ---------
 
-Knihovna *daploader* je dostupná v repozitáři PyPI [@PythonSoftwareFoundation2014] a je možné ji nainstalovat například pomocí porgramu `pip` [@PyPA2014] ([v ukázce](#daploader-install)).
+Knihovna *daploader* je dostupná v repozitáři PyPI [@PythonSoftwareFoundation2014] a je možné ji nainstalovat například pomocí programu `pip` [@PyPA2014] ([v ukázce](#daploader-install)).
 
 ```{caption="Instalace knihovny daploader {#daploader-install}"}
 pip install daploader
@@ -428,7 +428,7 @@ Django poskytuje model *User* reprezentující uživatele aplikace. Do tohoto mo
 
 V případě Dapi je to odkaz na služby, pomocí kterých když se uživatel přihlásí, tak přepíší data uživatele (jméno a e-mailovou adresu). To je nutné proto, že uživatel se může přihlašovat přes více služeb, které mohou poskytovat různé údaje. Takto si může vybrat, které údaje mají platit. Ve výchozím stavu takto přepisuje data první použitá služba.
 
-*Profil* nadále může obsahovat další data chybějící v modelu *User*, pokud by bylo rozhodnuto, že to je potřeba -- například telefonní číslo apod. Podobně metody, který by se normálně implementovali v modelu *User* jsou implementovány v modelu *Profile*.
+*Profil* nadále může obsahovat další data chybějící v modelu *User*, pokud by bylo rozhodnuto, že to je potřeba -- například telefonní číslo apod. Podobně metody, který by se normálně implementovaly v modelu *User* jsou implementovány v modelu *Profile*.
 
 Stránky
 -------
