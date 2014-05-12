@@ -1,4 +1,4 @@
-% Status quo a požadavky
+% Status quo a požadavky {#status}
 
 V této kapitole je osvětlena problematika této bakalářské práce s důrazem na důvody vedoucí k její potřebě.
 

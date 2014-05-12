@@ -1,8 +1,8 @@
-% Rešerše
+% Rešerše {#reserse}
 
 V této kapitole jsou nastíněna možná řešení požadavků vyjmenovaných [v části](#pozadavky@).
 
-Balík (dap)  {#reserse-balik}
+Balík (dap) {#reserse-balik}
 ===========
 
 S ohledem na požadavky uvedené [v části](#pozadavky-balik@) jsou zde představeny možnosti, které vyvstávají při volbě vhodného formátu pro dap.
