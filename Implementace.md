@@ -341,6 +341,8 @@ Zvolil jsem framework Django [@DjangoSoftwareFoundation2014][@Holovaty2008], kte
 
 > Model-view-controller (MVC) je softwarová architektura, která rozděluje datový model aplikace, uživatelské rozhraní a řídicí logiku do tří nezávislých komponent tak, že modifikace některé z nich má jen minimální vliv na ostatní. [@wiki-mvc]
 
+V terminologii Djanga se můžete setkat s pojmem MTV (*model*, *template*, *view*), který označuje stejnou technologii s jiným označením základních stavebních kamenů [@DjangoSoftwareFoundation2014a].
+
 Pro Django navíc existuje celá řada doplňků, modulů do Pythonu, které umožňují řešit některé požadavky na repozitář specifikované [v části](#pozadavky-repozitar@):
 
  * django-taggit [@Gaynor2014] pro klasifikaci pomocí tagů,
