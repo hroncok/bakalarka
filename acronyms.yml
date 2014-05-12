@@ -17,6 +17,7 @@ GUI: Graphical User Interface
 HTTP: Hypertext Transfer Protocol
 HTTPS: Hypertext Transfer Protocol Secure
 ISC: Internet Systems Consortium
+JSON: JavaScript Object Notation
 LGPL: Lesser General Public License
 MIT: Massachusetts Institute of Technology
 MVC: Model-view-controller
@@ -29,4 +30,5 @@ RPM: RPM Package Manager
 SQL: Structured Query Language
 TDD: Test-driven development
 URL: Uniform Resource Locator
+XML: Extensible Markup Language
 YAML: YAML Ain't Markup Language
