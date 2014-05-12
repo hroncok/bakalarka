@@ -127,7 +127,7 @@ Repozitář {#pozadavky-repozitar}
      * úprava nebo mazání uživatelských účtů a profilů,
      * vyhodnocování nahlášených dapů.
  * Pro všechny uživatele:
-     * autentifikace,
+     * autentizace,
      * úprava uživatelského a profilu,
      * opuštění aplikace (smazání profilu a vytvořeného obsahu).
 
