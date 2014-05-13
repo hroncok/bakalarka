@@ -53,7 +53,7 @@ GitHub [@GitHub2014] ([na obrázku](#pic:github)) je poměrně známá a oblíbe
 
 ![Screenshot ze služby GitHub {#pic:github}](images/github)
 
-Z uživatelského hlediska pak není příliš přívětivé rozlišení, co na GitHubu je dap a co ne - procházení jednotlivých projektů na GitHubu z aplikace DevAssistant a vyhledávání dapů je tak nemožné, nebo by bylo příliš komplikované. Obsah by také nebyl pod kontrolou vývojářů DevAssistantu a případné odstranění škodlivých dapů by vyžadovalo vyjednávání s provozovateli GitHubu.
+Z uživatelského hlediska pak není příliš přívětivé rozlišení, co na GitHubu je dap a co ne -- procházení jednotlivých projektů na GitHubu z aplikace DevAssistant a vyhledávání dapů je tak nemožné, nebo by bylo příliš komplikované. Obsah by také nebyl pod kontrolou vývojářů DevAssistantu a případné odstranění škodlivých dapů by vyžadovalo vyjednávání s provozovateli GitHubu.
 
 **Závěr:** Využití GitHubu nebo jakékoli podobné služby je tedy pro účely repozitáře dapů nevhodné.
 
