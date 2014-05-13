@@ -67,6 +67,7 @@
 \RequirePackage {hyperref}		% hyperlinks support
 \RequirePackage {minted}		% source code highlighting via Pygments
 \RequirePackage {etoolbox}
+\RequirePackage {nameref}
 
 % microtype currently supports only protrusion with XeLaTeX :(
 \RequirePackage [protrusion=true] {microtype}
