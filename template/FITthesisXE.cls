@@ -592,9 +592,7 @@ of works or by adapting the Work (including translation), and at the same time m
 }
 
 
-\makeatletter
 \renewcommand*{\l@listing}{\@dottedtocline{1}{0em}{2.3em}}
-\makeatother
 
 \AtBeginDocument{
 	%\pagestyle{plain}
