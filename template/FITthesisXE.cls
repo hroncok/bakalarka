@@ -87,6 +87,14 @@
 	}
 }
 
+% move page numers on chapter first pages to right
+\def\ps@plain{%
+  \let\@oddhead\@empty%
+  \let\@evenhead\@empty%
+  \def\@oddfoot{\reset@font\hfil\thepage}%
+  \def\@evenfoot{\reset@font\thepage\hfil}%
+}
+
 \newfloat{dirfigure}{htbp}{lod}[chapter]
 
 \if@langczech
