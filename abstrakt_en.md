@@ -1,1 +1,1 @@
-Here will be the English abstract.
+This bachelor’s thesis aims to specify and implement a format for distributing assistants for the DevAssistant application and design and implement a web repository to share assistants in that format with others.

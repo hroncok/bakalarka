@@ -1,1 +1,1 @@
-Tady bude český abstrakt.
+Tato bakalářská práce si klade za cíl specifikovat a implementovat formát pro šíření asistentů do aplikace DevAssistant a navrhnout a implementovat webový repozitář, kde se dají asistenty v tomto formátu sdílet s ostatními.
