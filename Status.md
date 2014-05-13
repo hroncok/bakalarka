@@ -122,7 +122,7 @@ Repozitář {#pozadavky-repozitar}
      * hodnocení dapů,
      * hlášení školdivých dapů,
      * možnost prohledávání repozitáře a stahování dapů přímo z aplikace DevAssistant[^api].
- * Pro správce repozitáře:
+ * Pro administrátora repozitáře:
      * mazání jednotlivých verzí dapu nebo dapu jako celku,
      * úprava nebo mazání uživatelských účtů a profilů,
      * vyhodnocování nahlášených dapů.
