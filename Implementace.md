@@ -89,7 +89,9 @@ Adresář `doc` byl přidán pro účely dapu, aby bylo možné společně s asi
 Soubor meta.yaml
 ----------------
 
-Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-balik@). Z důvodů popsaných [v části](#reserse-archiv@) se jedná o YAML soubor. Soubor obsahuje tyto direktivy:
+Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-balik@). Z důvodů popsaných [v části](#reserse-archiv@) se jedná o YAML soubor.
+
+Obsahuje tyto direktivy:
 
 ### authors
 
@@ -229,7 +231,7 @@ Strojově lze číst metadata dapu následujícím postupem:
  2. najít `meta.yaml` v jediné složce, která byla vyextrahována,
  3. parsovat YAML a číst potřebné údaje.
 
-Rozhodl jsem se tedy napsat knihovnu, která umožní tento postup automatizovat a kontrolovat, že načítaný dap splňuje specifikaci. Tato knihovna umožní:
+Rozhodl jsem se tedy napsat knihovnu, která umožní tento postup automatizovat a kontrolovat, že načítaný dap splňuje specifikaci. Knihovna umožní:
 
  * načítat dapy a programově přistupovat k jejich metadatům,
  * rozbalovat dapy na určité místo,
