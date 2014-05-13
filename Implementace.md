@@ -51,7 +51,7 @@ Asistenty a snipety mají hierarchickou strukturu. Platí, že asistent či snip
 
 Ikony (`icons`) a soubory (`files`) náleží jednotlivým asistentům a je tedy nutné je patřičně zařadit. Například asistentu `crt/python/flask.yaml` náleží ikona `crt/python/flask.svg` či `crt/python/flask.png` ze složky `icons` a žádná jiná.
 
-Adresáře, které nejsou využité (jsou prázdné) by dap neměl obsahovat. Veškerý obsah hlavního adresáře, kromě souboru `meta.yaml` je volitelný. Teoreticky tak může existovat dap obsahující pouze metadata, prakticky však takový dap nedává příliš smysl. Jakýkoliv obsah mimo tuto danou strukturu je nepřípustný.
+Adresáře, které nejsou využité (jsou prázdné) by dap neměl obsahovat. Veškerý obsah hlavního adresáře kromě souboru `meta.yaml` je volitelný. Teoreticky tak může existovat dap obsahující pouze metadata, prakticky však takový dap nedává příliš smysl. Jakýkoliv obsah mimo tuto danou strukturu je nepřípustný.
 
 Adresář `doc` byl přidán pro účely dapu, aby bylo možné společně s asistenty distribuovat i dokumentaci. Například povinně uváděný text licence, za jejíchž podmínek je obsah dapu distribuován.
 
@@ -104,7 +104,7 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-
 
 ### license
 
-> Licence obsahu dapu, povinný údaj. Používají se specifikátory licencí z RPM balíčků distribuce Fedora [@GoodLicenses][@GoodLicenses2]. Je možné použít pouze ve Fedoře povolené licence [@GoodLicenses][@GoodLicenses2], které zaručují svobodné šíření obsahu. Tagy lze kombinovat pomocí slov `and` a `or` -- k tomuto účelu je možné použít i závorky a vyhodnocení probíhá podobně jako v jiných logických výrazech. Slovo `and` se používá v případě, že část obsahu je šířena pod jednou a část pod druhou licencí, slovo `or` se používá pokud je možné licenci si vybrat [@LicensesCombined].
+> Licence obsahu dapu, povinný údaj. Používají se specifikátory licencí z RPM balíčků distribuce Fedora [@GoodLicenses][@GoodLicenses2]. Je možné použít pouze ve Fedoře povolené licence [@GoodLicenses][@GoodLicenses2], které zaručují svobodné šíření obsahu. Tagy lze kombinovat pomocí slov `and` a `or` -- k tomuto účelu je možné použít i závorky a vyhodnocení probíhá podobně jako v jiných logických výrazech. Slovo `and` se používá v případě, že část obsahu je šířena pod jednou a část pod druhou licencí, slovo `or` se používá, pokud je možné licenci si vybrat [@LicensesCombined].
 > 
 > V případě zvýšené poptávky po možnosti uvedení nesvobodné licence [@BadLicenses], je možné později povolit v metadatech i tuto variantu. Pro účely repozitáře dapů ale bude nadále možné nahrávat jen svobodný obsah.
 > 
@@ -143,7 +143,7 @@ Soubor `meta.yaml` obsahuje metadata dapu specifikovaná [v části](#pozadavky-
 
 ### version
 
-> Verze dapu, povinný údaj. Verze musí obsahovat alespoň jedno nezáporné číslo a může obsahovat neomezeně dalších nezáporných čísel oddělených tečkou. Číslice se uvádí bez nadbytečných úvodních nul. Za číselnou verzí může být bez oddělení uveden text `dev`, `a`, nebo `b` značící v uvedeném pořadí blíže nespecifikovanou vývojovou verzi, alfa verzi a betaverzi.
+> Verze dapu, povinný údaj. Verze musí obsahovat alespoň jedno nezáporné číslo a může obsahovat neomezeně dalších nezáporných čísel oddělených tečkou. Číslice se uvádí bez nadbytečných úvodních nul. Za číselnou verzí může být bez oddělení uveden text `dev`, `a`, nebo `b` značící v uvedeném pořadí blíže nespecifikovanou vývojovou verzi, alfa verzi a beta verzi.
 > 
 > Příklady verzí seřazené od nejstarší po nejnovější:
 > 
@@ -223,7 +223,7 @@ description: |
 Knihovna pro načítání metadat dapů {#daploader}
 ==================================
 
-Strojově číst metadata dapu lze následujícím postupem:
+Strojově lze číst metadata dapu následujícím postupem:
 
  1. extrahovat dap jako *tar.gz* archiv,
  2. najít `meta.yaml` v jediné složce, která byla vyextrahována,
@@ -256,7 +256,7 @@ Načtení dapu
 
 Daploader poskytuje třídu *Dap*. Její konstruktor načte dap a pokusí se z něj získat obsah souboru `meta.yaml` -- pokud se načtení nepodaří (nejedná se o *tar.gz* archiv nebo v archivu není právě jeden soubor `meta.yaml`), knihovna vyvolá výjimku. V případě správného načtení jsou jednotlivé položky ze souboru `meta.yaml` k dispozici ve formě asociativního pole[^pole].
 
-[^pole]: V Pythonu nazvaného slovník -- *dict*
+[^pole]: V Pythonu nazvaného slovník -- *dict*.
 
 Kontroly
 --------
@@ -341,7 +341,7 @@ Zvolil jsem framework Django [@DjangoSoftwareFoundation2014][@Holovaty2008], kte
 
 > Model-view-controller (MVC) je softwarová architektura, která rozděluje datový model aplikace, uživatelské rozhraní a řídicí logiku do tří nezávislých komponent tak, že modifikace některé z nich má jen minimální vliv na ostatní. [@wiki-mvc]
 
-V terminologii Djanga se můžete setkat s pojmem MTV (*model*, *template*, *view*), který označuje stejnou technologii s jiným označením základních stavebních kamenů [@DjangoSoftwareFoundation2014a].
+> V terminologii Djanga se můžete setkat s pojmem MTV (*model*, *template*, *view*), který označuje stejnou technologii s jiným označením základních stavebních kamenů [@DjangoSoftwareFoundation2014a].
 
 Pro Django navíc existuje celá řada doplňků, modulů do Pythonu, které umožňují řešit některé požadavky na repozitář specifikované [v části](#pozadavky-repozitar@):
 
@@ -359,7 +359,7 @@ Použil jsem další moduly do Pythonu k řešení vyvstaných problémů nespec
 
 A samozřejmě knihovnu daploader.
 
-Aplikace je psaná pro Python 2.7, na podporu Pythonu 3 nebyl kladen důraz, přesto je kód psán tak, aby případné portování na Python 3 probíhalo bez závažných problémů.
+Aplikace je psaná pro Python 2.7, na podporu Pythonu 3 nebyl kladen důraz. Přesto je kód psán tak, aby případné portování na Python 3 probíhalo bez závažných problémů.
 
 ### Databáze
 
@@ -369,7 +369,7 @@ Pro vývoj a běh aplikace na vlastním systému jsem použil SQLite -- odlehče
 
 Pro nasazení aplikace jsem pak použil PostgreSQL, které poskytuje oproti MySQL řadu výhod, především absolutně otevřený vývoj a lépe zajištěnou integritu dat [@Tezer2014] nebo speciální možnosti pro ukládání NoSQL dat [@Haas2014].
 
-[^mysql]: Případě kompatibilní náhrady jako MariaDB [@MariaDBFoundation2014]
+[^mysql]: Případě kompatibilní náhrady jako MariaDB [@MariaDBFoundation2014].
 
 ### Frontend
 
@@ -388,7 +388,7 @@ Aplikaci jsem nasadil na cloudovou platformu OpenShift [@RedHat2014a]. Která mi
 
 > Cron je softwarový démon, který v operačních systémech automatizovaně spouští v určitý čas nějaký příkaz resp. proces (skript, program apod.). Jedná se vlastně o specializovaný systémový proces, který v operačním systému slouží jakožto plánovač úloh, jenž umožňuje opakované spouštění periodicky se opakujících procesů (např. noční běhy dávkových úloh při hromadném zpracování dat apod.). [@wiki-cron]
 
-Základní využití je navíc zcela zdarma.
+Základní využití OpenShiftu je navíc zcela zdarma.
 
 Architektura
 ------------
@@ -563,7 +563,7 @@ summary: Python assistants originally shipped with devassistant itself
 version: 0.8.0
 ```
 
-[^tradicni]: Tradičnější je použití JSONu nebo XML
+[^tradicni]: Tradičnější je použití JSONu nebo XML.
 
 ### Testy
 
@@ -584,7 +584,7 @@ Zároveň jsem knihovnu rozšířil o program `dapi`, který umožňuje zobrazov
  * Odinstalovat dap
  * Zobrazit všechny nainstalované dapy
 
-[^aktualizovat]: Tedy nahradit nainstalovanou verzi jinou
+[^aktualizovat]: Tedy nahradit nainstalovanou verzi jinou.
 
 Příklad práce s `dapi` můžete vidět [v ukázce](#dapi-cli@). Nápověda je pak součástí programu (přepínač `--help`).
 
@@ -635,6 +635,6 @@ Licence
 
 Z důvodu licenční kompatibility s knihovnou daploader musí být kód Dapi vydán pod licencí kompatibilní s GNU GPL verze 2 [@GPLv2] nebo vyšší. Nabízí se použití stejné licence, zvolil jsem ale raději licenci GNU AGPL verze 3 [@AGPLv3], která je kompatibilní s GNU GPL verze 3[^verze] [@GPLv3]. Licence AGPL na rozdíl od GPL upravuje podmínky při vzdálenému přistupování k aplikaci -- tedy například přes webové rozhraní nebo API. Poskytování vzdáleného přístupu je u AGPL vyhodnoceno jako šíření aplikace. Plné znění licence je součástí zdrojových kódů Dapi, které naleznete na přiloženém médiu.
 
-Jakýkoliv obsah, který není kódem, například texty apod., je pak vydán pod licencí Creative Commons Attribution-ShareAlike 4.0 International [@CC-BY-SA].
+Jakýkoliv obsah, který není kódem, například texty apod., je pak vydán pod licencí Creative Commons Attribution-ShareAlike 4.0 International [@CC-BY-SA], není-li uvedeno jinak.
 
-[^verze]: AGPL verze 2 není kompatibilní s GPL verze 2
+[^verze]: AGPL verze 2 není kompatibilní s GPL verze 2.

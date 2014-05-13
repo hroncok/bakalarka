@@ -27,7 +27,7 @@ Implementace ryze vlastního formátu by pak přinášela mnoho problémů, nap�
 
 **Závěr:** Implementace ryze vlastního formátu je tedy pro účely dapu nevhodná.
 
-[^textove]: YAML definice asistentů a různé šablony zdrojových kódů
+[^textove]: YAML definice asistentů a různé šablony zdrojových kódů.
 
 Existující formát pro archivaci souborů {#reserse-archiv}
 ---------------------------------------
@@ -51,7 +51,7 @@ GitHub
 
 GitHub [@GitHub2014] ([na obrázku](#pic:github)) je poměrně známá a oblíbená služba určená k hostování zdrojových kódů aplikací pomocí verzovacího systému git [@Chacon2009]. Ačkoli jsou jednotlivé asistenty v dapu vlastně zdrojovým kódem a verzování tohoto kódu na GitHubu je pochopitelně možné, nesplňuje GitHub požadavky týkající se formátu dapu -- je sice možné nahrát k repozitáři archivy, není ale možné zajistit jejich kontrolu správnosti. GitHub nadále nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu.
 
-![Screenshot ze služby GitHub {#pic:github}](images/github)
+![Snímek obrazovky ze služby GitHub {#pic:github}](images/github)
 
 Z uživatelského hlediska pak není příliš přívětivé rozlišení, co na GitHubu je dap a co ne -- procházení jednotlivých projektů na GitHubu z aplikace DevAssistant a vyhledávání dapů je tak nemožné, nebo by bylo příliš komplikované. Obsah by také nebyl pod kontrolou vývojářů DevAssistantu a případné odstranění škodlivých dapů by vyžadovalo vyjednávání s provozovateli GitHubu.
 
@@ -62,7 +62,7 @@ PyPI
 
 PyPI [@PythonSoftwareFoundation2014] ([na obrázku](#pic:pypi)) je repozitář modulů do programovacího jazyka Python [@Pilgrim2010]. Zdrojový kód aplikace [@PythonSoftwareFoundation2014a] je dostupný pod permisivní licencí BSD a je tedy teoreticky možné PyPI upravit a použít jako repozitář dapů.
 
-![Screenshot z hlavní instance PyPI {#pic:pypi}](images/pypi)
+![Snímek obrazovky z hlavní instance PyPI {#pic:pypi}](images/pypi)
 
 PyPI nesplňuje některé požadavky definované [v části](#pozadavky-repozitar@). V první řadě je navržen na sdílení modulů do Pythonu a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. PyPI nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu. Klasifikace je možná pouze pomocí kategorií definovaných přímo v nahrávaném balíku, je možné použít pouze předem dané kategorie [@PythonSoftwareFoundation2014b].
 
@@ -75,7 +75,7 @@ RubyGems.org
 
 RubyGems.org [@Quaranto2014] ([na obrázku](#pic:rubygems)) je repozitář gemů -- modulů do jazyka Ruby. Pro Ruby plní stejnou funkci jako PyPI pro Python. Zdrojový kód aplikace [@Quaranto2014a] je dostupný pod permisivní licencí MIT a je tedy teoreticky možné RubyGems.org upravit a použít jako repozitář dapů, stejně jako tomu je u PyPI.
 
-![Screenshot z RubyGems.org {#pic:rubygems}](images/rubygems)
+![Snímek obrazovky z RubyGems.org {#pic:rubygems}](images/rubygems)
 
 RubyGems.org ale také nesplňuje některé požadavky definované [v části](#pozadavky-repozitar@). Trpí stejným neduhem jako PyPI -- je navržen na sdílení modulů do Ruby a vyžadoval by jisté úpravy, aby do něj bylo možné nahrávat dapy. RubyGems.org také nepodporuje uživatelské hodnocení ani hlášení škodlivého obsahu. Další nevýhodou je, že na rozdíl od PyPI nepodporuje žádnou možnost klasifikace.
 
