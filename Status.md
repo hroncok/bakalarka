@@ -87,7 +87,7 @@ Balík (dap) {#pozadavky-balik}
  * obsažení metadat,
  * možnost verzování.
 
-V balíku by měly být nutně uložena tato metadata:
+V balíku by měla být nutně uložena tato metadata:
 
  * název balíku,
  * krátké slovní shrnutí obsahu,
@@ -120,7 +120,7 @@ Repozitář {#pozadavky-repozitar}
      * vyhledávání dapů,
      * stažení dapů,
      * hodnocení dapů,
-     * hlášení školdivých dapů,
+     * hlášení škodlivých dapů,
      * možnost prohledávání repozitáře a stahování dapů přímo z aplikace DevAssistant[^api].
  * Pro administrátora repozitáře:
      * mazání jednotlivých verzí dapu nebo dapu jako celku,
@@ -128,7 +128,7 @@ Repozitář {#pozadavky-repozitar}
      * vyhodnocování nahlášených dapů.
  * Pro všechny uživatele:
      * autentizace,
-     * úprava uživatelského a profilu,
+     * úprava uživatelského profilu,
      * opuštění aplikace (smazání profilu a vytvořeného obsahu).
 
 [^dap]: Pro účely zjednodušení textu jsem se rozhodl toto slovo skloňovat podle vzoru *hrad*.

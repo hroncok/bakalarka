@@ -47,11 +47,11 @@ Dap má uvnitř archivu striktně danou [adresářovou strukturu](#dap-dir@), kt
 \caption{Generický dap \label{dap-dir}}
 \end{dirfigure}
 
-Asistenty a snipety mají hierarchickou strukturu. Platí, že asistent či snipet nejvyšší úrovně musí mít vždy stejný název jako dap, ve kterém je obsažen. Asistenty a snipety dalších úrovní se mohou jmenovat libovolně[^libovolne]. Pokud je v dapu asistent nižší úrovně, vždy v něm musí být i asistent úrovně vyšší. Například pro asistent `crt/python/flask.yaml` musí existovat asistent `crt/python.yaml` -- ten ale může obsahovat jen metadata a nemusí sám o sobě nic vykovávat.
+Asistenty a snipety mají hierarchickou strukturu. Platí, že asistent či snipet nejvyšší úrovně musí mít vždy stejný název jako dap, ve kterém je obsažen. Asistenty a snipety dalších úrovní se mohou jmenovat libovolně[^libovolne]. Pokud je v dapu asistent nižší úrovně, vždy v něm musí být i asistent úrovně vyšší. Například pro asistent `crt/python/flask.yaml` musí existovat asistent `crt/python.yaml` -- ten ale může obsahovat jen metadata a nemusí sám o sobě nic vykonávat.
 
 Ikony (`icons`) a soubory (`files`) náleží jednotlivým asistentům a je tedy nutné je patřičně zařadit. Například asistentu `crt/python/flask.yaml` náleží ikona `crt/python/flask.svg` či `crt/python/flask.png` ze složky `icons` a žádná jiná.
 
-Adresáře, které nejsou využité (jsou prázdné) by dap neměl obsahovat. Veškerý obsah hlavního adresáře kromě souboru `meta.yaml` je volitelný. Teoreticky tak může existovat dap obsahující pouze metadata, prakticky však takový dap nedává příliš smysl. Jakýkoliv obsah mimo tuto danou strukturu je nepřípustný.
+Adresáře, které jsou nevyužité (jsou prázdné), by dap neměl obsahovat. Veškerý obsah hlavního adresáře kromě souboru `meta.yaml` je volitelný. Teoreticky tak může existovat dap obsahující pouze metadata, prakticky však takový dap nedává příliš smysl. Jakýkoliv obsah mimo tuto danou strukturu je nepřípustný.
 
 Adresář `doc` byl přidán pro účely dapu, aby bylo možné společně s asistenty distribuovat i dokumentaci. Například povinně uváděný text licence, za jejíchž podmínek je obsah dapu distribuován.
 
@@ -106,7 +106,7 @@ Obsahuje tyto direktivy:
 
 ### license
 
-> Licence obsahu dapu, povinný údaj. Používají se specifikátory licencí z RPM balíčků distribuce Fedora [@GoodLicenses][@GoodLicenses2]. Je možné použít pouze ve Fedoře povolené licence [@GoodLicenses][@GoodLicenses2], které zaručují svobodné šíření obsahu. Tagy lze kombinovat pomocí slov `and` a `or` -- k tomuto účelu je možné použít i závorky a vyhodnocení probíhá podobně jako v jiných logických výrazech. Slovo `and` se používá v případě, že část obsahu je šířena pod jednou a část pod druhou licencí, slovo `or` se používá, pokud je možné licenci si vybrat [@LicensesCombined].
+> Licence obsahu dapu, povinný údaj. Používají se specifikátory licencí z RPM balíčků distribuce Fedora [@GoodLicenses][@GoodLicenses2]. Je možné použít pouze ve Fedoře povolené licence [@GoodLicenses][@GoodLicenses2], které zaručují svobodné šíření obsahu. Tagy lze kombinovat pomocí slov `and` a `or` -- k tomuto účelu je možné použít i závorky a vyhodnocení probíhá podobně jako v jiných logických výrazech. Slovo `and` se používá v případě, že část obsahu je šířena pod jednou a část pod druhou licencí, slovo `or` se používá, pokud je možné si licenci vybrat [@LicensesCombined].
 > 
 > V případě zvýšené poptávky po možnosti uvedení nesvobodné licence [@BadLicenses], je možné později povolit v metadatech i tuto variantu. Pro účely repozitáře dapů ale bude nadále možné nahrávat jen svobodný obsah.
 > 
@@ -161,7 +161,7 @@ Následují nepovinné údaje.
 
 ### bugreports
 
-> Místo, kam reportovat chyby, nepovinný údaj. Buďto validní URL podle stejných podmínek jako v případě *homepage* (popsáno dále), nebo e-mailová adresa. Zavináč v adrese lze nahradit sekvencí `_at_`.
+> Místo, kam reportovat chyby, nepovinný údaj. Buďto validní URL podle stejných podmínek jako v případě *homepage* (popsáno dále), nebo e-mailová adresa. Zavináč v adrese lze nahradit sekvencí `_at_`, stejně jako v případě *authors*.
 > 
 > Příklady validních záznamů pro položku *bugreports*:
 > 
@@ -279,7 +279,7 @@ Chybu vyvolá:
 Varování vyvolá:
 
  * dap obsahující pouze soubor `meta.yaml`,
- * prázný adresář v dapu,
+ * prázdný adresář v dapu,
  * chybějící ikona pro asistent nebo snipet,
  * vícenásobná ikona pro jeden asistent nebo snipet,
  * přebytečná ikona pro neexistující asistent nebo snipet,
@@ -296,7 +296,7 @@ foo-1.0.0.dap: WARNING: Only meta.yaml in dap
 Další funkce
 ------------
 
-Třída *Dap* také obsahuje metodu na extrahování dapu na určité místo. Knihovna nabízí porovnávací funkci verzí, která je možná použít například jako [v ukázce](#dapver).
+Třída *Dap* také obsahuje metodu na extrahování dapu na určité místo. Knihovna nabízí porovnávací funkci verzí, kterou je možno použít například jako [v ukázce](#dapver).
 
 ```{caption="Použití porovnávače verzí z Pythonu 2 {#dapver}" .python}
 from daploader import dapver
@@ -352,7 +352,7 @@ Pro Django navíc existuje celá řada doplňků, modulů do Pythonu, které umo
  * Django REST framework [@Christie2014] pro API,
  * Python Social Auth [@Aguirre2012] pro autentizaci pomocí služeb třetích stran.
 
-Použil jsem další moduly do Pythonu k řešení vyvstaných problémů nespecifikovaných v požadavcích:
+Použil jsem další moduly do Pythonu k řešení vzniklých problémů nespecifikovaných v požadavcích:
 
  * South [@Godwin2010] pro migraci dat při změně modelů,
  * Django Simple Captcha [@Bonetti2013] pro zobrazení CAPTCHA u formulářů dostupných pro nepřihlášené uživatele,
@@ -367,7 +367,7 @@ Aplikace je psaná pro Python 2.7, na podporu Pythonu 3 nebyl kladen důraz. Př
 
 Framework Django umožňuje použít databázové systémy SQLite [@SQLite], MySQL[^mysql] [@Oracle2014] nebo PostgreSQL [@PostgreSQL2014]. Díky dostatečné úrovni abstrakce z hlediska programování na použitém databázovém systému nezáleží.
 
-Pro vývoj a běh aplikace na vlastním systému jsem použil SQLite -- odlehčenou databázi uloženou v jednom souboru vhodnou právě na tento účel [@Tezer2014].
+Pro vývoj a běh aplikace na vlastním systému jsem použil SQLite -- odlehčenou databázi uloženou v jednom souboru vhodnou právě pro tento účel [@Tezer2014].
 
 Pro nasazení aplikace jsem pak použil PostgreSQL, které poskytuje oproti MySQL řadu výhod, především absolutně otevřený vývoj a lépe zajištěnou integritu dat [@Tezer2014] nebo speciální možnosti pro ukládání NoSQL dat [@Haas2014].
 
@@ -381,14 +381,14 @@ V části, která interaguje s uživatelem, jsem použil knihovny jQuery [@jQuer
 
 ### Nasazení
 
-Aplikaci jsem nasadil na cloudovou platformu OpenShift [@RedHat2014a]. Která mi umožní:
+Aplikaci jsem nasadil na cloudovou platformu OpenShift [@RedHat2014a], která mi umožní:
 
  * nasazení pomocí gitu [@Chacon2009],
  * automatickou instalaci závislostí z PyPI [@PythonSoftwareFoundation2014],
  * použití Pythonu [@Pilgrim2010] a PostgreSQL [@PostgreSQL2014],
  * pravidelné spouštění skriptů pomocí cronu.
 
-> Cron je softwarový démon, který v operačních systémech automatizovaně spouští v určitý čas nějaký příkaz resp. proces (skript, program apod.). Jedná se vlastně o specializovaný systémový proces, který v operačním systému slouží jakožto plánovač úloh, jenž umožňuje opakované spouštění periodicky se opakujících procesů (např. noční běhy dávkových úloh při hromadném zpracování dat apod.). [@wiki-cron]
+> Cron je softwarový démon, který v operačních systémech automatizovaně spouští v určitý čas nějaký příkaz, resp. proces (skript, program apod.). Jedná se vlastně o specializovaný systémový proces, který v operačním systému slouží jakožto plánovač úloh, jenž umožňuje opakované spouštění periodicky se opakujících procesů (např. noční běhy dávkových úloh při hromadném zpracování dat apod.). [@wiki-cron]
 
 Základní využití OpenShiftu je navíc zcela zdarma.
 
@@ -411,7 +411,7 @@ Dapi obsahuje několik modelů reprezentující dapy, uživatele apod. Jejich vz
 
 *MetaDap* uchovává informace o dapu, bez ohledu na jeho konkrétní verzi. Tedy název dapu, vlastníka, spoluvlastníky, hodnocení, tagy, hlášení a informace o tom, je-li *MetaDap* aktivní[^aktivni]. Dále obsahuje odkaz na poslední a poslední stabilní verzi dapu, pokud je k dispozici.
 
-Informace o celkovém počtu hodnocení a průměrném hodnocení je uchována v databázi a přepočítává se, až když dojde k nějaké změně. Jedná se o vědomé porušení 3. normální formy [@wiki-3nf]. Je to proto, aby se při každém načtení stránky s dapem nemusely z databáze načítat všechna jeho hodnocení. Stejným způsobem fungují odkazy na poslední a poslední stabilní verzi dapu.
+Informace o celkovém počtu hodnocení a průměrném hodnocení je uchována v databázi a přepočítává se, až když dojde k nějaké změně. Jedná se o vědomé porušení třetí normální formy [@wiki-3nf]. Je to proto, aby se při každém načtení stránky s dapem nemusela z databáze načítat všechna jeho hodnocení. Stejným způsobem fungují odkazy na poslední a poslední stabilní verzi dapu.
 
 [^aktivni]: Neaktivní MetaDap plní roli smazaného dapu bez nutnosti ho úplně smazat.
 
@@ -451,7 +451,7 @@ Hlavní stránka aplikace je místem, kudy uživatel na stránku vstupuje, pokud
 
 ### Přihlašovací stránka
 
-Přihlašovací stránka nabízí uživateli přihlášení pomocí služeb třetích stran, konkrétně dle zadání GitHub [@GitHub2014] a Fedora [@RedHat2013a]. Uživateli je zobrazena v případě, že se nepřihlášený pokusí přistoupit na stránku, kde je přihlášení vyžadováno.
+Přihlašovací stránka nabízí uživateli přihlášení pomocí služeb třetích stran, konkrétně dle zadání GitHub [@GitHub2014] a Fedora [@RedHat2013a]. Uživateli je zobrazena v případě, že se nepřihlášený pokusí zobrazit stránku, kde je přihlášení vyžadováno.
 
 Analogicky existuje stránka odhlašovací, ta však nemá žádný obsah a odhlášeného uživatele přesměruje na hlavní stránku.
 
@@ -511,13 +511,13 @@ Stránka s profilem uživatele -- je zobrazena [na obrázku](#pic:user). Obráze
 
 ### Výsledky vyhledávání
 
-Stránkovaný seznam s výpisem všech dapů odpovídajících hledané frázi, zobrazený stejně jako seznam dapů se zvoleným tagem. Vyhledávání je realizováno přes souborovou databázi Whoosh [@Chaput2013] -- při každém uložení nebo smazání dapu je tato databáze aktualizována. V případě většího provozu na webové aplikaci je možné databázi místo toho aktualizovat asynchronně pomocí služby cron [@wiki-cron].
+Stránkovaný seznam s výpisem všech dapů odpovídajících hledané frázi, je zobrazen stejně jako seznam dapů se zvoleným tagem. Vyhledávání je realizováno přes souborovou databázi Whoosh [@Chaput2013] -- při každém uložení nebo smazání dapu je tato databáze aktualizována. V případě většího provozu na webové aplikaci je možné databázi místo toho aktualizovat asynchronně pomocí služby cron [@wiki-cron].
 
 ### Podmínky služby
 
 Statická stránka zobrazující podmínky použití služby. Pro větší přehlednost je zobrazen obsah pomocí javascriptové knihovny toc [@Allen2014]. Text podmínek dodal Richard Fontana, zaměstnanec firmy Red Hat [@RedHat2014].
 
-Podmínky zajišťují, že provozovatel služby nezískává žádná speciální práva na uživateli nahraný obsah (kromě práva tento obsah zobrazit a šířit uživatelům), ale také za daný obsah nepřejímá zodpovědnost.
+Podmínky zajišťují, že provozovatel služby nezískává žádná speciální práva na obsah nahraný uživateli (kromě práva tento obsah zobrazit a šířit uživatelům), ale také za daný obsah nepřejímá zodpovědnost.
 
 API
 ---
